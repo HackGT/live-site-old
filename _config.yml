@@ -24,6 +24,17 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TheHackGT
 github_username:  HackGT
 
+collections:
+    event_pages: #calling this pages causes issues
+      output: true
+      permalink: /:name
+
+defaults:
+    -
+        scope:
+            path: "_event_pages"
+        values:
+            navpriority: 1
 # Build settings
 markdown: kramdown
 theme: minima
