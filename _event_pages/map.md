@@ -2,7 +2,7 @@
 layout: page
 title: Map
 permalink: /event/final_map
-navpriority: 2
+priority: 2
 js:
     - /assets/script.js
     - /assets/footscript.js

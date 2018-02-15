@@ -40,6 +40,20 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .bundle
+  - vendor
+  - Dockerfile
+  - .dockerignore
+  - .gitignore
+  - docker_resources
+  - deployment.yaml
+  - precheck.rb
+  - LICENSE
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
