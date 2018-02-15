@@ -1,5 +1,5 @@
 git:
     remote: https://github.com/HackGT/live-site.git
-    branch: evan/navbar-links
+    branch: master
 
 target_port: 80
