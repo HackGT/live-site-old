@@ -10,17 +10,9 @@
 
     {% endcomment %}
 
-    {% assign sorted_groups = site.event_pages | group_by: "navpriority" | reverse | sort: "title" %}
+    {% assign sorted_groups = site.event_pages | group_by: "priority" | reverse | sort: "title" %}
+    {% assign sorted_links = site.data.navbar_links %}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
-
-    {% comment %}
-    {% for group in sorted_groups %}
-        {% for event_page in group.items %}
-            {{ event_page.title }}
-        {% endfor %}
-    {% endfor %}
-    {% endcomment %}
 
     {% if sorted_groups %}
       <nav class="site-nav">
@@ -42,6 +34,11 @@
                     <a class="page-link" href="{{ event_page.url | relative_url }}">{{ event_page.title | escape }}</a>
                 {% endif %}
             {% endfor %}
+          {% endfor %}
+          {% for link in sorted_links %}
+            {% if link.title %}
+                <a class="page-link" href="{{ link.url | relative_url }}">{{ link.title | escape }}</a>
+            {% endif %}
           {% endfor %}
         </div>
       </nav>
