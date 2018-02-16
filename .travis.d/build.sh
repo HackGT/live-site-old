@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# HACKGPROJECT VERSION: a5f78884380e1cb082369d74577b3998f0d44c12
+# HACKGPROJECT VERSION: c42a982bc260eef72532e8794783ecc06a89c5f5
 set -euo pipefail
 PROJECT_TYPE="deployment"
 ORG_NAME_CASE_PRESERVE="HackGT"
@@ -58,7 +58,7 @@ git_branch() {
 }
 
 git_branch_id() {
-    git_branch | sed 's/[^0-9a-zA-Z_-.]/-/g'
+    git_branch | sed 's/[^0-9a-zA-Z_.-]/-/g'
 }
 
 publish_project_container() {
