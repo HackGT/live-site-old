@@ -54,6 +54,7 @@
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
+    z-index: 1;
 
     label[for="nav-trigger"] {
       display: block;
@@ -62,6 +63,7 @@
       height: 36px;
       z-index: 2;
       cursor: pointer;
+      margin-bottom: 0;
     }
 
     .menu-icon {
