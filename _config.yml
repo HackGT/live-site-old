@@ -34,13 +34,13 @@ defaults:
         scope:
             path: "_event_pages"
         values:
-            navpriority: 1
+            priority: 1
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  
+
 exclude:
   - Gemfile
   - Gemfile.lock
