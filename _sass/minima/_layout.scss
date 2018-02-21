@@ -74,7 +74,7 @@
       line-height: 0;
       padding-top: 10px;
       text-align: center;
-      
+
       > svg path {
         fill: $grey-color-dark;
       }
@@ -88,8 +88,8 @@
     input:checked ~ .trigger {
       display: block;
       padding-bottom: 5px;
-      animation: slidedown .75s;
-      -webkit-animation: slidedown .75s;
+      animation: slidedown .375s;
+      -webkit-animation: slidedown .375s;
       @keyframes slidedown {
           from {
               opacity: 0;
