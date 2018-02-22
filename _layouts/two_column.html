@@ -11,7 +11,8 @@ layout: default
       <div class="post-content">
           {% for block in page.left_blocks %}
               {% for i in site.blocks %}
-                  {% if block == i.path %}
+                  {% assign block_full_path = "_blocks/" | append: block %}
+                  {% if block_full_path == i.path %}
                       {{ i | markdownify }}
                   {% endif %}
               {% endfor %}
@@ -32,7 +33,8 @@ layout: default
       <div class="post-content">
           {% for block in page.right_blocks %}
               {% for i in site.blocks %}
-                  {% if block == i.path %}
+                  {% assign block_full_path = "_blocks/" | append: block %}
+                  {% if block_full_path == i.path %}
                       {{ i | markdownify }}
                   {% endif %}
               {% endfor %}
