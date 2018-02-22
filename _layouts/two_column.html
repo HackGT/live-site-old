@@ -7,6 +7,7 @@ layout: default
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
+<<<<<<< 694c80ba2829f67d094373ea01a5f95742cb7338
                     <div class="block block-left">
                         <div class="block-header">
                             {{ i.title }}
@@ -15,6 +16,9 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
+=======
+                      {{ i | markdownify }}
+>>>>>>> No need to prepend _blocks/ for blocks to include on a two-column page
                   {% endif %}
               {% endfor %}
           {% endfor %}
@@ -26,6 +30,7 @@ layout: default
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
+<<<<<<< 694c80ba2829f67d094373ea01a5f95742cb7338
                     <div class="block block-right">
                         <div class="block-header">
                             {{ i.title }}
@@ -34,6 +39,9 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
+=======
+                      {{ i | markdownify }}
+>>>>>>> No need to prepend _blocks/ for blocks to include on a two-column page
                   {% endif %}
               {% endfor %}
           {% endfor %}
