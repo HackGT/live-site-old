@@ -25,9 +25,11 @@ twitter_username: TheHackGT
 github_username:  HackGT
 
 collections:
-    event_pages: #calling this pages causes issues
-      output: true
-      permalink: /:name/
+  event_pages:
+    output: true
+    permalink: /:name/
+  blocks:
+    output: false
 
 defaults:
     -
