@@ -27,20 +27,20 @@ github_username:  HackGT
 collections:
     event_pages: #calling this pages causes issues
       output: true
-      permalink: /:name
+      permalink: /:name/
 
 defaults:
     -
         scope:
             path: "_event_pages"
         values:
-            navpriority: 1
+            priority: 1
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  
+
 exclude:
   - Gemfile
   - Gemfile.lock

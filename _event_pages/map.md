@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Map
-permalink: /event/final_map
+permalink: /event/final_map/
 priority: 2
 js:
     - /assets/script.js

@@ -54,6 +54,7 @@
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
+    z-index: 1;
 
     label[for="nav-trigger"] {
       display: block;
@@ -62,6 +63,7 @@
       height: 36px;
       z-index: 2;
       cursor: pointer;
+      margin-bottom: 0;
     }
 
     .menu-icon {
@@ -86,6 +88,24 @@
     input:checked ~ .trigger {
       display: block;
       padding-bottom: 5px;
+      animation: slidedown .375s;
+      -webkit-animation: slidedown .375s;
+      @keyframes slidedown {
+          from {
+              opacity: 0;
+              max-height: 40px;
+              overflow: hidden;
+          }
+
+          81% {
+              opacity: 1;
+          }
+
+          to {
+              max-height: 350px;
+              overflow: visible;
+          }
+      }
     }
 
     .page-link {
