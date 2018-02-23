@@ -2,12 +2,15 @@
 layout: default
 ---
 <div class="column">
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
       <div class="post-content">
           {% for block in page.left_blocks %}
               {% for i in site.blocks %}
+                  {{ i.layout | inspect }}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
-<<<<<<< 694c80ba2829f67d094373ea01a5f95742cb7338
                     <div class="block block-left">
                         <div class="block-header">
                             {{ i.title }}
@@ -16,21 +19,17 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
-=======
-                      {{ i | markdownify }}
->>>>>>> No need to prepend _blocks/ for blocks to include on a two-column page
                   {% endif %}
               {% endfor %}
           {% endfor %}
       </div>
 </div>
 <div class="column">
-      <div class="post-content">
+    <div class="post-content">
           {% for block in page.right_blocks %}
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
-<<<<<<< 694c80ba2829f67d094373ea01a5f95742cb7338
                     <div class="block block-right">
                         <div class="block-header">
                             {{ i.title }}
@@ -39,9 +38,6 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
-=======
-                      {{ i | markdownify }}
->>>>>>> No need to prepend _blocks/ for blocks to include on a two-column page
                   {% endif %}
               {% endfor %}
           {% endfor %}
