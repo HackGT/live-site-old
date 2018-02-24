@@ -8,7 +8,6 @@ layout: default
       <div class="post-content">
           {% for block in page.left_blocks %}
               {% for i in site.blocks %}
-                  {{ i.layout | inspect }}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
                     <div class="block block-left">
