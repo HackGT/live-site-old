@@ -1,6 +1,21 @@
 @charset "utf-8";
 
+
 $table-cell-highlight-color: #daecf4;
+
+.block-header {
+    @include relative-font-size(1.625);
+    background: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.block-body {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: white;
+}
 
 .schedule {
     table {
@@ -11,7 +26,6 @@ $table-cell-highlight-color: #daecf4;
     table > tbody > tr > td:not(.schedule-day) {
         border: 0;
     }
-
 
     table > thead > tr > th,
     table > tbody > tr > td {
