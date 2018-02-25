@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% for cal in page.calendars %}
+<div class="column">
+    <div class="block">
+        <div class="block-header">
+            {{ cal.title | escape }}
+        </div>
+        <div class="block-body schedule-body">
+            <p>
+                Fetching the latest events!
+            </p>
+            <div class="schedule hidden" id="schedule-{{ forloop.index0 }}">
+                <table>
+                    <thead>
+                        <th>
+                            Event
+                        </th>
+                        <th>
+                            Start time
+                        </th>
+                        <th>
+                            End time
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% for cal in page.calendars %}
+    {% if forloop.first == true %}
+        <script type="text/javascript">
+        var apiKey = "{{ page.gcal.api_key | escape }}";
+        var startDateTime = "{{ page.gcal.start_datetime | escape }}";
+        var endDateTime = "{{ page.gcal.end_datetime | escape }}"
+        var calendars = [
+    {% endif %}
+        "{{ cal.id | escape }}",
+    {% if forloop.last == true %}
+        ];
+        </script>
+    {% endif%}
+{% endfor %}
+{% include schedule.js %}
