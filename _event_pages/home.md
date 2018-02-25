@@ -5,6 +5,5 @@ left_blocks:
     - phone_numbers.md
 right_blocks:
     - links.md
-priority: 4
 permalink: /
 ---
