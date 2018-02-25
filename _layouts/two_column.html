@@ -2,9 +2,6 @@
 layout: default
 ---
 <div class="column">
-      <header class="post-header">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-      </header>
       <div class="post-content">
           {% for block in page.left_blocks %}
               {% for i in site.blocks %}
@@ -25,22 +22,22 @@ layout: default
       </div>
 </div>
 <div class="column">
-    <div class="post-content">
-        {% for block in page.right_blocks %}
-            {% for i in site.blocks %}
-                {% assign block_full_path = "_blocks/" | append: block %}
-                {% if block_full_path == i.path %}
-                  <div class="block">
-                      <div class="block-header">
-                          {{ i.title }}
-                      </div>
-                      <div class="block-body">
-                          {{ i | markdownify }}
-                      </div>
-                  </div>
+      <div class="post-content">
+          {% for block in page.right_blocks %}
+              {% for i in site.blocks %}
+                  {% assign block_full_path = "_blocks/" | append: block %}
+                  {% if block_full_path == i.path %}
+                    <div class="block">
+                        <div class="block-header">
+                            {{ i.title }}
+                        </div>
+                        <div class="block-body">
+                            {{ i | markdownify }}
+                        </div>
+                    </div>
 
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
+                  {% endif %}
+              {% endfor %}
+          {% endfor %}
       </div>
 </div>
