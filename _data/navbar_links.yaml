@@ -3,3 +3,6 @@
   url: https://gatech.edu
 - title: Wooo
   url: https://hack.gt
+# Define additional links below
+- #title: Title that appears in navbar
+  #url: https://example.com
