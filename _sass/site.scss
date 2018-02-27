@@ -1,5 +1,43 @@
 @charset "utf-8";
 
+
+// Colors:
+// Site-Level
+$page-background-color: white;
+// To change the page font as a whole, add
+// font-family: fonts-here !important;
+// to the body block in this file
+
+// Individual Pages
+$page-title-color: #606c76;
+
+
+// Navbar
+$navbar-background-color: white;
+$navbar-text-color: black;
+
+
+// Site-Level
+body {
+    //font-family: font !important;
+    background: $page-background-color;
+}
+
+// Individual Pages
+h1.post-title {
+    color: $page-title-color;
+}
+
+// Navbar
+header.site-header {
+    background: $navbar-background-color;
+}
+
+div.wrapper > a.site-title,
+div.trigger > a.page-link {
+    color: $navbar-text-color;
+}
+
 div.container {
     padding: 0;
 }

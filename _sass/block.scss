@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+
+// Blocks
+$block-accent-color: black; //Used on the left column of two_column layout, and all schedule columns
+$block-alt-accent-color: black; //Used on the right column of the two_column layout
+$block-header-text-color: white;
+$block-border-color: black; //If you don't like the block borders, you can set this to $page-background-color to make it hidden
+$corner-border-radius: 3px;
+
+// Blocks
+.block {
+    margin-bottom: 15px;
+}
+
+.block-header {
+    @include relative-font-size(1.375);
+    background: $block-accent-color;
+    color: $block-header-text-color;
+    text-align: center;
+    border-radius: $corner-border-radius $corner-border-radius 0 0;
+}
+
+.block-body {
+    padding: 5px;
+    background-color: white;
+    border: 2px solid $block-border-color;
+    border-top: 0;
+    border-radius: 0 0 $corner-border-radius $corner-border-radius;
+}
+
+.block.block-left > .block-header {
+    background: $block-accent-color;
+}
+
+.block.block-right > .block-header {
+    background: $block-alt-accent-color;
+}

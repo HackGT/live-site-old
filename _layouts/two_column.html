@@ -7,7 +7,7 @@ layout: default
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
-                    <div class="block">
+                    <div class="block block-left">
                         <div class="block-header">
                             {{ i.title }}
                         </div>
@@ -27,7 +27,7 @@ layout: default
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
                   {% if block_full_path == i.path %}
-                    <div class="block">
+                    <div class="block block-right">
                         <div class="block-header">
                             {{ i.title }}
                         </div>

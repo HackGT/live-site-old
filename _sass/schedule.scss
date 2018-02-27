@@ -1,23 +1,5 @@
 @charset "utf-8";
 
-.block {
-    margin-bottom: 15px;
-}
-
-.block-header {
-    @include relative-font-size(1.625);
-    background: black;
-    color: white;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-}
-
-.block-body {
-    border: 2px solid black;
-    padding: 5px;
-    background-color: white;
-}
-
 .schedule {
     table {
         margin-bottom: 0;
@@ -52,7 +34,7 @@
 .schedule-day {
     @include relative-font-size(1.125);
     font-weight: bold;
-    border-left: 4px solid black;
+    border-left: 4px solid $block-accent-color;
 }
 
 .old {
