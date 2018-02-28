@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# HACKGPROJECT VERSION: c42a982bc260eef72532e8794783ecc06a89c5f5
+# HACKGPROJECT VERSION: 52666d1e1d1eb7924f50a4f4c03201a2803b13ac
 set -euo pipefail
 PROJECT_TYPE="deployment"
 ORG_NAME_CASE_PRESERVE="HackGT"
@@ -216,3 +216,4 @@ case "$PROJECT_TYPE" in
         echo "Unknown project type!"
         exit 1
 esac
+
