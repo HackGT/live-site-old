@@ -45,9 +45,7 @@
 
 
             var events = result.items;
-            console.log(result)
             var schedule = $(scheduleId + " > table > tbody");
-            console.log(scheduleId + " > table > tbody");
             var startTime;
             var endTime;
             var endTimeAsDate;
@@ -60,8 +58,6 @@
                 + DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
 
             var currentDay;
-            console.log(schedule);
-            console.log(events.length);
             var eventValues;
             for (var i = 0; i < events.length; i++) {
                 if (i > 0) {
@@ -79,7 +75,6 @@
                 endTime = prettyTime(endTimeAsDate);
                 location = events[i].location || "";
                 oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
-                console.log("current - end",currentTime - endTimeAsDate > 0 );
                 schedule.append("<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
                 // schedule.append("<tr" + oldClass + "><td>" + events[i].summary + "</td><td>" + startTime + "</td><td>" + endTime + "</td><td> " + location + "</td></tr>");
                 eventValues = [
