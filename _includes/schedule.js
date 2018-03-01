@@ -94,6 +94,10 @@
         } //END else
     }
 
+    function scheduleError(error) {
+        var scheduleId = "#schedule-" + this.num;
+        $(scheduleId).prev().text("The schedule couldn't be retrieved.  Please check your internet connection."     );
+    }
 
     var url;
     var calId;
@@ -107,7 +111,8 @@
             "url": url,
             type: "GET",
             "num": i
-        }).done(success);
+        }).done(success)
+        .fail(scheduleError);
     }
 
     //TODO: error handling
