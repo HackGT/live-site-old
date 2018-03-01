@@ -99,11 +99,17 @@
         $(scheduleId).prev().text("The schedule couldn't be retrieved.  Please check your internet connection."     );
     }
 
+    // Show a warning in the console if endDateTime comes before startDateTime
+    if (new Date(endDateTime) - new Date(startDateTime) < 0) {
+        console.warn("schedule.js: No calendar events will be fetched!  The date of the last calendar event to include in the schedule (endDateTime) is earlier than the date of the first calendar event to include in the schedule.  The current start date is " + new Date(startDateTime) + ".  The current end date is " + new Date(endDateTime) + ".");
+    }
+
     var url;
     var calId;
 
     for (var i = 0; i < calendars.length; i++) {
         calId = calendars[i];
+
         url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
             + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime + "&timeMax=" + endDateTime;
 
@@ -114,8 +120,5 @@
         }).done(success)
         .fail(scheduleError);
     }
-
-    //TODO: error handling
-    //TODO: max time later than min time (perhaps console.warn? "This page is configured wrong" on the schedule page: ..." or figure out how to make the jekyll build fail)
 })();
 </script>
