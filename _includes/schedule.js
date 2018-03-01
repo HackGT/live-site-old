@@ -62,6 +62,7 @@
             var currentDay;
             console.log(schedule);
             console.log(events.length);
+            var eventValues;
             for (var i = 0; i < events.length; i++) {
                 if (i > 0) {
                     currentDay = new Date(events[i].start.dateTime).getDay();
@@ -79,8 +80,18 @@
                 location = events[i].location || "";
                 oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
                 console.log("current - end",currentTime - endTimeAsDate > 0 );
-                schedule.append("<tr" + oldClass + "><td>" + events[i].summary + "</td><td>" + startTime + "</td><td>" + endTime + "</td><td> " + location + "</td></tr>");
+                schedule.append("<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
+                // schedule.append("<tr" + oldClass + "><td>" + events[i].summary + "</td><td>" + startTime + "</td><td>" + endTime + "</td><td> " + location + "</td></tr>");
+                eventValues = [
+                    events[i].summary,
+                    startTime,
+                    endTime,
+                    location
+                ];
 
+                $(scheduleId + ' > table > tbody > tr:last-child > td').each(function(index) {
+                    $(this).text(eventValues[index]);
+                });
             }
 
             $(scheduleId).prev().addClass("hidden");
