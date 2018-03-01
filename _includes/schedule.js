@@ -106,9 +106,8 @@
         $.ajax({
             "url": url,
             type: "GET",
-            "num": i,
-            "success": success
-        });
+            "num": i
+        }).done(success);
     }
 
     //TODO: error handling
