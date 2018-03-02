@@ -30,7 +30,6 @@
             return new Date(a.start.dateTime) - new Date(b.start.dateTime)
                 || new Date(a.end.dateTime) - new Date(b.end.dateTime)
                 || a.summary > b.summary;
-            //return 1;
         });
 
         var DAYS_OF_WEEK = [
