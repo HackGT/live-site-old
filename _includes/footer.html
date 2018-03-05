@@ -1,23 +1,19 @@
-<style>
-    #right {
-        float: right;
-        font-size: 11px;
-        margin-top: 10px;
-        text-align: right;
-    }
-</style>
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
 
-    <div id="left" class="footer-col-wrapper">
+    <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-          {% include social.html %}
-          {% if site.email %}
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
+              {% include social.html %}
+        <ul class="contact-list">
+          <li>
+              {% if site.email %}
+              <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+              {% endif %}
+          </li>
+        </ul>
         <ul class="contact-list">
           <li class="p-name">
               {% if site.author %}
@@ -26,13 +22,14 @@
               {{ site.title | escape }}
             {% endif %}
             </li>
-
         </ul>
       </div>
 
-      <div id="right" class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-          <p><a href = "https://docs.google.com/forms/d/e/1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA/viewform?entry.1073143569=https://live.hack.gt/schedule&entry.267778992=Schedule&entry.2080441427&entry.1331555321&entry.278526493">{{ site.feedback | escape}}</a></p>
+      <div class="footer-col footer-col-3">
+        <p><font size = 1px>{{ site.description | escape }}</font></p>
+        {% if site.url %}
+        <p><a href = "{{ site.url| cgi_escape | escape }}">{{ site.feedback | escape}}</a></p>
+        {% endif %}
       </div>
     </div>
 
