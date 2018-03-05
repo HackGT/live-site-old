@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="assets/manifest.json">
+    <link rel="manifest" href="/manifest.json">
     {% seo %}
 
     {% feed_meta %}
@@ -17,4 +17,18 @@
         {% for script in page.js %}<script src="{{ script }}"></script>
         {% endfor %}
     {% endif %}
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+     var OneSignal = window.OneSignal || [];
+     OneSignal.push(function() {
+       OneSignal.init({
+         appId: "{{ site.oneSignalAppId }}",
+         autoRegister: false,
+         notifyButton: {
+           enable: true,
+         },
+       });
+     });
+    </script>
 </head>
