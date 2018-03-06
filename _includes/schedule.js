@@ -19,11 +19,13 @@
         return hours + ":" + minutes + " " + ampm;
     }
 
-    function success(result) {
-        var scheduleId = "#schedule-" + this.num;
+    function success(data) {
+        var result = data.apiResponse;
+        var scheduleId = "#schedule-" + data.num;
 
         if (result.items.length == 0) {
-            $(scheduleId).prev().text("No events found");
+            document.querySelector(scheduleId)
+                .previousElementSibling.textContent = "No events found";
             return false;
         }
         result.items.sort(function(a,b) {
@@ -43,12 +45,11 @@
         ];
 
         var events = result.items;
-        var schedule = $(scheduleId + " > table > tbody");
+        var schedule = document.querySelector(scheduleId + " > table > tbody");
         var currentTime = new Date();
 
         var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
-        schedule.append('<tr><td class="schedule-day" colspan="4">'
-            + DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+        schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
 
         var eventValues;
         for (var i = 0; i < events.length; i++) {
@@ -56,7 +57,7 @@
                 var currentDay = new Date(events[i].start.dateTime).getDay();
 
                 if (currentDay != prevCurrentDay) {
-                    schedule.append('<tr><td class="schedule-day" colspan="4">'
+                    schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'
                         + DAYS_OF_WEEK[currentDay] + '</td></tr>');
                 }
                 prevCurrentDay = currentDay;
@@ -67,7 +68,7 @@
             var endTime = prettyTime(endTimeAsDate);
             var location = events[i].location || "";
             var oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
-            schedule.append("<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
+            schedule.insertAdjacentHTML('beforeend',"<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
 
             eventValues = [
                 events[i].summary,
@@ -75,19 +76,31 @@
                 endTime,
                 location
             ];
-
-            $(scheduleId + ' > table > tbody > tr:last-child > td').each(function(index) {
-                $(this).text(eventValues[index]);
+            document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td').forEach(function(item, index) {
+                item.textContent = eventValues[index];
             });
         }
 
-        $(scheduleId).prev().addClass("hidden");
-        $(scheduleId).removeClass("hidden");
+        var scheduleBlockBody = document.querySelector(scheduleId);
+        var prevScheduleBlockBody = scheduleBlockBody.previousElementSibling;
+
+        if (prevScheduleBlockBody.classList) {
+            prevScheduleBlockBody.classList.add("hidden");
+        } else {
+            prevScheduleBlockBody.className += " hidden";
+        }
+
+        if (scheduleBlockBody.classList) {
+            scheduleBlockBody.classList.remove("hidden");
+        } else {
+            scheduleBlockBody.className = scheduleBlockBody.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
     }
 
-    function scheduleError(error) {
-        var scheduleId = "#schedule-" + this.num;
-        $(scheduleId).prev().text("The schedule couldn't be retrieved.  Please check your internet connection.");
+    function scheduleError(i) {
+        var scheduleId = "#schedule-" + i;
+        var errorElem = document.querySelector(scheduleId);
+        errorElem.previousElementSibling.textContent = "The schedule couldn't be retrieved.  Please check your internet connection.";
     }
 
     // Show a warning in the console if endDateTime comes before startDateTime
@@ -97,19 +110,25 @@
         + ".  The current end date is " + new Date(endDateTime) + ".");
     }
 
+    function getCalendarData(url, i) {
+        fetch(url).then(function (result) {
+            return result.json();
+        }).then(function(data) {
+            success({ apiResponse: data,
+                    num: i });
+        })
+        .catch(function () {
+            scheduleError(i);
+        });
+    }
+
     for (var i = 0; i < calendars.length; i++) {
         var calId = calendars[i];
-
         var url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
             + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime
             + "&timeMax=" + endDateTime;
 
-        $.ajax({
-            "url": url,
-            type: "GET",
-            "num": i
-        }).done(success)
-        .fail(scheduleError);
+        getCalendarData(url, i);
     }
 })();
 </script>
