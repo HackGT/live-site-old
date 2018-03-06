@@ -31,5 +31,11 @@
     </div>
 
   </div>
-
 </footer>
+{% if page.layout == "schedule" %}
+    {% include schedule.js %}
+{% endif %}
+{% if page.js %}
+    {% for script in page.js %}<script src="{{ script }}"></script>
+    {% endfor %}
+{% endif %}
