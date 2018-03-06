@@ -3,9 +3,9 @@ calendars:
     -
       title: Event
       id: 7amn78g6pub8lei43h9eoan0g0@group.calendar.google.com
-    #-
-      #title: Tech Talks and Workshops
-      #id: obbt22hf4ul15hqj3kk4bm6ac0@group.calendar.google.com
+    -
+      title: Workshops
+      id: aorar45f4a2hvl59lsqoevgu9o@group.calendar.google.com
 gcal:
   # All calendars on the same page must use the same API key and have the same start/end dates/times
   api_key: AIzaSyCz8DCKXJ-vR2oi1pOMp-Y0InUWpbv9FJk
