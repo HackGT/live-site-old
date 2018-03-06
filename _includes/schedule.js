@@ -84,17 +84,8 @@
         var scheduleBlockBody = document.querySelector(scheduleId);
         var prevScheduleBlockBody = scheduleBlockBody.previousElementSibling;
 
-        if (prevScheduleBlockBody.classList) {
-            prevScheduleBlockBody.classList.add("hidden");
-        } else {
-            prevScheduleBlockBody.className += " hidden";
-        }
-
-        if (scheduleBlockBody.classList) {
-            scheduleBlockBody.classList.remove("hidden");
-        } else {
-            scheduleBlockBody.className = scheduleBlockBody.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        }
+        prevScheduleBlockBody.classList.add("hidden");
+        scheduleBlockBody.classList.remove("hidden");
     }
 
     function scheduleError(i) {
