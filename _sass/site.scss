@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+
+// Colors:
+// Site-Level
+$page-background-color: #ecf0f1;
+// To change the page font as a whole, add
+// font-family: fonts-here !important;
+// to the body block in this file
+
+// Individual Pages
+$page-title-color: #606c76;
+
+
+// Navbar
+$navbar-background-color: #6a8f95;
+$navbar-text-color: white;
+
+@font-face {
+   font-family: 'FuturaPT';
+   src: url('/assets/fonts/FuturaPTMedium.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/assets/fonts/ProximaNovaRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/assets/fonts/ProximaNovaBold.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/assets/fonts/ProximaNovaExtrabold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Site-Level
+body {
+    font-family: 'FuturaPT' !important;
+    background: $page-background-color;
+    h1, h2, h3, h4, h5, h6,
+    div.wrapper > a.site-title,
+    div.block-header {
+        font-family: 'ProximaNova';
+    }
+}
+
+// Individual Pages
+h1.post-title {
+    color: $page-title-color;
+}
+
+// Navbar
+header.site-header {
+    background: $navbar-background-color;
+}
+
+div.wrapper > a.site-title,
+div.trigger > a.page-link {
+    color: $navbar-text-color;
+}
+
+div.trigger > a.page-link {
+    @include relative-font-size(1.125);
+}
+
+div.container {
+    padding: 0;
+}

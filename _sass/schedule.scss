@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+$table-cell-highlight-color: #daecf4;
+
+.schedule {
+    table {
+        margin-bottom: 0;
+    }
+
+    table > thead > tr > th,
+    table > tbody > tr > td:not(.schedule-day) {
+        border: 0;
+    }
+
+
+    table > thead > tr > th,
+    table > tbody > tr > td {
+        padding: 3px;
+    }
+
+    table > tbody > tr:nth-child(odd) > td {
+        background: $table-cell-highlight-color;
+    }
+
+
+    table > tbody > tr > td.schedule-day {
+        background: #c8e5f2;
+    }
+
+    td {
+        min-width: 75px;
+    }
+
+    td:last-child {
+        min-width: 100px;
+    }
+}
+
+.schedule-body {
+    padding: 0;
+    border: 0;
+}
+
+.schedule-day {
+    @include relative-font-size(1.125);
+    font-weight: bold;
+    border-left: 4px solid $block-accent-color;
+}
+
+.old {
+    color: #9E9E9E;
+}

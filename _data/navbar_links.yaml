@@ -1,5 +1,8 @@
 #These links will appear in the order they're defined here
 - title: Georgia Tech
   url: https://gatech.edu
-- title: Wooo
+- title: HackGT
   url: https://hack.gt
+# Define additional links below
+- #title: Title that appears in navbar
+  #url: https://example.com
