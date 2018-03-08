@@ -1,19 +1,19 @@
 {
-  "short_name": "HackGT",
-  "name": "HackGT Live",
+  "short_name": "BuildGT",
+  "name": "BuildGT Live",
   "icons": [
     {
-      "src": "launcher-icon-1x.png",
+      "src": "/assets/launcher-icon-1x.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "launcher-icon-2x.png",
+      "src": "/assets/launcher-icon-2x.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "launcher-icon-4x.png",
+      "src": "/assets/launcher-icon-4x.png",
       "type": "image/png",
       "sizes": "192x192"
     }
@@ -21,4 +21,7 @@
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
+  "background_color": "#ecf0f1",
+  "theme_color": "#6a8f95",
+  "display": "fullscreen"
 }
