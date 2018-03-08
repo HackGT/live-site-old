@@ -8,28 +8,19 @@
       <div class="footer-col footer-col-1">
               {% include social.html %}
         <ul class="contact-list">
-          <li>
-              {% if site.email %}
-              <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-              {% endif %}
-          </li>
-        </ul>
-        <ul class="contact-list">
           <li class="p-name">
               {% if site.author %}
               {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
             {% endif %}
             </li>
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p><font size = 1px>{{ site.description | escape }}</font></p>
         {% if site.url %}
         <p><a href = "{{ site.url| cgi_escape | escape }}">{{ site.feedback | escape}}</a></p>
         {% endif %}
+        <p>Made with <3 by the HackGTeam</p>
       </div>
     </div>
 
