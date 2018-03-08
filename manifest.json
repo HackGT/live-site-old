@@ -21,4 +21,7 @@
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
+  "background_color": "#ecf0f1",
+  "theme_color": "#6a8f95",
+  "display": "fullscreen"
 }
