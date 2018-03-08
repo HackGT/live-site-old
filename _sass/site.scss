@@ -12,8 +12,13 @@ $page-background-color: #ecf0f1;
 $page-title-color: #606c76;
 
 
+
 // Navbar
+$navbar-menu-icon-dark: #424242;
+$navbar-menu-icon-light: white;
+
 $navbar-background-color: #6a8f95;
+$navbar-menu-icon-color: $navbar-menu-icon-light;
 $navbar-text-color: white;
 
 @font-face {
@@ -50,6 +55,14 @@ body {
     div.block-header {
         font-family: 'ProximaNova';
     }
+}
+
+nav.site-nav {
+    background: $navbar-background-color;
+}
+
+span.menu-icon > svg > path {
+    fill: $navbar-menu-icon-color !important;
 }
 
 // Individual Pages
