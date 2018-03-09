@@ -45,3 +45,7 @@ server/config/questions\.schema\.d\.ts
 .travis.d/.bundle
 .travis.d/Gemfile.lock
 .travis.d/vendor
+
+# JetBrains
+.idea/
+.idea/inspectionProfiles/
