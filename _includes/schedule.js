@@ -5,7 +5,7 @@
     function prettyTime(dateObj) {
         var hours = dateObj.getHours();
         var minutes = dateObj.getMinutes();
-        var ampm = (hours > 12) ? "PM" : "AM";
+        var ampm = (hours >= 12) ? "PM" : "AM";
         if (hours == 0) {
             hours = 12;
         } else if (hours > 12) {
