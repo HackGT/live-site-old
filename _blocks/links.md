@@ -1,18 +1,11 @@
 ---
-layout: page
-title: About
-permalink: /about/
+title: Checking Out Hardware
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+We are providing lots of hardware, including Arduinos, Oculus Rifts, Raspberry Pis, and more! To request hardware,
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+1. Make an account on [hardware.hack.gt](https://hardware.hack.gt/).
+2. Once you've logged in, click on your username in the upper right hand corner of the screen. Fill in your name, hacking location, and phone number on this page.
+3. Find the hardware you want to request on the home page, and click the "Request Now" button.
+4. Once we approve your request, you'll get a text from the HackGT team when your items are ready to be picked up. 
+5. Pick up your items at the HackGT hardware checkout desk. Make sure to bring an ID with you! 
