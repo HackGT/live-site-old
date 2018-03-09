@@ -1,0 +1,9 @@
+- name: Facebook
+  profile_url: https://www.facebook.com/HackGT
+- name: GitHub
+  profile_url: https://www.github.com/HackGT
+- name: Twitter
+  profile_url: https://www.twitter.com/TheHackGT
+
+# The icon that shows up is based on the name you list above
+# Possibilties include: Dribbble, Facebook, Flickr, GitHub, Instagram, LinkedIn, Pinterest, Twitter, YouTube, Google+
