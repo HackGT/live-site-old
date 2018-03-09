@@ -16,7 +16,7 @@
 title: BuildGT
 email: hello@hack.gt
 description: >- # this means to ignore newlines until "baseurl:"
-  Twelve hour hardware hackathon brought to you by HackGT and the Invention Studio.
+  Twelve-hour hardware hackathon brought to you by HackGT and the Invention Studio
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://live.build.hack.gt
 twitter_username: TheHackGT
