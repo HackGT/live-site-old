@@ -2,8 +2,10 @@
 layout: two_column
 left_blocks:
     - info.md
-    - phone_numbers.md
+    - submission.md
+
 right_blocks:
-    - links.md
+    - hardware.md
+    - rpi.md
 permalink: /
 ---
