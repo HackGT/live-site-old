@@ -3,7 +3,7 @@
 
 // Colors:
 // Site-Level
-$page-background-color: #ecf0f1;
+$page-background-color: #e0e0e0;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
@@ -11,50 +11,25 @@ $page-background-color: #ecf0f1;
 // Individual Pages
 $page-title-color: #606c76;
 
-
-
 // Navbar
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #6a8f95;
-$navbar-menu-icon-color: $navbar-menu-icon-light;
-$navbar-text-color: white;
-
-@font-face {
-   font-family: 'FuturaPT';
-   src: url('/assets/fonts/FuturaPTMedium.otf') format('opentype');
-   font-weight: normal;
-   font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova';
-    src: url('/assets/fonts/ProximaNovaRegular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova';
-    src: url('/assets/fonts/ProximaNovaBold.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ProximaNova';
-    src: url('/assets/fonts/ProximaNovaExtrabold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}
+$navbar-background-color: white;
+$navbar-menu-icon-color: $navbar-menu-icon-dark;
+$navbar-text-color: black;
 
 // Site-Level
 body {
-    font-family: 'FuturaPT' !important;
+    //Use the CSS property below to set the site body font
+    //font-family: custom-font-here !important;
     background: $page-background-color;
-    h1, h2, h3, h4, h5, h6,
+    // Uncomment the block below and change the font to set the site header font
+    /*h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
         font-family: 'ProximaNova';
-    }
+    }*/
 }
 
 nav.site-nav {
