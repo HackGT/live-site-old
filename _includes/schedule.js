@@ -64,8 +64,14 @@
             }
 
             var startTime = prettyTime(new Date(events[i].start.dateTime));
-            var endTimeAsDate = new Date(events[i].end.dateTime)
-            var endTime = prettyTime(endTimeAsDate);
+            var endTime = prettyTime(new Date(events[i].end.dateTime));
+
+            // It looks weird if the start time and end time for an event are
+            // the same, so just show the start time for events that are
+            // clearly meant to just mark an important time (such as a deadline)
+            if (endTime == startTime) {
+                endTime = "";
+            }
             var location = events[i].location || "";
             var oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
             schedule.insertAdjacentHTML('beforeend',"<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
