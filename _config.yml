@@ -1,15 +1,15 @@
 # This file defines some parameters that will affect the live site as a whole.
-title: Catalyst  
+title: Catalyst
 description: >- # >- means ignore newlines until "baseurl:"
-  Write an awesome description for your live site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results).
+  Catalyst is a free, 12-hour event held on Saturday April 7th from 9AM to 9PM,
+  where metro Atlanta high school students will explore technology and learn
+  from mentors at Georgia Tech and our sponsors.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
-url: # Your site's domain, e.g. everything up and including to the .com
+url: live.catalyst.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
-oneSignalAppId: 412f86d5-9c3d-4f7c-aa7b-d2a50025b8c7
+oneSignalAppId: 571e8f76-1234-41fe-a5fb-c8abb8dac211
 
 
 # Hi!  There's a lot of interesting stuff under me, but if you touch it, you might break something!  Please don't edit anything below this line unless you know what you're doing!
