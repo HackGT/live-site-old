@@ -1,10 +1,16 @@
 @charset "utf-8";
 
-$table-cell-highlight-color: #daecf4;
+$table-cell-highlight-color: #e3e3e3;
+$day-highlight-color: #c8e5f2;
 
 .schedule {
     table {
         margin-bottom: 0;
+    }
+
+    table > thead > tr > th {
+        background: #b6d2e3;
+        border: 0;
     }
 
     table > thead > tr > th,
@@ -24,11 +30,12 @@ $table-cell-highlight-color: #daecf4;
 
 
     table > tbody > tr > td.schedule-day {
-        background: #c8e5f2;
+        background: $day-highlight-color;
     }
 
     td {
         min-width: 75px;
+        color: #2d2d36;
     }
 
     td:last-child {
@@ -47,6 +54,6 @@ $table-cell-highlight-color: #daecf4;
     border-left: 4px solid $block-accent-color;
 }
 
-.old {
-    color: #9E9E9E;
+table > tbody > tr.old > td {
+    color: #969696;
 }
