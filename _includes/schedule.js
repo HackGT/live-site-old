@@ -19,6 +19,17 @@
         return hours + ":" + minutes + " " + ampm;
     }
 
+    function containsMultipleDays(events) {
+        var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
+        for (var i = 1; i < events.length; i++) {
+            var currentDay = new Date(events[i].start.dateTime).getDay();
+            if (currentDay != prevCurrentDay) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function success(data) {
         var result = data.apiResponse;
         var scheduleId = "#schedule-" + data.num;
@@ -48,19 +59,26 @@
         var schedule = document.querySelector(scheduleId + " > table > tbody");
         var currentTime = new Date();
 
-        var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
-        schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+        var showDayHeaders = containsMultipleDays(events);
+
+        if (showDayHeaders) {
+
+            var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
+            schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+        }
 
         var eventValues;
         for (var i = 0; i < events.length; i++) {
             if (i > 0) {
-                var currentDay = new Date(events[i].start.dateTime).getDay();
+                if (showDayHeaders) {
+                    var currentDay = new Date(events[i].start.dateTime).getDay();
 
-                if (currentDay != prevCurrentDay) {
-                    schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'
-                        + DAYS_OF_WEEK[currentDay] + '</td></tr>');
+                    if (currentDay != prevCurrentDay) {
+                        schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'
+                            + DAYS_OF_WEEK[currentDay] + '</td></tr>');
+                    }
+                    prevCurrentDay = currentDay;
                 }
-                prevCurrentDay = currentDay;
             }
 
             var startTime = prettyTime(new Date(events[i].start.dateTime));
@@ -116,6 +134,7 @@
                     num: i });
         })
         .catch(function (e) {
+            console.error(e);
             scheduleError(i);
         });
     }
