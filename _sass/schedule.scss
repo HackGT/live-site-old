@@ -28,6 +28,10 @@ $day-highlight-color: #c8e5f2;
         background: $table-cell-highlight-color;
     }
 
+    table > tbody > tr,
+    table > thead > tr {
+        border: 0;
+    }
 
     table > tbody > tr > td.schedule-day {
         background: $day-highlight-color;
