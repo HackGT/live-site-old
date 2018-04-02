@@ -7,4 +7,5 @@ left_blocks:
 right_blocks:
     - howto1.md
 permalink: /
+priority: 3
 ---
