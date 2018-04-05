@@ -4,4 +4,7 @@ title: Hardware Track
 permalink: /tracks/hardware/
 ---
 
-All about the hardware track!
+### About
+For the hardware track, you'll be creating your own projects with circuit components! Projects include an electronic piano and a speaker.
+
+### Resources
