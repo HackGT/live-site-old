@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Hardware Track
-permalink: /tracks/hardware/
 ---
 
 ### About
