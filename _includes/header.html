@@ -10,7 +10,7 @@
 
     {% endcomment %}
 
-    {% assign sorted_groups = site.event_pages | group_by: "priority" | sort: "name" | reverse %}
+    {% assign sorted_groups = site.event_pages | sort: "title" | group_by: "priority" | sort: "name" | reverse %}
 
     {% assign sorted_links = site.data.navbar_links %}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
