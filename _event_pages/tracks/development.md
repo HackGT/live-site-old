@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Development Track
-permalink: /tracks/webdev/
 ---
 
 ### About
