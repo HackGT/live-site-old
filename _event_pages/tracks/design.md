@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Design Track
-permalink: /tracks/design/
 ---
 
 ### About
