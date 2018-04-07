@@ -5,10 +5,11 @@ description: >- # >- means ignore newlines until "baseurl:"
   where metro Atlanta high school students will explore technology and learn
   from mentors at Georgia Tech and our sponsors.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
-url: live.catalyst.hack.gt # Your site's domain, e.g. everything up and including to the .com
+url: https://live.catalyst.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
+enableOneSignal: false
 oneSignalAppId: 571e8f76-1234-41fe-a5fb-c8abb8dac211
 
 
