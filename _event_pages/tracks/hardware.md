@@ -8,3 +8,4 @@ For the hardware track, you'll be creating your own projects with circuit compon
 
 ### Resources
 * [Curriculum](https://docs.google.com/presentation/d/1XauFxKV2pV97SBV7o-i2KxUNTBTSbhp6SG4sL1Z9eTo/edit?usp=sharing){:target="_blank"}
+* [Circuits Projects](https://docs.google.com/presentation/d/1qxsJFk97psouseVBb3gx2rtroRCRD3YfqBIiC0VIWzg/edit?usp=drivesdk){:target="_blank"}
