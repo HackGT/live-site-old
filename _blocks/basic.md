@@ -12,3 +12,6 @@ Hello! We are excited to welcome you to Catalyst 2018! Here's some important inf
 For internet access, connect to the `GTvisitor` network. Here are the necessary credentials:
 * Event code: `catalyst`
 * Password: `5D645`
+
+#### Slides
+* [Opening Ceremonies](https://docs.google.com/presentation/d/1dbxrURuA6FzwktI7qLJHOfDqZ6JuR40ei-TbhkOuS1o/edit?usp=sharing)
