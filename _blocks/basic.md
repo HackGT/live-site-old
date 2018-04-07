@@ -15,3 +15,6 @@ For internet access, connect to the `GTvisitor` network. Here are the necessary 
 
 #### Slides
 * [Opening Ceremonies](https://docs.google.com/presentation/d/1dbxrURuA6FzwktI7qLJHOfDqZ6JuR40ei-TbhkOuS1o/edit?usp=sharing)
+
+### Post Event Survey
+* [Take the event survey!](https://goo.gl/forms/qi9pskUzMk3Rsw4i2)
