@@ -1,7 +1,7 @@
 # This file defines some parameters that will affect the live site as a whole.
 title: Catalyst
 description: >- # >- means ignore newlines until "baseurl:"
-  Catalyst is a free, 12-hour event held on Saturday April 7th from 9AM to 9PM,
+  Catalyst is a free, 12-hour event held on Saturday, April 7th from 9AM to 9PM,
   where metro Atlanta high school students will explore technology and learn
   from mentors at Georgia Tech and our sponsors.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
