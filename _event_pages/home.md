@@ -1,9 +1,10 @@
 ---
 layout: two_column
 left_blocks:
-    - info.md
+    - delete_me.md
+    - links.md
     - phone_numbers.md
 right_blocks:
-    - links.md
+    - howto1.md
 permalink: /
 ---

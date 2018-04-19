@@ -66,6 +66,13 @@
             var startTime = prettyTime(new Date(events[i].start.dateTime));
             var endTimeAsDate = new Date(events[i].end.dateTime)
             var endTime = prettyTime(endTimeAsDate);
+
+            // It looks weird if the start time and end time for an event are
+            // the same, so just show the start time for events that are
+            // clearly meant to just mark an important time (such as a deadline)
+            if (endTime == startTime) {
+                endTime = "";
+            }
             var location = events[i].location || "";
             var oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
             schedule.insertAdjacentHTML('beforeend',"<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
@@ -91,7 +98,7 @@
     function scheduleError(i) {
         var scheduleId = "#schedule-" + i;
         var errorElem = document.querySelector(scheduleId);
-        errorElem.previousElementSibling.textContent = "The schedule couldn't be retrieved.  Please check your internet connection.";
+        errorElem.previousElementSibling.textContent = "The schedule couldn't be retrieved.  Please check your internet connection."
     }
 
     // Show a warning in the console if endDateTime comes before startDateTime
@@ -108,7 +115,7 @@
             success({ apiResponse: data,
                     num: i });
         })
-        .catch(function () {
+        .catch(function (e) {
             scheduleError(i);
         });
     }
