@@ -2,10 +2,12 @@
 
 
 // Blocks
-$block-accent-color: black; //Used on the left column of two_column layout, and all schedule columns
-$block-alt-accent-color: black; //Used on the right column of the two_column layout
-$block-header-text-color: white;
+$block-accent-color: #4ea1d3; //Used on the left column of two_column layout, and all schedule columns
+$block-alt-accent-color: #4ea1d3; //Used on the right column of the two_column layout
+$block-header-text-color: #d8e9ef;
 $corner-border-radius: 3px;
+$block-body-bg-color: #fafdff;
+$block-body-text-color: #454552;
 
 // Blocks
 .block {
@@ -22,7 +24,8 @@ $corner-border-radius: 3px;
 
 .block-body {
     padding: 5px;
-    background-color: white;
+    background-color: $block-body-bg-color;
+    color: $block-body-text-color;
 }
 
 .block.block-left > .block-header {

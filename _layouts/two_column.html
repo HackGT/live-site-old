@@ -15,14 +15,13 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
-
                   {% endif %}
               {% endfor %}
           {% endfor %}
       </div>
 </div>
 <div class="column">
-      <div class="post-content">
+    <div class="post-content">
           {% for block in page.right_blocks %}
               {% for i in site.blocks %}
                   {% assign block_full_path = "_blocks/" | append: block %}
@@ -35,7 +34,6 @@ layout: default
                             {{ i | markdownify }}
                         </div>
                     </div>
-
                   {% endif %}
               {% endfor %}
           {% endfor %}

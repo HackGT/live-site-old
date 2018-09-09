@@ -22,6 +22,13 @@
   }
 }
 
+@include media-query($on-palm) {
+    div.row {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+}
+
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -53,6 +60,8 @@
     border-radius: 5px;
     text-align: right;
     z-index: 1;
+
+
 
     label[for="nav-trigger"] {
       display: block;
