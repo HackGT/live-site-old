@@ -1,6 +1,6 @@
 {
-  "short_name": "BuildGT",
-  "name": "BuildGT Live",
+  "short_name": "Catalyst",
+  "name": "Catalyst Live",
   "icons": [
     {
       "src": "/assets/launcher-icon-1x.png",
@@ -21,7 +21,7 @@
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
-  "background_color": "#ecf0f1",
-  "theme_color": "#6a8f95",
+  "background_color": "#d0e6ef",
+  "theme_color": "#454566",
   "display": "fullscreen"
 }

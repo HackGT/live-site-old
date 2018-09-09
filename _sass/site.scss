@@ -3,33 +3,44 @@
 
 // Colors:
 // Site-Level
-$page-background-color: #e0e0e0;
+$page-background-color: #d0e6ef;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
 
 // Individual Pages
-$page-title-color: #606c76;
+$page-title-color: #454552;
 
 // Navbar
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: white;
-$navbar-menu-icon-color: $navbar-menu-icon-dark;
-$navbar-text-color: black;
+$navbar-background-color: #454566;
+$navbar-menu-icon-color: $navbar-menu-icon-light;
+$navbar-text-color: #fff0f2;
 
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
-    //font-family: custom-font-here !important;
+    font-family: 'Raleway', sans-serif !important;
     background: $page-background-color;
+    color: $page-title-color !important;
     // Uncomment the block below and change the font to set the site header font
     /*h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
         font-family: 'ProximaNova';
     }*/
+}
+
+a.site-title {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+}
+
+a.site-title:hover {
+    text-decoration: none;
 }
 
 nav.site-nav {

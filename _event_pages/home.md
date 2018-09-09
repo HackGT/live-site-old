@@ -1,10 +1,9 @@
 ---
 layout: two_column
 left_blocks:
-    - delete_me.md
-    - links.md
-    - phone_numbers.md
+    - basic.md
 right_blocks:
-    - howto1.md
+    - photobooth.md
 permalink: /
+priority: 3
 ---
