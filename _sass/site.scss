@@ -74,7 +74,15 @@ div.container {
     padding: 0;
 }
 
-// The below is adapted from http://rianrietveld.com/2015/04/04/the-screen-reader-text-class-why-and-how/
+.material-icons {
+  vertical-align: middle;
+}
+
+table {
+  margin: 0 -1px;
+}
+
+// The style below is adapted from http://rianrietveld.com/2015/04/04/the-screen-reader-text-class-why-and-how/
 .sr-only {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);

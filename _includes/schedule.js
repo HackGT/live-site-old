@@ -64,17 +64,20 @@
         if (showDayHeaders) {
 
             var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
-            schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+            schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0"><td class="schedule-day" colspan="4"><i class="material-icons">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
         }
 
+        var day = 0;
         var eventValues;
         for (var i = 0; i < events.length; i++) {
             if (i > 0) {
                 if (showDayHeaders) {
+
                     var currentDay = new Date(events[i].start.dateTime).getDay();
 
                     if (currentDay != prevCurrentDay) {
-                        schedule.insertAdjacentHTML('beforeend','<tr><td class="schedule-day" colspan="4">'
+                        day++;
+                        schedule.insertAdjacentHTML('beforeend','<tr class="header-day-' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons">keyboard_arrow_down</i>'
                             + DAYS_OF_WEEK[currentDay] + '</td></tr>');
                     }
                     prevCurrentDay = currentDay;
@@ -92,8 +95,8 @@
                 endTime = "";
             }
             var location = events[i].location || "";
-            var oldClass = (currentTime - endTimeAsDate > 0) ? ' class="old"' : ""; //event already ended
-            schedule.insertAdjacentHTML('beforeend',"<tr" + oldClass + "><td></td><td></td><td></td><td></td></tr>");
+            var oldClass = (currentTime - endTimeAsDate > 0) ? ' old' : ""; //event already ended
+            schedule.insertAdjacentHTML('beforeend','<tr class="schedule-day-'+ day + oldClass + '"><td></td><td></td><td></td><td></td></tr>');
 
             eventValues = [
                 events[i].summary,
@@ -144,6 +147,8 @@
         var url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
             + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime
             + "&timeMax=" + endDateTime;
+
+        console.log(url);
 
         getCalendarData(url, i);
     }
