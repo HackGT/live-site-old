@@ -10,8 +10,8 @@
 
         console.log('tr#header-day-' + day + ' > td > i');
         var caret = document.querySelector('tr#header-day-' + day + ' > td > i');
-        var currentCaret = caret.textContent;
-        caret.textContent = currentCaret === "keyboard_arrow_down" ? "keyboard_arrow_right" : "keyboard_arrow_down";
+        caret.classList.toggle('closed');
+        caret.classList.toggle('open');
     }
 
     function prettyTime(dateObj) {
@@ -76,7 +76,7 @@
         if (showDayHeaders) {
 
             var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
-            schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+            schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
             document.querySelector('#header-day-0').onclick = function() {
                 toggleDay(this.attributes['data-day'].value);
             };
@@ -92,7 +92,7 @@
 
                     if (currentDay != prevCurrentDay) {
                         day++;
-                        schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons">keyboard_arrow_down</i>'
+                        schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'
                             + DAYS_OF_WEEK[currentDay] + '</td></tr>');
                         document.querySelector('#header-day-' + day).addEventListener('click', function() {
                             toggleDay(this.attributes['data-day'].value);
