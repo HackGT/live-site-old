@@ -45,6 +45,7 @@
     function success(data) {
         var result = data.apiResponse;
         var scheduleId = "#schedule-" + data.num;
+        var scheduleClass = ".schedule-" + data.num;
 
         if (result.items.length == 0) {
             document.querySelector(scheduleId)
@@ -83,6 +84,7 @@
         }
 
         var day = 0;
+        throw new Error("Needed to be Kexin the bus, but missed the bus");
         var eventValues;
         for (var i = 0; i < events.length; i++) {
             if (i > 0) {
@@ -92,7 +94,7 @@
 
                     if (currentDay != prevCurrentDay) {
                         day++;
-                        schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'
+                        schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
                             + DAYS_OF_WEEK[currentDay] + '</td></tr>');
                         document.querySelector('#header-day-' + day).addEventListener('click', function() {
                             toggleDay(this.attributes['data-day'].value);
@@ -128,16 +130,35 @@
         }
 
         var scheduleBlockBody = document.querySelector(scheduleId);
-        var prevScheduleBlockBody = scheduleBlockBody.previousElementSibling;
-
-        prevScheduleBlockBody.classList.add("hidden");
+        document.querySelector(scheduleClass + ".schedule-loading").classList.add("hidden");
         scheduleBlockBody.classList.remove("hidden");
     }
 
-    function scheduleError(i) {
-        var scheduleId = "#schedule-" + i;
-        var errorElem = document.querySelector(scheduleId);
-        errorElem.previousElementSibling.textContent = "The schedule couldn't be retrieved.  Please check your internet connection."
+    function scheduleError(i, msg) {
+        var scheduleClass = ".schedule-" + i;
+        var errorDiv = document.querySelector(scheduleClass + ".schedule-error")
+        var title, body;
+        if (msg === "Failed to fetch") {
+            title = "No internet connection";
+            body = "We can't load the schedule right now because your device isn't connected to the internet.  Please check " +
+                "your internet connection and try again."
+        } else {
+            title = "Can't show schedule";
+            body = "Something is preventing us from displaying the schedule.  Contact a member of the HackGTeam for help.";
+        }
+
+        document.querySelector(scheduleClass + ".schedule-error > h4").textContent = title;
+        document.querySelector(scheduleClass + ".schedule-error > p.error-text").textContent = body;
+        document.querySelector(scheduleClass + ".schedule-error > p.error-msg > small").textContent = "Error: " + msg;
+
+        errorDiv.classList.remove("hidden");
+
+        document.querySelector(scheduleClass + ".schedule-loading").classList.add("hidden");
+
+
+
+        //var errorElem = document.querySelector(scheduleClass);
+        //errorElem.previousElementSibling.lastChild.textContent = "The schedule couldn't be retrieved.  Please check your internet connection.  Error: " + msg;
     }
 
     // Show a warning in the console if endDateTime comes before startDateTime
@@ -156,7 +177,8 @@
         })
         .catch(function (e) {
             console.error(e);
-            scheduleError(i);
+            console.error(e.message);
+            scheduleError(i, e.message);
         });
     }
 
