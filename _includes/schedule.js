@@ -84,7 +84,7 @@
         }
 
         var day = 0;
-        throw new Error("Needed to be Kexin the bus, but missed the bus");
+
         var eventValues;
         for (var i = 0; i < events.length; i++) {
             if (i > 0) {
