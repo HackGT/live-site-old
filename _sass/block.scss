@@ -2,9 +2,9 @@
 
 
 // Blocks
-$block-accent-color: #4ea1d3; //Used on the left column of two_column layout, and all schedule columns
-$block-alt-accent-color: #4ea1d3; //Used on the right column of the two_column layout
-$block-header-text-color: #d8e9ef;
+$block-accent-color: #9076fb; //Used on the left column of two_column layout, and all schedule columns
+$block-alt-accent-color: $block-accent-color; //Used on the right column of the two_column layout
+$block-header-text-color: white;
 $corner-border-radius: 3px;
 $block-body-bg-color: #fafdff;
 $block-body-text-color: #454552;
@@ -26,6 +26,11 @@ $block-body-text-color: #454552;
     padding: 5px;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
+
+    /* Added for HackGTeeny */
+    a {
+        color: #9b4dca !important;
+    }
 }
 
 .block.block-left > .block-header {

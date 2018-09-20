@@ -1,23 +1,29 @@
 @charset "utf-8";
 
-
 // Colors:
 // Site-Level
-$page-background-color: #d0e6ef;
+$page-background-color: #77d7fd;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
 
 // Individual Pages
-$page-title-color: #454552;
+$page-title-color: #2d2d42;
 
 // Navbar
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #454566;
+$navbar-background-color: #20c0ed;
 $navbar-menu-icon-color: $navbar-menu-icon-light;
 $navbar-text-color: #fff0f2;
+
+$navbar-bottom-border: white 0.75px solid;
+
+@font-face {
+  font-family: Bebas;
+  src: url('/assets/BEBAS.ttf');
+}
 
 // Site-Level
 body {
@@ -33,18 +39,31 @@ body {
     }*/
 }
 
-a.site-title {
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: 700;
-}
+//a.site-title {
+//    text-transform: uppercase;
+//    font-style: italic;
+//    font-weight: 700;
+//}
 
 a.site-title:hover {
     text-decoration: none;
 }
 
+/* Just for HackGTeeny */
+a {
+  color: white  !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
 nav.site-nav {
     background: $navbar-background-color;
+    font-weight: 400;
+}
+
+a.site-title {
+  font-family: 'Bebas', 'Raleway', sans-serif;
 }
 
 span.menu-icon > svg > path {
@@ -59,6 +78,7 @@ h1.post-title {
 // Navbar
 header.site-header {
     background: $navbar-background-color;
+    border-bottom: $navbar-bottom-border;
 }
 
 div.wrapper > a.site-title,

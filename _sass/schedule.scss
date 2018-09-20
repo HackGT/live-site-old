@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-$table-cell-highlight-color: #e3e3e3;
-$day-highlight-color: #c8e5f2;
+$table-cell-highlight-color: #ededed;
+$day-highlight-color: #dfd8fb;
+$table-header-row-background: #b4a3fb;
 
 .schedule {
     /*overflow-x: auto;*/
@@ -11,7 +12,7 @@ $day-highlight-color: #c8e5f2;
     }
 
     table > thead > tr > th {
-        background: #b6d2e3;
+        background: $table-header-row-background;
         border: 0;
     }
 
@@ -38,6 +39,10 @@ $day-highlight-color: #c8e5f2;
         padding: 3px;
     }
 
+    table > tbody > tr:nth-child(even) > td {
+        background: white;
+    }
+
     table > tbody > tr:nth-child(odd) > td {
         background: $table-cell-highlight-color;
     }
@@ -52,7 +57,7 @@ $day-highlight-color: #c8e5f2;
     }
 
     table > tbody > tr > td.schedule-day {
-        background: #c8e5f2;
+        background: $day-highlight-color;
     }
 
     td {
