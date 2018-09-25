@@ -80,7 +80,7 @@ $day-highlight-color: #c8e5f2;
 }
 
 
-
+.schedule-error,
 .schedule-loading,
 .schedule-message {
     text-align: center;
@@ -99,6 +99,10 @@ $day-highlight-color: #c8e5f2;
 
     > h4 {
       padding-top: 15px;
+    }
+
+    > img {
+        max-width: 300px;
     }
 }
 
