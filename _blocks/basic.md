@@ -1,17 +1,9 @@
 ---
-title: Welcome to Catalyst 2018!
+title: Welcome to HackGTeeny!
 ---
 
-Hello! We are excited to welcome you to Catalyst 2018! Here's some important information:
+To get started at HackGTeeny, please make sure you have the following programs installed:
 
-#### Contact Information
-* HackGT Staff: `678-870-4225`
-* Campus Police: `404-894-2500`
-
-#### Wifi
-For internet access, connect to the `GTvisitor` network. Here are the necessary credentials:
-* Event code: `catalyst`
-* Password: `5D645`
-
-#### Slides
-* [Opening Ceremonies](https://docs.google.com/presentation/d/1dbxrURuA6FzwktI7qLJHOfDqZ6JuR40ei-TbhkOuS1o/edit?usp=sharing)
+1. [Android Studio](https://developer.android.com/studio/) or [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) (for Android or iOS workshop, you pick one)
+2. [NodeJS](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/package/download) (for Backend workshop)
+3. A text editor ([Sublime](http://www.sublimetext.com/3), [Atom](https://atom.io/), or [Visual Studio Code](https://code.visualstudio.com/download) are just a few examples) 
