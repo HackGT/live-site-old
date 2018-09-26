@@ -5,7 +5,7 @@ $day-highlight-color: #dfd8fb;
 $table-header-row-background: #b4a3fb;
 
 .schedule {
-    overflow-x: auto;
+    /*overflow-x: auto;*/
     table {
         margin-bottom: 0;
         border: 0;
@@ -21,6 +21,18 @@ $table-header-row-background: #b4a3fb;
         border: 0;
     }
 
+
+    table > tbody > tr > td.schedule-day {
+        @include relative-font-size(1.125);
+        font-weight: bold;
+        border-top: 0;
+        border-right: 0;
+        border-left: 4px solid $block-accent-color;
+        cursor: pointer;
+        i {
+            user-select: none;
+        }
+    }
 
     table > thead > tr > th,
     table > tbody > tr > td {
@@ -67,14 +79,42 @@ $table-header-row-background: #b4a3fb;
 }
 
 .schedule-body {
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.schedule-day {
-    @include relative-font-size(1.125);
-    font-weight: bold;
-    border-left: 4px solid $block-accent-color;
+
+.schedule-error,
+.schedule-loading,
+.schedule-message {
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    > img {
+      padding-bottom: 5px;
+    }
+
+    > h4, > p {
+      max-width: 350px;
+      margin: auto;
+    }
+
+    > h4 {
+      padding-top: 15px;
+    }
+
+    > img {
+        max-width: 300px;
+    }
+}
+
+.schedule-status-msg {
+  height: 150px;
 }
 
 table > tbody > tr.old > td {

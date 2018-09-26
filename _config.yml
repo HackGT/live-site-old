@@ -1,9 +1,9 @@
 # This file defines some parameters that will affect the live site as a whole.
 title: HackGTeeny
 description: >- # >- means ignore newlines until "baseurl:"
-  Catalyst is a free, 12-hour event held on Saturday, April 7th from 9AM to 9PM,
-  where metro Atlanta high school students will explore technology and learn
-  from mentors at Georgia Tech and our sponsors.
+  HackGTeeny is a series of beginner workshops to introduce critical skills for application development. Hosted by Georgia
+  Tech's favorite hackathon, HackGT, HackGteeny offers a 5 hour, hands-on, mentor-guided grind for students with some (but not
+  extensive) coding experience.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
 url: https://live.teeny.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
@@ -30,8 +30,6 @@ defaults:
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
 
 exclude:
   - Gemfile
