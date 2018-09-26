@@ -4,11 +4,9 @@
 (function() {
     function toggleDay(day) {
         document.querySelectorAll('.schedule-day-' + day).forEach(function (item, index) {
-            console.log(item, index);
             item.classList.toggle('hidden');
         });
 
-        console.log('tr#header-day-' + day + ' > td > i');
         var caret = document.querySelector('tr#header-day-' + day + ' > td > i');
         caret.classList.toggle('closed');
         caret.classList.toggle('open');
@@ -176,8 +174,6 @@
                     num: i });
         })
         .catch(function (e) {
-            console.error(e);
-            console.error(e.message);
             scheduleError(i, e.message);
         });
     }
@@ -187,8 +183,6 @@
         var url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
             + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime
             + "&timeMax=" + endDateTime;
-
-        console.log(url);
 
         getCalendarData(url, i);
     }
