@@ -4,7 +4,7 @@ $table-cell-highlight-color: #e3e3e3;
 $day-highlight-color: #c8e5f2;
 
 .schedule {
-    overflow-x: auto;
+    /*overflow-x: auto;*/
     table {
         margin-bottom: 0;
         border: 0;
@@ -20,6 +20,18 @@ $day-highlight-color: #c8e5f2;
         border: 0;
     }
 
+
+    table > tbody > tr > td.schedule-day {
+        @include relative-font-size(1.125);
+        font-weight: bold;
+        border-top: 0;
+        border-right: 0;
+        border-left: 4px solid $block-accent-color;
+        cursor: pointer;
+        i {
+            user-select: none;
+        }
+    }
 
     table > thead > tr > th,
     table > tbody > tr > td {
@@ -67,16 +79,6 @@ $day-highlight-color: #c8e5f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.schedule-day {
-    @include relative-font-size(1.125);
-    font-weight: bold;
-    border-left: 8px solid $block-accent-color;
-    cursor: pointer;
-    i {
-        user-select: none;
-    }
 }
 
 
