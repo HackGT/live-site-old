@@ -46,8 +46,13 @@
         var scheduleClass = ".schedule-" + data.num;
 
         if (result.items.length == 0) {
-            document.querySelector(scheduleId)
-                .previousElementSibling.textContent = "No events found";
+            // Show a warning in the console if endDateTime comes before startDateTime
+            if (new Date(endDateTime) - new Date(startDateTime) < 0) {
+                scheduleError(data.num, "Event range end date is before start date")
+            } else {
+                document.querySelector(scheduleId)
+                    .previousElementSibling.textContent = "No events found";
+            }
             return false;
         }
         result.items.sort(function(a,b) {
@@ -157,13 +162,6 @@
 
         //var errorElem = document.querySelector(scheduleClass);
         //errorElem.previousElementSibling.lastChild.textContent = "The schedule couldn't be retrieved.  Please check your internet connection.  Error: " + msg;
-    }
-
-    // Show a warning in the console if endDateTime comes before startDateTime
-    if (new Date(endDateTime) - new Date(startDateTime) < 0) {
-        console.warn("schedule.js: No calendar events will be fetched!  The date of the last calendar event to include in the schedule (endDateTime) is earlier than the date of the first calendar event to include in the schedule.  The current start date is "
-        + new Date(startDateTime)
-        + ".  The current end date is " + new Date(endDateTime) + ".");
     }
 
     function getCalendarData(url, i) {
