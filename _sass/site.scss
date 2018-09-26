@@ -74,7 +74,34 @@ div.container {
     padding: 0;
 }
 
-// The below is adapted from http://rianrietveld.com/2015/04/04/the-screen-reader-text-class-why-and-how/
+.material-icons {
+  vertical-align: middle;
+}
+
+@-webkit-keyframes rotate-caret-open {
+  0% { transform: rotate(-90deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@-webkit-keyframes rotate-caret-close {
+  100% { transform: rotate(-90deg); }
+}
+
+i.closed {
+  animation-name: rotate-caret-close;
+  animation-duration: .25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+i.open {
+  animation-name: rotate-caret-open;
+  animation-duration: .25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+// The style below is adapted from http://rianrietveld.com/2015/04/04/the-screen-reader-text-class-why-and-how/
 .sr-only {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
