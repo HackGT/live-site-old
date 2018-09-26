@@ -44,14 +44,13 @@
         var result = data.apiResponse;
         var scheduleId = "#schedule-" + data.num;
         var scheduleClass = ".schedule-" + data.num;
-
+        console.log(result.items.length);
         if (result.items.length == 0) {
             // Show a warning in the console if endDateTime comes before startDateTime
             if (new Date(endDateTime) - new Date(startDateTime) < 0) {
                 scheduleError(data.num, "Event range end date is before start date")
             } else {
-                document.querySelector(scheduleId)
-                    .previousElementSibling.textContent = "No events found";
+                scheduleError(data.num, "No events found")
             }
             return false;
         }
@@ -145,6 +144,9 @@
             title = "No internet connection";
             body = "We can't load the schedule right now because your device isn't connected to the internet.  Please check " +
                 "your internet connection and try again."
+        } else if (msg === "No events found") {
+            title = "No events found";
+            body = ""
         } else {
             title = "Can't show schedule";
             body = "Something is preventing us from displaying the schedule.  Contact a member of the HackGTeam for help.";
@@ -152,7 +154,9 @@
 
         document.querySelector(scheduleClass + ".schedule-error > h4").textContent = title;
         document.querySelector(scheduleClass + ".schedule-error > p.error-text").textContent = body;
-        document.querySelector(scheduleClass + ".schedule-error > p.error-msg > small").textContent = "Error: " + msg;
+        if (msg !== "No events found") {
+            document.querySelector(scheduleClass + ".schedule-error > p.error-msg > small").textContent = "Error: " + msg;
+        }
 
         errorDiv.classList.remove("hidden");
 
