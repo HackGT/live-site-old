@@ -8,7 +8,7 @@ title: Workshop Materials
 2. Mobile Development - iOS
  * [Code](https://github.com/gtiosclub/Guess-the-Number)
 3. Mobile Development - Android
- * [Slides](https://docs.google.com/presentation/d/1FfDligDo1K-gxikKbDIR3NpgXpcT1qu9lH5nENAAzP4/edit?usp=sharing)
+ * [Slides](https://goo.gl/pwY2yv)
  * [Code](https://github.com/git-mad/Tap-Game)
 4. Backend Web Development
  * [Slides](https://slides.com/mjkaufer/intro-to-backend/#/)
