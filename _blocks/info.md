@@ -14,4 +14,5 @@ title: Workshop Materials
  * [Slides](https://slides.com/mjkaufer/intro-to-backend/#/)
  * [Code](https://github.com/mjkaufer/HackGTeeny-Backend)
 5. Intro to AI
- * Materials coming soon!
+ * [Slides](https://docs.google.com/presentation/d/1X4arDqS49-Q5ILobFEukmNXllqAR19bWaSn-kq-bi-0/edit?usp=sharing)
+ * [Code](https://colab.research.google.com/drive/1aZ9EQbwVUCe49El56528_ObY8Jok55ty)
