@@ -1,13 +1,16 @@
 # This file defines some parameters that will affect the live site as a whole.
-title: HackGT Live
+title: HackGT 5
 description: >- # >- means ignore newlines until "baseurl:"
-  The base HackGT live site
+  Looking to inspire and challenge our attendees, HackGT’s 5th annual 36-hour hackathon will help students develop their
+   skills, explore new technologies, and turn their curiosities into opportunities. Participants are invited to discover
+    friendly campgrounds, lush landscapes, and a spirit of adventure — inspired by the diverse beauty of America's
+    National Parks from Yellowstone and the Grand Canyon to the Olympic Peninsula and Denali.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
-url: https://live-site.dev.hack.gt # Your site's domain, e.g. everything up and including to the .com
+url: https://2018.live.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
-enableOneSignal: false
+enableOneSignal: true
 oneSignalAppId: 571e8f76-1234-41fe-a5fb-c8abb8dac211
 
 
