@@ -72,6 +72,21 @@ div.trigger > a.page-link {
 
 div.container {
     padding: 0;
+    max-width: inherit;
+}
+
+ul, ol {
+    ul, ol {
+        margin-top: 0;
+    }
+}
+
+li {
+    margin-bottom: $spacing-unit / 4;
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 .material-icons {

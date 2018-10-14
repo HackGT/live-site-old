@@ -5,13 +5,12 @@
 $block-accent-color: #4ea1d3; //Used on the left column of two_column layout, and all schedule columns
 $block-alt-accent-color: #4ea1d3; //Used on the right column of the two_column layout
 $block-header-text-color: #d8e9ef;
-$corner-border-radius: 3px;
+$corner-border-radius: 5px;
 $block-body-bg-color: #fafdff;
 $block-body-text-color: #454552;
 
 // Blocks
 .block {
-    margin-bottom: 15px;
 }
 
 .block-header {
@@ -20,12 +19,18 @@ $block-body-text-color: #454552;
     color: $block-header-text-color;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
+    padding: .4em 0;
 }
 
 .block-body {
-    padding: 5px;
+    padding: 30px;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
+}
+
+.block-body > *:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .block.block-left > .block-header {
