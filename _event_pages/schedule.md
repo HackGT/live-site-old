@@ -1,4 +1,5 @@
 ---
+icon: nav_icons/DaySchedule.svg
 calendars:
     -
       title: Event

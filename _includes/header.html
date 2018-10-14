@@ -38,7 +38,11 @@
           {% for group in sorted_groups %}
             {% for event_page in group.items %}
                 {% if event_page.title %}
-                    <a class="page-link" href="{{ event_page.url | relative_url }}">{{ event_page.title | escape }}</a>
+                    <a class="page-link" href="{{ event_page.url | relative_url }}">
+                        {% if event_page.icon %}
+                            <img src="/assets/{{ event_page.icon | escape }}"  height="30" draggable="false"/>
+                        {% endif %}
+                        {{ event_page.title | escape }}</a>
                 {% endif %}
             {% endfor %}
           {% endfor %}

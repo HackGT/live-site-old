@@ -48,10 +48,6 @@ body {
     background-image: url(../assets/bg_night.svg);
 }
 
-
-
-
-
 //a.site-title {
 //    text-transform: uppercase;
 //    font-style: italic;
@@ -66,7 +62,6 @@ a {
   color: white  !important;
   font-weight: 500;
   text-decoration: none;
-  margin-left: -28px;
   margin-top: 10px;
 }
 
@@ -78,6 +73,7 @@ nav.site-nav {
 
 a.site-title {
   font-family: 'Bebas', 'Raleway', sans-serif;
+  margin-left: -28px;
 }
 
 span.menu-icon > svg > path {
@@ -98,7 +94,6 @@ header.site-header {
 }
 
 .site-nav .page-link:not(:last-child) {
-  margin-right: 40px;
   padding-right: 20px;
   border-right: 1px solid white;
 }
@@ -112,14 +107,50 @@ div.trigger > a.page-link {
     @include relative-font-size(1.125);
 }
 
-@media screen and (max-width: 800px) {
-  .site-nav {
-    background: inherit;
+@media screen and (max-width: 900px) {
+  nav.site-nav {
+    min-width: 30px !important;
+    background: #f0d8d5;
+
   }
+
+  span.menu-icon > svg > path {
+    fill: $navbar-menu-icon-dark !important;
+  }
+
+  div.trigger > a.page-link {
+    color: black !important;
+
+  }
+}
+
+nav.site-nav {
+  text-align: right;
+  min-width: 900px;
+}
+
+h1.post-title {
+  margin-top: 15px;
+  text-align: center;
 }
 
 div.container {
     padding: 0;
+    max-width: inherit;
+}
+
+ul, ol {
+    ul, ol {
+        margin-top: 0;
+    }
+}
+
+li {
+    margin-bottom: $spacing-unit / 4;
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 .material-icons {

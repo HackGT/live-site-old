@@ -1,4 +1,5 @@
 ---
+icon: nav_icons/DayLink.svg
 layout: two_column
 left_blocks:
     - basic.md
