@@ -16,20 +16,15 @@ $navbar-menu-icon-light: white;
 
 $navbar-background-color: #20c0ed;
 $navbar-menu-icon-color: $navbar-menu-icon-light;
-$navbar-text-color: #fff0f2;
+$navbar-text-color: #000;
 
-$navbar-bottom-border: white 0.75px solid;
-
-@font-face {
-  font-family: Bebas;
-  src: url('/assets/BEBAS.ttf');
-}
+$navbar-bottom-border: 0;
 
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
     font-family: 'Raleway', sans-serif !important;
-    background: $page-background-color;
+    background-color: $page-background-color;
     color: $page-title-color !important;
     // Uncomment the block below and change the font to set the site header font
     /*h1, h2, h3, h4, h5, h6,
@@ -38,6 +33,24 @@ body {
         font-family: 'ProximaNova';
     }*/
 }
+
+#static-bg {
+  position: fixed;
+  background-image: url(../assets/bg_day.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#static-bg.night {
+    background-image: url(../assets/bg_night.svg);
+}
+
+
+
+
 
 //a.site-title {
 //    text-transform: uppercase;
@@ -49,16 +62,17 @@ a.site-title:hover {
     text-decoration: none;
 }
 
-/* Just for HackGTeeny */
 a {
   color: white  !important;
   font-weight: 500;
   text-decoration: none;
+  margin-left: -28px;
+  margin-top: 10px;
 }
 
 
 nav.site-nav {
-    background: $navbar-background-color;
+    /*background: $navbar-background-color;*/
     font-weight: 400;
 }
 
@@ -77,8 +91,16 @@ h1.post-title {
 
 // Navbar
 header.site-header {
-    background: $navbar-background-color;
+    /*background: $navbar-background-color;*/
     border-bottom: $navbar-bottom-border;
+    margin-left: 180px;
+    height: 55.95px;
+}
+
+.site-nav .page-link:not(:last-child) {
+  margin-right: 40px;
+  padding-right: 20px;
+  border-right: 1px solid white;
 }
 
 div.wrapper > a.site-title,
@@ -88,6 +110,12 @@ div.trigger > a.page-link {
 
 div.trigger > a.page-link {
     @include relative-font-size(1.125);
+}
+
+@media screen and (max-width: 800px) {
+  .site-nav {
+    background: inherit;
+  }
 }
 
 div.container {
