@@ -4,7 +4,7 @@ layout: two_column
 left_blocks:
     - basic.md
 right_blocks:
-    - photobooth.md
+    - faq.md
 permalink: /
 priority: 3
 ---
