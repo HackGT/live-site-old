@@ -6,6 +6,7 @@ left_blocks:
     - mini_events.md
 right_blocks:
     - faq.md
+    - scavenger-hunt.md
 permalink: /
 priority: 3
 ---
