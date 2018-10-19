@@ -11,7 +11,7 @@ calendars:
       title: Fireside Chats
       id: trhrcqmjq8s4nqnbn42d4qh028@group.calendar.google.com
     -
-      title: Campsites
+      title: Campsite Hours
       id: 811fduc258qjr0lv4ffgsvikbk@group.calendar.google.com
 gcal:
   # All calendars on the same page must use the same API key and have the same start/end dates/times

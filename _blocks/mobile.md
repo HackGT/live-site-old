@@ -15,5 +15,5 @@ title: Mobile Development
   * [Slides](https://goo.gl/pwY2yv)
   * [Code](https://github.com/git-mad/PhotoGallery)
 4. Advanced Android
-  * Slides
+  * [Slides](https://docs.google.com/presentation/d/1gpKm6SXp3_ZdZISyiIHDVhwSEo3QmrfaEuyxplxxS4Q/edit#slide=id.g4514f17b59_0_0)
   * [Code](https://github.com/git-mad/PhotoGallery)
