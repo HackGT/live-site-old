@@ -30,7 +30,7 @@ title: Klaus Floor One
 
     <div class="column">
         <ol start="13">
-            <li>Room 1447 - Security</li>
+            <li>Room 1447</li>
             <li>Room 1456 - AI</li>
             <li>Hardware Desk</li>
             <li>Arcade</li>
