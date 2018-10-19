@@ -2,7 +2,7 @@
 title: StatGT API
 ---
 
-For HackGT 5: Dare to Venture, we're introducing an API all about HackGT and its participants! We hope this encourages you to think of projects involving improving the hackathon experience, interacting with participants using the NFC badges, and more!
+For HackGT 5: Dare to Venture, we're introducing an API all about HackGT and its participants! We hope this encourages you to think of projects about improving the hackathon experience, interacting with other participants using NFC badges, and more!
 
 The API features two endpoints:
 1. `https://stats.dev.hack.gt/api/tags` returns aggregate counts of checked in participants per event. Sample response:
