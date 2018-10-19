@@ -1,5 +1,9 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@font-face {
+  font-family: Hamurz;
+  src: url("../assets/Hamurz.ttf")  format("truetype");
+}
 
 // Colors:
 // Site-Level
@@ -24,7 +28,7 @@ $navbar-bottom-border: 0;
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Raleway', sans-serif;
     background-color: $page-background-color;
     color: $page-title-color !important;
     // Uncomment the block below and change the font to set the site header font
@@ -93,6 +97,7 @@ span.menu-icon > svg > path {
 // Individual Pages
 h1.post-title {
     color: $page-title-color;
+    font-family: 'Hamurz', sans-serif;
 }
 
 // Navbar

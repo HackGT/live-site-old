@@ -1,6 +1,6 @@
 ---
 layout: one_column
-title: Points
+title: points
 icon: nav_icons/points.svg
 blocks:
     - mini_events.md

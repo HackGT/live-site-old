@@ -1,7 +1,8 @@
 ---
 layout: one_column
-title: StatGT
-icon: nav_icons/DayMap.svg
+title: statGt
+icon: nav_icons/DayAPI.svg
+nav_title: StatGT
 blocks:
     - statgt-api.md
 # If you don't define permalink, the page will have a url like /file_name without the .md
