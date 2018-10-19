@@ -116,7 +116,10 @@ div.trigger > a.page-link {
   nav.site-nav {
     min-width: 30px !important;
     background: #f0d8d5;
+  }
 
+  .site-nav .page-link {
+    padding-right: 20px;
   }
 
   span.menu-icon > svg > path {
