@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+div.tabs {
+    text-align: left;
+}
+
+li.tab {
+    list-style: none;
+    display: inline-block;
+    padding: 0 1.5em;
+    cursor: pointer;
+}
+
+li.tab.active {
+    text-decoration: underline;
+}
