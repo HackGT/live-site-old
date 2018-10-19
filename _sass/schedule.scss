@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 $table-cell-highlight-color: #ededed;
-$day-highlight-color: #dfd8fb;
-$table-header-row-background: #b4a3fb;
+$day-highlight-color: #f0e2d1;
+$table-header-row-background: #f0d1aa;
 
 .schedule {
     /*overflow-x: auto;*/
@@ -119,4 +119,12 @@ $table-header-row-background: #b4a3fb;
 
 table > tbody > tr.old > td {
     color: #969696;
+}
+
+.schedule-body {
+    display: none;
+}
+
+.schedule-body.active {
+    display: block;
 }

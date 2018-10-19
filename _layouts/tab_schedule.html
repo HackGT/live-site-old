@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<div class="column">
+    <div class="block">
+        <div class="block-header tabs">
+            {% for cal in page.calendars %}
+                <li class="tab{% if forloop.first %} active{% endif %}" data-div="schedule-block-{{ forloop.index0 }}">{{ cal.title | escape }}</li>
+            {% endfor %}
+        </div>
+
+        {% for cal in page.calendars %}
+            <div class="block-body schedule-body{% if forloop.first %} active{% endif %}" id="schedule-block-{{ forloop.index0 }}">
+                <div class="schedule-loading align-middle schedule-{{ forloop.index0 }}">
+                    <img src="/assets/TeenyBearHead.svg" draggable="false" />
+                    <h4>
+                        Fetching the latest events!
+                    </h4>
+                </div>
+    
+                <div class="schedule-error hidden align-middle schedule-{{ forloop.index0 }}">
+                    <img src="/assets/TeenyError.svg" draggable="false" />
+                    <h4>
+    
+                    </h4>
+                    <p class="error-text"></p>
+                    <p class="error-msg"><small></small></p>
+    
+                </div>
+    
+                <div class="schedule hidden" id="schedule-{{ forloop.index0 }}">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Event
+                                </th>
+                                <th>
+                                    Start time
+                                </th>
+                                <th>
+                                    End time
+                                </th>
+                                <th>
+                                    Location
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% for cal in page.calendars %}
+    {% if forloop.first == true %}
+        <script type="text/javascript">
+        var apiKey = "{{ page.gcal.api_key | escape }}";
+        var startDateTime = "{{ page.gcal.start_datetime | escape }}";
+        var endDateTime = "{{ page.gcal.end_datetime | escape }}"
+        var calendars = [
+    {% endif %}
+        "{{ cal.id | escape }}",
+    {% if forloop.last == true %}
+        ];
+        </script>
+    {% endif%}
+{% endfor %}
