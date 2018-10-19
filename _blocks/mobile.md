@@ -2,6 +2,8 @@
 title: Mobile Development
 ---
 
+In collaboration with [iOS Club](https://gtios.club/) and [GIT MAD](https://gitmad.gtorg.gatech.edu/).
+
 #### Dependencies
 * [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) for iOS development
 * [Android Studio](https://developer.android.com/studio/) for Android development

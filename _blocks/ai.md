@@ -2,6 +2,8 @@
 title: Artificial Intelligence
 ---
 
+In collaboration with [The Agency](https://gtagency.github.io/) and [Robotarium](http://www.robotics.gatech.edu/robotarium).
+
 #### Materials
 1. AI with Robotarium
 2. Semantic Search
