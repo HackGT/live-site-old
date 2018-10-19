@@ -42,12 +42,7 @@
                         {% if event_page.icon %}
                             <img src="/assets/{{ event_page.icon | escape }}"  height="30" draggable="false"/>
                         {% endif %}
-                        {% if event_page.nav_title %}
-                        {{ event_page.nav_title | escape }}
-                        {% else %}
-                        {{ event_page.title | escape | capitalize }}
-                        {% endif %}
-                      </a>
+                        {{ event_page.title | escape }} </a>
                 {% endif %}
             {% endfor %}
           {% endfor %}

@@ -4,6 +4,10 @@
   font-family: Hamurz;
   src: url("../assets/Hamurz.ttf")  format("truetype");
 }
+@font-face {
+  font-family: Chicago;
+  src: url("../assets/Chicago.ttf")  format("truetype");
+}
 
 // Colors:
 // Site-Level
@@ -236,4 +240,8 @@ strong a {
 
 .map-row {
   text-align: center;
+}
+
+.block-header {
+  font-family: Chicago, 'Raleway', sans-serif;
 }

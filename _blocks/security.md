@@ -12,4 +12,4 @@ In collaboration with [GreyHat](https://greyhatgt.github.io/about/) and [GTRI](h
 3. Designing Secure Software 
   * [Slides](/files/ssd.pptx)
 4. Intro to Rust
-  * [Slides](files/intro_rust.pptx)
+  * [Slides](/files/intro_rust.pptx)

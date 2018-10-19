@@ -1,6 +1,7 @@
 ---
 layout: one_column
-title: workshops
+display_title: workshops
+title: Workshops
 icon: nav_icons/DayWorkshop.svg
 blocks:
     - mobile.md
