@@ -73,7 +73,7 @@ Your challenge is to train a chatbot to respond to common inquiries and escalate
 * See the Goldman Sachs booth for information on getting access to the API.
 * Prize: Amazon Echo & Smart WiFi Plugs for each team member.
 
-#### Capitol One
+#### Capital One
 * Best Financial Hack
 * Prize: $300 Amazon Gift Card for each member of the winning team. 
 
