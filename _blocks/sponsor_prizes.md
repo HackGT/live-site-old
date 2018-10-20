@@ -79,7 +79,7 @@ Your challenge is to train a chatbot to respond to common inquiries and escalate
 
 #### ESRI
 * Best Use of ESRI APIs
-* Prize: 4 $250 Amaazon Gift Cards
+* Prize: 4 $250 Amazon Gift Cards
 
 #### Lyft
 * Best Transportation Related Hack
