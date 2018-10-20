@@ -11,7 +11,7 @@ The API features two endpoints:
     <event name>: <number of participants>
 }
 ```
-2. `https://stats.dev.hack.gt/api/<userID>` returns basic information about a participant, given the user's registration account ID. This returns JSON with the following fields: 
+2. `https://stats.dev.hack.gt/api/user/<userID>` returns basic information about a participant, given the user's registration account ID. This returns JSON with the following fields: 
   * name
   * email
   * school
