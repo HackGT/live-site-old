@@ -24,7 +24,7 @@ title: Sponsor Challenges and Prizes
   2. Uses at least one API for the Citi Developer Portal
   3. Positively impacts the customer experience. 
   4. In addition, Citi has a keen focus on the Financial Wellness of our customers. Though it is not required, we recommend looking into how your idea could possibly help people manage their money in more responsible ways.
-* Prize: TBD
+* Prize: Echo Spot for each team member
 
 #### FINRA
 * Call centers in many organizations field thousands of inquiries and issues each year. They range from solving issues directly or referring the questions to other departments based on need. Many of these questions are about where to find certain information, how to reset a password, or other routine issues that could be answered by a chatbot, rather than a human.
