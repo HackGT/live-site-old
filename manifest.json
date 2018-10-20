@@ -1,19 +1,19 @@
 {
-  "short_name": "Catalyst",
-  "name": "Catalyst Live",
+  "short_name": "HackGT 5",
+  "name": "HackGT 5",
   "icons": [
     {
-      "src": "/assets/launcher-icon-1x.png",
+      "src": "/assets/pwa_icons/Icon48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "/assets/launcher-icon-2x.png",
+      "src": "/assets/pwa_icons/Icon96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "/assets/launcher-icon-4x.png",
+      "src": "/assets/pwa_icons/Icon192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
@@ -21,7 +21,7 @@
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
-  "background_color": "#d0e6ef",
-  "theme_color": "#454566",
+  "background_color": "#E17E76",
+  "theme_color": "#E17E76",
   "display": "fullscreen"
 }
