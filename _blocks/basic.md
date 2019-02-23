@@ -1,8 +1,8 @@
 ---
-title: Welcome to Catalyst 2018!
+title: Welcome to BuildGT 2019!
 ---
 
-Hello! We are excited to welcome you to Catalyst 2018! Here's some important information:
+Hello! We are excited to welcome you to BuildGT 2019! Here's some important information:
 
 #### Contact Information
 * HackGT Staff: `678-870-4225`
