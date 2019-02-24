@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Design Track
+title: Prototyping Route
+priority: 4
 ---
 
 ### About
-The design track is about creating art through code! For this track, you'll learn how to write JavaScript to draw shapes, add custom styles, animate objects, and more.
+It all starts with the prototype!  Learn how to take your physical design skills to the next level!  *In partnership with the Invention Studio.*
 
 ### Resources
 * [Workshops](https://docs.google.com/presentation/d/1x6S8CdyRkL-cKL1alhyp9aH3vJByCn4Qwul8__U9t9w/edit?usp=sharing){:target="_blank"}

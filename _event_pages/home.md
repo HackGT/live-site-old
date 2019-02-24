@@ -6,5 +6,5 @@ left_blocks:
 right_blocks:
     - photobooth.md
 permalink: /
-priority: 3
+priority: 7
 ---

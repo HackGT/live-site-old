@@ -13,5 +13,5 @@ gcal:
   end_datetime: "2019-03-03T03:00:01-0500" #This is the absolute latest start time to include an event on the page.  The timestamp is exclusive, meaning that to include events at 3:00 PM, you would write T15:01:00 (includes events starting as late as 15:00:59)
 title: Schedule
 layout: schedule
-priority: 2
+priority: 6
 ---

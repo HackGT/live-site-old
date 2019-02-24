@@ -2,12 +2,14 @@
 
 $table-cell-highlight-color: #e3e3e3;
 $day-highlight-color: #c8e5f2;
+$corner-border-radius: 10px;
 
 .schedule {
     /*overflow-x: auto;*/
     table {
         margin-bottom: 0;
         border: 0;
+        border-radius: $corner-border-radius;
     }
 
     table > thead > tr > th {
