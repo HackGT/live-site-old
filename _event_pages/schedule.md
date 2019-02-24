@@ -5,7 +5,7 @@ calendars:
       id: hack.gt_hpud1u9bsdqvpo3887qfosb6nk@group.calendar.google.com
     -
       title: Workshops and Mini Events
-      id:
+      id: hack.gt_geu7r7o8m34a8giq563d3licqk@group.calendar.google.com
 gcal:
   # All calendars on the same page must use the same API key and have the same start/end dates/times
   api_key: AIzaSyCy-H3QRODFKvDBphR-OgkeNJP6MRxf_V8
