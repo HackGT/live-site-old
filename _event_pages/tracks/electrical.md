@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Electrical Design Route
-priority: 5
+title: Devices Route
+priority: 4
 ---
 
 ### About
