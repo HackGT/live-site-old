@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Prototyping Route
-priority: 4
+title: Bootcamp Route
+priority: 5
 ---
 
 ### About

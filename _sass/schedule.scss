@@ -12,6 +12,10 @@ $corner-border-radius: 10px;
         border-radius: $corner-border-radius;
     }
 
+    table > thead {
+        border-radius: $corner-border-radius;
+    }
+
     table > thead > tr > th {
         background: #b6d2e3;
         border: 0;
