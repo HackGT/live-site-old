@@ -8,10 +8,10 @@ Hello! We are excited to welcome you to BuildGT 2019! Here's some important info
 * HackGT Staff: `678-870-4225`
 * Campus Police: `404-894-2500`
 
-#### Wifi
-For internet access, connect to the `GTvisitor` network. Here are the necessary credentials:
-* Event code: `catalyst`
-* Password: `5D645`
+#### Important Links
+* [Check out hardware](https://hardware.hack.gt/) <br>
+* [BuildGT Devpost](https://buildgt-2019.devpost.com/) <br>
+* [Event Slack](https://buildgt2019.slack.com) <br>
 
 #### Slides
-* [Opening Ceremonies](https://docs.google.com/presentation/d/1dbxrURuA6FzwktI7qLJHOfDqZ6JuR40ei-TbhkOuS1o/edit?usp=sharing)
+* Opening Ceremonies - Coming Soon!

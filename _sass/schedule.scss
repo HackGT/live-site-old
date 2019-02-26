@@ -2,7 +2,7 @@
 
 $table-cell-highlight-color: #e3e3e3;
 $day-highlight-color: #c8e5f2;
-$corner-border-radius: 10px;
+$corner-border-radius: 8px;
 
 .schedule {
     /*overflow-x: auto;*/
@@ -12,13 +12,29 @@ $corner-border-radius: 10px;
         border-radius: $corner-border-radius;
     }
 
-    table > thead {
-        border-radius: $corner-border-radius;
-    }
-
-    table > thead > tr > th {
+    table > thead > tr {
+      > th {
         background: #b6d2e3;
         border: 0;
+      }
+
+      > th:first-child {
+        border-top-left-radius: $corner-border-radius;
+      }
+
+      > th:last-child {
+        border-top-right-radius: $corner-border-radius;
+      }
+    }
+
+    table > tbody > tr:last-child {
+      > td:first-child {
+        border-bottom-left-radius: $corner-border-radius;
+      }
+
+      > td:last-child {
+        border-bottom-right-radius: $corner-border-radius;
+      }
     }
 
     table > thead > tr > th,

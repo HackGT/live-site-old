@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 // Colors:
 // Site-Level
 $page-background-color: #eeeeee;
@@ -17,7 +16,7 @@ $navbar-menu-icon-light: white;
 
 $navbar-background-color: #014eb8;
 $navbar-menu-icon-color: $navbar-menu-icon-light;
-$navbar-text-color: #fff0f2;
+$navbar-text-color: white;
 
 // Site-Level
 body {
@@ -34,10 +33,9 @@ body {
 }
 
 a.site-title {
-    text-transform: uppercase;
-    font-style: italic;
     font-weight: 700;
-    font-family: "Gotham Medium", sans-serif;
+    font-family: "Space Mono", sans-serif;
+
 }
 
 a.site-title:hover {
@@ -65,11 +63,42 @@ header.site-header {
 div.wrapper > a.site-title,
 div.trigger > a.page-link {
     color: $navbar-text-color;
-}
-
-div.trigger > a.page-link {
     @include relative-font-size(1.125);
 }
+
+
+@include media-query-using($on-laptop) {
+  div.trigger > a.page-link {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      transition: 0.25s all;
+  }
+
+
+  div.trigger > a.page-link::before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      bottom: 0;
+      content: "";
+      transition: 0.25s all ease-out;
+  }
+
+  div.trigger > a.page-link::before {
+      left: -100%;
+  }
+
+  div.trigger > a.page-link:hover::before {
+      left: 0;
+  }
+
+  div.trigger > a.page-link:hover {
+    text-decoration: none;
+  }
+}
+
 
 div.container {
     padding: 0;
