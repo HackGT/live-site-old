@@ -2,12 +2,12 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
-    function toggleDay(day) {
-        document.querySelectorAll('.schedule-day-' + day).forEach(function (item, index) {
+    function toggleDay(scheduleId, day) {
+        document.querySelectorAll('div ' + scheduleId + ' > table > tbody > tr.schedule-day-' + day).forEach(function (item, index) {
             item.classList.toggle('hidden');
         });
 
-        var caret = document.querySelector('tr#header-day-' + day + ' > td > i');
+        var caret = document.querySelector('div ' + scheduleId + ' > table > tbody > tr#header-day-' + day + ' > td > i');
         caret.classList.toggle('closed');
         caret.classList.toggle('open');
     }
@@ -78,11 +78,10 @@
         var showDayHeaders = containsMultipleDays(events);
 
         if (showDayHeaders) {
-
             var prevCurrentDay = new Date(events[0].start.dateTime).getDay();
             schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
-            document.querySelector('#header-day-0').onclick = function() {
-                toggleDay(this.attributes['data-day'].value);
+            document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
+                toggleDay(scheduleId, this.attributes['data-day'].value);
             };
         }
 
@@ -99,8 +98,8 @@
                         day++;
                         schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
                             + DAYS_OF_WEEK[currentDay] + '</td></tr>');
-                        document.querySelector('#header-day-' + day).addEventListener('click', function() {
-                            toggleDay(this.attributes['data-day'].value);
+                        document.querySelector('div ' + scheduleId + ' > table > tbody > tr#header-day-' + day).addEventListener('click', function() {
+                            toggleDay(scheduleId, this.attributes['data-day'].value);
                         });
                     }
                     prevCurrentDay = currentDay;
