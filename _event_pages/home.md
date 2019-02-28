@@ -4,6 +4,8 @@ layout: two_column
 left_blocks:
     - basic.md
 right_blocks:
+    - hardware.md
+    - maker_spaces.md
 permalink: /
 priority: 7
 ---

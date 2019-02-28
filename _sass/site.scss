@@ -68,11 +68,12 @@ div.trigger > a.page-link {
 
 
 @include media-query-using($on-laptop) {
+
   div.trigger > a.page-link {
       position: relative;
       overflow: hidden;
       display: inline-block;
-      transition: 0.25s all;
+      // transition: 0.25s all;
   }
 
 
