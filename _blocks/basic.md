@@ -17,6 +17,7 @@ connect to the **GTvisitor** network and then choose the free access option.
 * [Hardware and Tool Inventory](https://hardware.hack.gt/)
 * [BuildGT Devpost](https://buildgt-2019.devpost.com/)
 * [Event Slack](https://buildgt2019.slack.com)
+    * [Invite Link](https://join.slack.com/t/buildgt2/shared_invite/enQtNTUyNjMzMjQ5NDcyLThhZGE1ZmNkOGMwZDhmMzlhMGFiOWQyZjZjMzQ4Nzc4ODAyYWZjODNhYTk1NmRiMTk4YjE3NWQ0YmFlZjJhN2Y)
 
 #### Slides
 * Opening Ceremonies - Coming Soon!
