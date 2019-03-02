@@ -1,27 +1,11 @@
 {
-  "short_name": "Catalyst",
-  "name": "Catalyst Live",
-  "icons": [
-    {
-      "src": "/assets/launcher-icon-1x.png",
-      "type": "image/png",
-      "sizes": "48x48"
-    },
-    {
-      "src": "/assets/launcher-icon-2x.png",
-      "type": "image/png",
-      "sizes": "96x96"
-    },
-    {
-      "src": "/assets/launcher-icon-4x.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    }
-  ],
+  "short_name": "BuildGT",
+  "name": "BuildGT 2",
+  "icons": [],
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
-  "background_color": "#d0e6ef",
-  "theme_color": "#454566",
+  "background_color": "#eeeeee",
+  "theme_color": "#014eb8",
   "display": "fullscreen"
 }
