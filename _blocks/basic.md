@@ -1,8 +1,8 @@
 ---
-title: Welcome to BuildGT 2019!
+title: Welcome to BuildGT 2!
 ---
 
-Hello! We are excited to welcome you to BuildGT 2019! Here's some important information:
+Hello! We are excited to welcome you to BuildGT 2! Here's some important information:
 
 #### Contact Information
 * HackGT Staff: `678-870-4225`
@@ -16,7 +16,7 @@ connect to the **GTvisitor** network and then choose the free access option.
 #### Important Links
 * [Hardware and Tool Inventory](https://hardware.hack.gt/)
 * [BuildGT Devpost](https://buildgt-2019.devpost.com/)
-* [Event Slack](https://buildgt2019.slack.com)
+* [Event Slack](https://buildgt2.slack.com)
     * [Invite Link](https://join.slack.com/t/buildgt2/shared_invite/enQtNTUyNjMzMjQ5NDcyLThhZGE1ZmNkOGMwZDhmMzlhMGFiOWQyZjZjMzQ4Nzc4ODAyYWZjODNhYTk1NmRiMTk4YjE3NWQ0YmFlZjJhN2Y)
 
 #### Slides
