@@ -5,7 +5,7 @@ left_blocks:
     - basic.md
     - faq.md
 right_blocks:
-    - hardware.md
+    - hardware_checkout_open.md
     - maker_spaces.md
 permalink: /
 priority: 7
