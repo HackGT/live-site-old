@@ -8,11 +8,6 @@ Hello! We are excited to welcome you to BuildGT 2! Here's some important informa
 * HackGT Staff: `678-870-4225`
 * Campus Police: `404-894-2500`
 
-#### WiFi
-
-If you already use the **eduroam** network, just connect to that.  Otherwise,
-connect to the **GTvisitor** network and then choose the free access option.
-
 #### Important Links
 * [Hardware and Tool Inventory](https://hardware.hack.gt/)
 * [BuildGT Devpost](https://buildgt-2019.devpost.com/)
