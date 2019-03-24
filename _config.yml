@@ -7,8 +7,8 @@ url: https://live-site.dev.hack.gt # Your site's domain, e.g. everything up and 
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
-enableOneSignal: false
-oneSignalAppId: 571e8f76-1234-41fe-a5fb-c8abb8dac211
+enableOneSignal: true
+oneSignalAppId: bc0adfb7-56b4-47c5-b2e8-d22a7333a39c
 
 
 # Hi!  There's a lot of interesting stuff under me, but if you touch it, you might break something!  Please don't edit anything below this line unless you know what you're doing!
