@@ -2,8 +2,9 @@
 layout: two_column
 left_blocks:
     - basic.md
+    - contact.md
 right_blocks:
-    - photobooth.md
+    - resources.md
 permalink: /
 priority: 3
 ---
