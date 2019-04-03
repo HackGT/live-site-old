@@ -13,9 +13,11 @@ So go forth, Hacker, begin your journey, expand your horizons, and create your s
 * Campus Police: `404-894-2500`
 
 #### **Wifi**
-For internet access, connect to the `GTvisitor` network. Here are the necessary credentials:
-* Event code: `catalyst`
-* Password: `5D645`
+For much faster speeds, if you attend a university that uses **[eduroam](https://www.eduroam.org/where/)**, connect to eduroam with your school's authentication credentials.
+
+For example, Georgia Tech students would use username `<GT Username>@gatech.edu` and their campus password.
+
+Otherwise, connect to the **GTVisitor** network.
 
 #### **Slides**
 * [Opening Ceremonies](https://docs.google.com/presentation/d/1GUDZ0mES2KHo5PcXJ4zIvZkPzQjgOv1Z8RvMfNy5rR0/edit?usp=sharing)
