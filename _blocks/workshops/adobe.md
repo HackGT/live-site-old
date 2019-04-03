@@ -1,7 +1,7 @@
 ---
 title: Adobe Suite Series
 ---
-![alt-text](../assets/workshops/adobe.png#icon)
+<!-- ![Adobe Suite Logo](../assets/workshops/adobe.png#icon) -->
 
 
 * **Illustrator** Learn the basics of Illustrator in the scope of making assets for apps, websites, etc. as well as the general principles of how to use Illustrator as an artistic/design tool.
