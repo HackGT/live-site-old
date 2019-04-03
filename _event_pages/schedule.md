@@ -1,8 +1,17 @@
 ---
 calendars:
     -
-      title: Event
+      title: General Schedule
+      id: 2i4b6ntbvud65gt3n56lkroih4@group.calendar.google.com
+
+    -
+      title: Workshops
       id: b0b5cgvioaot86ih9c6aoff5ns@group.calendar.google.com
+
+    -
+      title: Events
+      id: coj3d4cvq0akkfmrsom2venj18@group.calendar.google.com
+
 
 gcal:
   # All calendars on the same page must use the same API key and have the same start/end dates/times

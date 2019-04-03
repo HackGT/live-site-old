@@ -64,6 +64,14 @@ h1.post-title {
     font-family: 'Nobel', sans-serif;
 }
 
+img[src*="#icon"] {
+   width:250px;
+   height:200px;
+   float: left;
+   margin-right: 3em;
+   margin-bottom: 3em;
+}
+
 // Navbar
 header.site-header {
     background: $navbar-background-color;
