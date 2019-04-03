@@ -23,6 +23,6 @@ Check out the wide variety of Arts + Tech research and projects going on at Geor
 <br/><br/>
 <br/><br/>
 
-![Ubiquitous Computing Logo](../assets/people/uc.png#profile)
+![Ubiquitous Computing Logo](../assets/people/uc.jpg#profile)
 <br/><br/>
 **Ubiquitous Computing** Seamlessly embedding technology into the real world.
