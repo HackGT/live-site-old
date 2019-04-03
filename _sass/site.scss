@@ -3,7 +3,7 @@
 
 // Colors:
 // Site-Level
-$page-background-color: #d0e6ef;
+$page-background-color: #f5f9f7;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
@@ -12,30 +12,33 @@ $page-background-color: #d0e6ef;
 $page-title-color: #454552;
 
 // Navbar
-$navbar-menu-icon-dark: #424242;
+$navbar-menu-icon-dark: #f8ac8e;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #454566;
-$navbar-menu-icon-color: $navbar-menu-icon-light;
-$navbar-text-color: #fff0f2;
+$navbar-background-color: #c2e3d3;
+$navbar-menu-icon-color: $navbar-menu-icon-dark;
+$navbar-text-color: white;
 
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
-    font-family: 'Raleway', sans-serif !important;
-    background: $page-background-color;
+    font-family: 'Nobel', sans-serif !important;
+    background: url('../assets/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: $page-title-color !important;
     // Uncomment the block below and change the font to set the site header font
-    /*h1, h2, h3, h4, h5, h6,
+    h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
-        font-family: 'ProximaNova';
-    }*/
+        font-family: 'Nobel', sans-serif;
+    }
 }
 
 a.site-title {
     text-transform: uppercase;
-    font-style: italic;
     font-weight: 700;
 }
 
@@ -54,20 +57,38 @@ span.menu-icon > svg > path {
 // Individual Pages
 h1.post-title {
     color: $page-title-color;
+    text-align: center;
+    padding-bottom: 1em;
+    font-weight: bold;
+    color: #43616d;
+    font-family: 'Nobel', sans-serif;
 }
 
 // Navbar
 header.site-header {
     background: $navbar-background-color;
+    .logo {
+        width: 50px;
+        height: 50px;
+        bottom: 0;
+        margin-top: 0.25em;
+        margin-right: 0.5em;
+        content: url("../assets/logo.png");
+        float: left;
+    }
 }
 
-div.wrapper > a.site-title,
+div.wrapper > div > a.site-title,
 div.trigger > a.page-link {
     color: $navbar-text-color;
 }
 
 div.trigger > a.page-link {
     @include relative-font-size(1.125);
+    background-color: #f8ac8e;
+    border-radius: 15px;
+    padding: 0.4em 1.5em 0.4em 1.5em;
+    box-shadow: 1px 2px #E8E8E8;
 }
 
 div.container {

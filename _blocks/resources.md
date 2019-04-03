@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Hardware
 ---
 #### **The Invention Studio**
 Open Saturday 10 AM - 6 PM

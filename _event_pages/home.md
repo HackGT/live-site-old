@@ -2,9 +2,9 @@
 layout: two_column
 left_blocks:
     - basic.md
-    - contact.md
-right_blocks:
     - resources.md
+right_blocks:
+    - submission.md
 permalink: /
 priority: 3
 ---

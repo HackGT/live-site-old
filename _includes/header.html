@@ -1,7 +1,5 @@
 <header class="site-header" role="banner">
-
   <div class="wrapper">
-
     {% comment %}
         Group_by allows the navlinks to be alphabetically sorted when they have the same navpriority.  Higher navpriorities are expected to be displayed farther left or higher in a navbar.
         Sources:
@@ -13,7 +11,10 @@
     {% assign sorted_groups = site.event_pages | sort: "title" | group_by: "priority" | sort: "name" | reverse %}
 
     {% assign sorted_links = site.data.navbar_links %}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <div class="rows">
+        <div class="logo"></div>
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
 
     {% if sorted_groups %}
       <nav class="site-nav">
