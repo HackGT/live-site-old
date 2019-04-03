@@ -42,6 +42,12 @@ $block-body-text-color: #585858;
     border: solid 1px #E8E8E8;
 }
 
+.block-body {
+    h3 {
+        text-align: center;
+    }
+}
+
 .block-body > *:last-child {
     padding-bottom: 0px;
     margin-bottom: 0px;
