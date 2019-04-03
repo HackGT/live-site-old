@@ -17,7 +17,7 @@ Open Saturday 12 PM - 3 PM
 * 3D Printer
 
 #### **Hardware Desk**
-Checkout our hardware [inventory](https://tinyurl.com/y3oez2um)
+Check out our hardware [inventory](https://tinyurl.com/y3oez2um)
 
 #### **Mentors**
 Need help? Send a request in the #mentorship channel, or stop by help desk and the mentor lounge to chat with a mentor!

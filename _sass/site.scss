@@ -22,7 +22,7 @@ $navbar-text-color: white;
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
-    font-family: 'Nobel', sans-serif !important;
+    font-family: 'nobel', sans-serif !important;
     background: url('../assets/bg.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -33,7 +33,7 @@ body {
     h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
-        font-family: 'Nobel', sans-serif;
+        font-family: 'nobel', sans-serif;
     }
 }
 
@@ -61,7 +61,8 @@ h1.post-title {
     padding-bottom: 1em;
     font-weight: bold;
     color: #43616d;
-    font-family: 'Nobel', sans-serif;
+    font-family: 'nobel', sans-serif;
+    font-weight: 700;
 }
 
 img[src*="#icon"] {

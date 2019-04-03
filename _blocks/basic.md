@@ -5,7 +5,7 @@ title: Welcome to Horizons!
 
 We want to see you make your own unique story that meaningfully melds elements of both arts and technology.
 
-So go forth, Hacker, begin your journey, expand your horizons, and create your story
+So go forth, Hacker, begin your journey, expand your horizons, and create your story.
 
 
 #### **Contact Information**
