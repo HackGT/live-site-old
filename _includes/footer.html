@@ -19,8 +19,11 @@
 
   </div>
 </footer>
-{% if page.layout == "schedule" %}
+{% if page.layout == "schedule" or page.layout == "tab_schedule" %}
     {% include schedule.js %}
+{% endif %}
+{% if page.layout == "tab_schedule" %}
+    {% include tab.js %}
 {% endif %}
 {% if page.js %}
     {% for script in page.js %}<script src="{{ script }}"></script>

@@ -115,3 +115,11 @@ $day-highlight-color: #c8e5f2;
 table > tbody > tr.old > td {
     color: #969696;
 }
+
+.schedule-body {
+    display: none;
+}
+
+.schedule-body.active {
+    display: block;
+} 
