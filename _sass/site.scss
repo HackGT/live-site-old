@@ -72,6 +72,11 @@ img[src*="#icon"] {
    margin-bottom: 3em;
 }
 
+img[src*="#profile"] {
+   width:350px;
+   height:300px;
+}
+
 // Navbar
 header.site-header {
     background: $navbar-background-color;
