@@ -1,7 +1,23 @@
 @charset "utf-8";
 
 $table-cell-highlight-color: #e3e3e3;
-$day-highlight-color: #c8e5f2;
+$day-highlight-color: #43616d;
+
+li.tab.active {
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.5em 1em 0.5em 1em;
+    box-shadow: 1px 2px #E8E8E8;
+    color: #43616d;
+}
+
+li.tab {
+    text-decoration: underline;
+}
+
+div.block-header.tabs {
+    text-align: center;
+}
 
 .schedule {
     /*overflow-x: auto;*/
@@ -11,15 +27,15 @@ $day-highlight-color: #c8e5f2;
     }
 
     table > thead > tr > th {
-        background: #b6d2e3;
+        background: #fcc2ab;
         border: 0;
+        color: white;
     }
 
     table > thead > tr > th,
     table > tbody > tr > td:not(.schedule-day) {
         border: 0;
     }
-
 
     table > tbody > tr > td.schedule-day {
         @include relative-font-size(1.125);
@@ -49,10 +65,7 @@ $day-highlight-color: #c8e5f2;
 
     table > tbody > tr > td.schedule-day {
         background: $day-highlight-color;
-    }
-
-    table > tbody > tr > td.schedule-day {
-        background: #c8e5f2;
+        color: white;
     }
 
     td {
@@ -122,4 +135,4 @@ table > tbody > tr.old > td {
 
 .schedule-body.active {
     display: block;
-} 
+}
