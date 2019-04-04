@@ -1,7 +1,9 @@
 # This file defines some parameters that will affect the live site as a whole.
 title: Horizons
 description: >- # >- means ignore newlines until "baseurl:"
-  Horizons 2019 live site
+  There's a new event on the horizon! HackGT is presenting an Art+Tech make-a-thon called Horizons, where participants get to brainstorm, design, and create projects integrating art and technology. At the end of the event, we'll have a showcase of all the projects and judges will vote for specific categories of prizes.
+
+  Feel unprepared? Don't worry! We'll have plenty of mentors on hand to help with projects, presentations, idea creation, and technical difficulties!
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
 url: https://live-site.dev.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
