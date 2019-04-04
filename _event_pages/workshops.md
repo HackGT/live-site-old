@@ -3,7 +3,6 @@ layout: two_column
 left_blocks:
     - workshops/sound-design.md
     - workshops/ideation.md
-    - workshops/empathy-and-research.md
     - workshops/pitch.md
 right_blocks:
     - workshops/adobe.md
