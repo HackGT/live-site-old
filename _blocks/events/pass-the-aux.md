@@ -11,10 +11,11 @@ Pass The Aux is a platform for music producers, instrumentalists, vocalists and 
 Jeff is a beat maker, freestyle dancer and music lover. Starting as a guitarist, his path as a musician was interrupted when he discovered the various street dance styles that were represented in the freestyle dance community of his hometown of Sacramento. Through his experiences growing as a dancer he became more connected with the music genres present in this dance community: House, Hip Hop, Funk, Soul, and eventually Chicago Footwork music. These experiences have continuously influenced his process of music-making.
 <br/><br/>
 
-### **Mahir Haque (Marmelade)**
-![Picture of Mahir Haque (Marmelade)](../assets/people/mahir.jpg#profile)
+### **Jonathan Wang**
+![Picture of Jonathan Wang](../assets/people/jonathan.png#profile)
 <br/><br/>
-Mahir have been producing since he was in middle school and generally make bass heavy music. His background in musical instruments includes 7 years of trumpet playinyg and 5 years of guitar playing. Mahir's goal with music is to convey emotions to the listeners in a way that he would not be able to just by speaking. He enjoy all kinds of music and seek to learn more about different genres as he progresses.
+Jonathan has been producing and DJing for a year now. He's currently focused
+on making house music, inspired by hiphop and RnB.
 <br/><br/>
 
 ### **Ves Grantcharov**
