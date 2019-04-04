@@ -12,10 +12,6 @@ Open Saturday 10 AM - 3 PM
 * 3D Printer
 * Machine Shop
 
-#### **COLAB/DILAC**
-Open Saturday 12 PM - 3 PM
-* 3D Printer
-
 #### **Hardware Desk**
 Check out our hardware [inventory](https://docs.google.com/spreadsheets/d/1I43mYOnlPTpylaBq6CcQg6p28pK8qLvH3879gxv5Y18/edit?usp=sharing)
 

@@ -20,7 +20,7 @@ For example, Georgia Tech students would use username `<GT Username>@gatech.edu`
 Otherwise, connect to the **GTVisitor** network.
 
 #### **Slides**
-* [Opening Ceremonies](https://docs.google.com/presentation/d/1GUDZ0mES2KHo5PcXJ4zIvZkPzQjgOv1Z8RvMfNy5rR0/edit?usp=sharing)
+* Coming Soon
 
 #### **Slack**
 * Click [here](https://join.slack.com/t/horizons-2019/shared_invite/enQtNTkwMzM1Njc4MDAxLWU4NjliYjVhYjEzYTVlZTUzMzg4NGFhYTQyZjFiOTAxNzJiZjhhYWM4ZjA2NDFlZWE4Mzk2ZTVmMDgxZmYwNTE) to join the slack!
