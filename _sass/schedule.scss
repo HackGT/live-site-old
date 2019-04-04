@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $table-cell-highlight-color: #e3e3e3;
-$day-highlight-color: #43616d;
+$day-highlight-color: #fcc2ab;
 
 li.tab.active {
     background-color: white;
@@ -27,7 +27,7 @@ div.block-header.tabs {
     }
 
     table > thead > tr > th {
-        background: #fcc2ab;
+        background: #7796a3;
         border: 0;
         color: white;
     }
@@ -42,7 +42,7 @@ div.block-header.tabs {
         font-weight: bold;
         border-top: 0;
         border-right: 0;
-        border-left: 4px solid $block-accent-color;
+        border-left: 4px solid $day-highlight-color;
         cursor: pointer;
         i {
             user-select: none;
