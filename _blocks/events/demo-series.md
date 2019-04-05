@@ -27,3 +27,21 @@ Astrid Bin is an artist who uses common materials and electronics to make musica
 ![Ubiquitous Computing Logo](../assets/people/uc.jpg#profile)
 <br/><br/>
 Seamlessly embedding technology into the real world.
+<br/><br/>
+
+### **Joshua Fisher**
+![Picture of Joshua Fisher](../assets/people/joshua.jpg#profile)
+<br/><br/>
+I work with emerging media forms to facilitate social change. My specific focus is on community storytelling with augmented and virtual reality. I collaborate with community leaders, artists, educators, writers, and students on stories of communal significance. To enable these kinds of experiences, I have created local partnerships with the Peachtree and Pine Homeless Shelter, the Arthur M. Blank Foundation, and the Atlanta Bicycle Coalition.  Over the years, I have become an established public speaker and storyteller with performances, lectures, and talks on digital publishing, interactive narratives, and augmented reality.
+<br/><br/>
+
+### **Stephanie Baione**
+![Picture of Stephanie Baione](../assets/people/stephanie.jpg#profile)
+<br/><br/>
+My name is Stephanie Baione, and I am a 4th year Computational Media major. My interests lie in the field of Human Computer Interaction and the process of making media more user-friendly.
+<br/><br/>
+
+### **Prahbath Chandanala (Octbr)**
+![Picture of Prahbath Chandanala (Octbr)](../assets/people/prahbath.jpg#profile)
+<br/><br/>
+Octbr is an electronic and hip hop music producer drawing inspirations from the intricate texture sounds of artists like Mura Masa and coupling them with hard hitting bass lines and beautiful melodic trills. He has been producing for over 5 years, steadily gaining a sizeable following on SoundCloud. His Sleepyhead by Passion Pit remix has amassed over a million streams to date.
