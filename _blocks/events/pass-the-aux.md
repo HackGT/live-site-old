@@ -28,3 +28,9 @@ Ves highly interested in how technology affects art - music in particular. While
 ![Picture of Ore Aderibigbe](../assets/people/ore.jpg#profile)
 <br/><br/>
 Oré is an electronic music producer whose style involves taking elements from hiphop, house and jazz music to weave together experimental and off-kilter beats. He has been producing for over three years, as he continually tries to improve and refine his sound.
+<br/><br/>
+
+### **Prahbath Chandanala (Octbr)**
+![Picture of Prahbath Chandanala (Octbr)](../assets/people/prahbath.jpg#profile)
+<br/><br/>
+Octbr is an electronic and hip hop music producer drawing inspirations from the intricate texture sounds of artists like Mura Masa and coupling them with hard hitting bass lines and beautiful melodic trills. He has been producing for over 5 years, steadily gaining a sizeable following on SoundCloud. His Sleepyhead by Passion Pit remix has amassed over a million streams to date.

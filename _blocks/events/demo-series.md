@@ -39,9 +39,3 @@ I work with emerging media forms to facilitate social change. My specific focus 
 ![Picture of Stephanie Baione](../assets/people/stephanie.jpg#profile)
 <br/><br/>
 My name is Stephanie Baione, and I am a 4th year Computational Media major. My interests lie in the field of Human Computer Interaction and the process of making media more user-friendly.
-<br/><br/>
-
-### **Prahbath Chandanala (Octbr)**
-![Picture of Prahbath Chandanala (Octbr)](../assets/people/prahbath.jpg#profile)
-<br/><br/>
-Octbr is an electronic and hip hop music producer drawing inspirations from the intricate texture sounds of artists like Mura Masa and coupling them with hard hitting bass lines and beautiful melodic trills. He has been producing for over 5 years, steadily gaining a sizeable following on SoundCloud. His Sleepyhead by Passion Pit remix has amassed over a million streams to date.
