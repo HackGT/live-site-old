@@ -39,3 +39,11 @@ I work with emerging media forms to facilitate social change. My specific focus 
 ![Picture of Stephanie Baione](../assets/people/stephanie.jpg#profile)
 <br/><br/>
 My name is Stephanie Baione, and I am a 4th year Computational Media major. My interests lie in the field of Human Computer Interaction and the process of making media more user-friendly.
+<br/><br/>
+
+### **Mark Leibert**
+![Picture of Mark Leibert](../assets/people/mark.jpg#profile)
+<br/><br/>
+Mark Leibert is an artist, academic, and industry professional working in the areas of art and design. His research and teaching interests include painting, color theory, visual culture, web and graphic design, UX, and artist materials. His portraits are the result of a poetic engagement with algorithms and artificial intelligence.
+
+Leibert’s design and digital experience includes projects with the High Museum of Art, The Papers of George Washington, the Carter Center, Task Force for Global Health, and many others. He is Principal and Creative Director of Kaikoo Media and works actively in the web and graphic design industry, focusing particularly on projects with non-profit organizations. His art work, which includes painting, photography, and digital installations is in private and corporate collections, including the High Museum of Art, Capital One, Ritz Carlton, among others. He is co-founder of Day and Night projects, an Atlanta artist run gallery, and his work is represented by Sander Hudson Gallery. He has taught at James Madison University, Anderson Ranch Arts Center, SCAD, Georgia State University, and Georgia Tech.
