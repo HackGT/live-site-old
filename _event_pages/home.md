@@ -4,7 +4,7 @@ left_blocks:
     - basic.md
 right_blocks:
     - resources.md
-		- submission.md
+    - submission.md
 permalink: /
 priority: 3
 ---
