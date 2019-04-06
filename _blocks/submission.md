@@ -1,8 +1,6 @@
 ---
 title: Project Submissions
 ---
-Project submissions on Devpost are due at 10 PM! Submit your projects on the Horizons Devpost.
+**Important:** In order to be eligible for judging and prizes, **you must submit your project to Devpost by 7 PM!**  After that, you may continue working on your project until 8 PM.
 
-Hacking will end at 11 PM.
-
-If you have any questions or concerns about submissions, come to our help desk in front of Instructional Center room 109.
+Submit your project using the [Horizons Devpost](https://horizons2019.devpost.com/).
