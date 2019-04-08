@@ -3,7 +3,7 @@ layout: two_column
 left_blocks:
     - basic.md
 right_blocks:
-    - resources.md
+    - photobooth.md
 permalink: /
-priority: 3
+priority: 5
 ---

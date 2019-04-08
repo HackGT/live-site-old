@@ -1,11 +1,6 @@
 ---
-title: Welcome to Horizons!
+title: Welcome to Catalyst!
 ---
-“The most beautiful thing we can experience is the mysterious. It is the source of all true art and science." - Albert Einstein
-
-We want to see you make your own unique story that meaningfully melds elements of both arts and technology.
-
-So go forth, Hacker, begin your journey, expand your horizons, and create your story.
 
 
 #### **Contact Information**
@@ -21,6 +16,3 @@ Otherwise, connect to the **GTVisitor** network.
 
 #### **Slides**
 * [Opening Ceremonies](https://docs.google.com/presentation/d/109Xm3n3x3_J-qhs-dNOUbl6zSnSzcda7kd-vLMSdfbg/edit?usp=sharing)
-
-#### **Slack**
-* Click [here](https://join.slack.com/t/horizons-2019/shared_invite/enQtNTkwMzM1Njc4MDAxLWU4NjliYjVhYjEzYTVlZTUzMzg4NGFhYTQyZjFiOTAxNzJiZjhhYWM4ZjA2NDFlZWE4Mzk2ZTVmMDgxZmYwNTE) to join the slack!
