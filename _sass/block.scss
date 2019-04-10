@@ -21,11 +21,11 @@ $block-body-text-color: white;
 }
 
 .block-header {
-    @include relative-font-size(1.375);
+    @include relative-font-size(1.75);
     background: $block-accent-color;
     color: $block-header-text-color;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0.5em;
     // box-shadow: 2px 4px #E8E8E8;

@@ -47,13 +47,14 @@ body {
     div.wrapper > a.site-title,
     div.block-header {
         font-family: 'raleway', sans-serif;
-        font-style: italic;
+        // font-style: italic;
     }
 }
 
 a.site-title {
     text-transform: uppercase;
     font-weight: 700;
+    font-style: italic;
 }
 
 a.site-title:hover {
@@ -102,7 +103,8 @@ div.wrapper > div > a.site-title,
 div.trigger > a.page-link {
     color: $navbar-text-color;
     text-align: left;
-    font-style: italic;
+    // font-style: italic;
+    font-size: 2em;
 }
 
 div.trigger > a.page-link {
@@ -110,7 +112,7 @@ div.trigger > a.page-link {
     // background-color: #f8ac8e;
     border-radius: 15px;
     // padding: 0.5em 1em 0.5em 1em;
-    font-style: italic;
+    // font-style: italic;
     // box-shadow: 1px 2px #E8E8E8;
 }
 
