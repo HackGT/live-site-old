@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$table-cell-highlight-color: #000000;
+$table-cell-highlight-color: #FFFFFF;
 $day-highlight-color: black;
 
 // li.tab.active {
@@ -13,7 +13,7 @@ $day-highlight-color: black;
 
 li.tab {
     list-style-type: none;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 // div.block-header.tabs {
@@ -29,14 +29,14 @@ li.tab {
     }
 
     table > thead > tr > th {
-        background: white;
+        background: #b2b0b1;
         border: 0;
         color: black;
     }
 
     table > tbody > tr > td:not(.schedule-day) {
         border: 0;
-        background: #232323;
+        background: #E7E8EB;
     }
 
     table > tbody > tr > td.schedule-day {
@@ -67,12 +67,12 @@ li.tab {
 
     table > tbody > tr > td.schedule-day {
         background: $day-highlight-color;
-        color: #ebebeb;
+        color: black;
     }
 
     td {
         min-width: 85px;
-        color: #ebebeb;
+        color: black;
     }
 
     @include media-query($on-palm) {
@@ -128,8 +128,8 @@ li.tab {
 }
 
 table > tbody > tr.old > td {
-    color: #ebebeb;
-    background: black;
+    color: black;
+    background: white;
 }
 
 .schedule-body {
