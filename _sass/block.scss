@@ -24,10 +24,11 @@ $block-body-text-color: white;
     @include relative-font-size(1.75);
     background: $block-accent-color;
     color: $block-header-text-color;
-    font-weight: bold;
+    font-weight: 1000;
     text-align: center;
+    // font-style: italic;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
-    padding: .4em 0.5em;
+    padding: 0.5em 0 0 0;
     // box-shadow: 2px 4px #E8E8E8;
     border-left: solid 3px white;
 }
@@ -41,7 +42,7 @@ $block-body-text-color: white;
     margin-bottom: 3%;
     // box-shadow: 2px 4px #E8E8E8;
     border-left: solid 3px white;
-    margin-top: -2%;
+    // margin-top: -2%;
 }
 
 .block-body {
@@ -56,9 +57,9 @@ $block-body-text-color: white;
 }
 
 .block.block-left > .block-header {
-    background: $block-accent-color;
+    // background: $block-accent-color;
 }
 
 .block.block-right > .block-header {
-    background: $block-alt-accent-color;
+    // background: $block-alt-accent-color;
 }
