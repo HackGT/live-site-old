@@ -1,7 +1,7 @@
 # This file defines some parameters that will affect the live site as a whole.
 title: Catalyst
 description: >- # >- means ignore newlines until "baseurl:"
-  HackGT presents Catalyst, a FREE day of STEAM directed towards high school students in the Metro Atlanta Area. We are eager to welcome 400+ students on Saturday April 13th, from 9 am to 9 pm to Georgia Tech's Campus, making it one of the largest high school learn-a-thons hosted in the country.
+  HackGT presents Catalyst, a FREE day of STEAM directed towards high school students in the Metro Atlanta Area. We are eager to welcome 400+ students on Saturday April 13th, from 9 AM to 9 PM to Georgia Tech's Campus, making it one of the largest high school learn-a-thons hosted in the country.
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
 url: https://live-site.dev.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
