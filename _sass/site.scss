@@ -47,6 +47,7 @@ body {
     div.wrapper > a.site-title,
     div.block-header {
         font-family: 'raleway', sans-serif;
+        font-style: italic;
     }
 }
 
@@ -101,13 +102,14 @@ div.wrapper > div > a.site-title,
 div.trigger > a.page-link {
     color: $navbar-text-color;
     text-align: left;
+    font-style: italic;
 }
 
 div.trigger > a.page-link {
     @include relative-font-size(1.125);
     // background-color: #f8ac8e;
     border-radius: 15px;
-    padding: 0.5em 1em 0.5em 1em;
+    // padding: 0.5em 1em 0.5em 1em;
     font-style: italic;
     // box-shadow: 1px 2px #E8E8E8;
 }
