@@ -1,8 +1,8 @@
 ---
-layout: two_column
-left_blocks:
+title: Gaming Track
+layout: one_column
+blocks:
     - gaming/about.md
-right_blocks:
     - gaming/resources.md
 priority: 3
 ---

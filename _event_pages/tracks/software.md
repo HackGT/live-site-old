@@ -1,8 +1,8 @@
 ---
-layout: two_column
-left_blocks:
+title: Software Track
+layout: one_column
+blocks:
     - software/about.md
-right_blocks:
     - software/resources.md
 priority: 1
 ---

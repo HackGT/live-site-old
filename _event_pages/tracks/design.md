@@ -1,8 +1,8 @@
 ---
-layout: two_column
-left_blocks:
+title: Design Track
+layout: one_column
+blocks:
     - design/about.md
-right_blocks:
     - design/resources.md
 priority: 0
 ---

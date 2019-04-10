@@ -16,7 +16,7 @@ $block-body-text-color: white;
     }
 
     a {
-        color: #f8ac8e;
+        color: #999999;
     }
 }
 
@@ -25,11 +25,11 @@ $block-body-text-color: white;
     background: $block-accent-color;
     color: $block-header-text-color;
     font-weight: bold;
-    text-align: center;
+    text-align: right;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
-    padding: .4em 0;
+    padding: .4em 0.5em;
     // box-shadow: 2px 4px #E8E8E8;
-    border-left: solid 1px white;
+    border-left: solid 3px white;
 }
 
 .block-body {
@@ -37,9 +37,9 @@ $block-body-text-color: white;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
     border-radius: 0 0 $corner-border-radius $corner-border-radius;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     // box-shadow: 2px 4px #E8E8E8;
-    border-left: solid 1px white;
+    border-left: solid 3px white;
 }
 
 .block-body {
