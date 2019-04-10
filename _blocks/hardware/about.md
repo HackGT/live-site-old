@@ -1,6 +1,8 @@
 ---
-title: About
+title: About the Hardware Track!
 ---
-Experience Hardware with 3 small projects that teach you both the basics of electronic prototyping, the importance of good engineering concepts, and the creativity you have while building something from scratch. You will be going from the basics of circuitry to creating your own electric car. We have plenty of suplus and knowledge on how to create and improve on your design as the day goes on
+### **About**
+Build next-generation devices that will power future tech! In the Hardware Track, you'll learn how to design fundamental circuits through breadboarding and Arduino, create devices that you can interact with, and gain skills that will help you bring your ideas to life. Students will have the opportunity to build their own electronic hardware and then take home their creations to share with friends and family!
 
+### **Resources**
 [Beginner's Tutorial](https://learn.sparkfun.com/tutorials/where-do-i-start/all)
