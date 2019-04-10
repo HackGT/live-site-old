@@ -91,11 +91,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  // color: $brand-color;
+  color: #99ccff;
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    // color: darken($brand-color, 15%);
+    color: darken(#99ccff, 15%);
   }
 
   &:hover {
@@ -200,7 +202,8 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    // fill: #{$grey-color};
+    fill: white;
     vertical-align: text-top;
 }
 
