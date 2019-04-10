@@ -2,12 +2,12 @@
 
 
 // Blocks
-$block-accent-color: #43616d; //Used on the left column of two_column layout, and all schedule columns
-$block-alt-accent-color: #43616d; //Used on the right column of the two_column layout
-$block-header-text-color: #ffffff;
-$corner-border-radius: 15px;
-$block-body-bg-color: #f5f9f7;
-$block-body-text-color: #585858;
+$block-accent-color: black; //Used on the left column of two_column layout, and all schedule columns
+$block-alt-accent-color: black; //Used on the right column of the two_column layout
+$block-header-text-color: white;
+$corner-border-radius: 0px;
+$block-body-bg-color: black;
+$block-body-text-color: white;
 
 // Blocks
 .block {
@@ -28,8 +28,8 @@ $block-body-text-color: #585858;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
-    box-shadow: 2px 4px #E8E8E8;
-    border: solid 1px #E8E8E8;
+    // box-shadow: 2px 4px #E8E8E8;
+    border-left: solid 1px white;
 }
 
 .block-body {
@@ -38,8 +38,8 @@ $block-body-text-color: #585858;
     color: $block-body-text-color;
     border-radius: 0 0 $corner-border-radius $corner-border-radius;
     margin-bottom: 10%;
-    box-shadow: 2px 4px #E8E8E8;
-    border: solid 1px #E8E8E8;
+    // box-shadow: 2px 4px #E8E8E8;
+    border-left: solid 1px white;
 }
 
 .block-body {
