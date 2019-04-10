@@ -34,12 +34,14 @@ $block-body-text-color: white;
 
 .block-body {
     padding: 30px;
+    padding-top: 10px;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
     border-radius: 0 0 $corner-border-radius $corner-border-radius;
     margin-bottom: 3%;
     // box-shadow: 2px 4px #E8E8E8;
     border-left: solid 3px white;
+    margin-top: -2%;
 }
 
 .block-body {
