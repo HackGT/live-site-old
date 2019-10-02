@@ -24,7 +24,7 @@ $block-body-text-color: #454552;
     color: $block-header-text-color;
     text-align: center;
     // border-radius: $corner-border-radius $corner-border-radius 0 0;
-    border-radius: $corner-border-radius;
+    border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
     margin-bottom: 0.5em;
     position: relative;
@@ -56,6 +56,11 @@ $block-body-text-color: #454552;
     a {
         color: #9b4dca !important;
     }
+}
+
+.block-body > *:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .block-body > *:last-child {
