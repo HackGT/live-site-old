@@ -1,7 +1,7 @@
 ---
-layout: one_column
+layout: one_column_cms
 title: Hardware
 icon: nav_icons/Hardware.svg
-blocks:
-    - hardware.md
+cms_blocks:
+    - hardware
 ---
