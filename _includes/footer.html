@@ -34,6 +34,7 @@
     setInterval(makeNightIfNight, 10 * 000)
   </script> -->
 </footer>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script -->
 {% include cms.js %}
 {% if page.layout == "schedule" or page.layout == "tab_schedule" %}
     {% include schedule.js %}
@@ -44,6 +45,8 @@
 {% if page.layout == "schedule_cms" %}
     {% include schedule_cms.js %}
 {% endif %}
+{% include bundle.js %}
+{% include index.js %}
 {% if page.js %}
     {% for script in page.js %}<script src="{{ script }}"></script>
     {% endfor %}

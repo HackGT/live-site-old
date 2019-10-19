@@ -245,3 +245,105 @@ strong a {
 .block-header {
   font-family: 'Chicago', 'Raleway', sans-serif;
 }
+
+/* Map styles */
+
+.pin {
+    animation: pop-up 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+#map {
+    display: flex;
+}
+
+.card {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background: #85CDF2;
+    border: 5px solid royalblue;
+    padding: 1rem;
+    border-radius: 20px;
+    animation: pop-up 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@keyframes pop-up {
+    0% {
+        clip-path: ellipse(0px 0px at 150px 150px);
+        transform: translate(0px, 50px);
+    }
+    70% {
+        clip-path: ellipse(300px 300px at 150px 75px);
+        transform: translate(0px, -50px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.view-switcher {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    color: white;
+}
+
+.view-switcher div {
+    background: #7693A9;
+    width: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.view-switcher-option input {
+    display: none;
+}
+
+.view-switcher-option input:checked + label {
+    background: $page-title-color;
+
+}
+
+.view-switcher-option label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    background: #7693A9;
+    cursor: pointer;
+}
+
+.view-switcher-option label:hover {
+    background: $page-title-color;
+}
+
+#mobile-block {
+    text-align: center;
+    padding: 4em;
+}
+
+#regular-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) and (max-width: 512px) {
+    #mobile-block { display: block; }  /* show it on small screens */
+    #regular-block { display: none; }
+    #messages { display: none; }
+}
+
+@media screen and (min-width: 512px) {
+    #mobile-block { display: none; }
+}
