@@ -46,13 +46,8 @@
         var scheduleClass = ".schedule-" + data.num;
 
         if (result.items.length == 0) {
-            // Show a warning in the console if endDateTime comes before startDateTime
-            if (new Date(endDateTime) - new Date(startDateTime) < 0) {
-                scheduleError(data.num, "Event range end date is before start date")
-            } else {
-                document.querySelector(scheduleId)
+           document.querySelector(scheduleId)
                     .previousElementSibling.textContent = "No events found";
-            }
             return false;
         }
         result.items.sort(function(a,b) {
@@ -163,25 +158,89 @@
         //errorElem.previousElementSibling.lastChild.textContent = "The schedule couldn't be retrieved.  Please check your internet connection.  Error: " + msg;
     }
 
-    function getCalendarData(url, i) {
-        fetch(url).then(function (result) {
-            return result.json();
-        }).then(function(data) {
-            success({ apiResponse: data,
-                    num: i });
+    // function getCalendarData(url, i) {
+    //     fetch(url).then(function (result) {
+    //         return result.json();
+    //     }).then(function(data) {
+    //         success({ apiResponse: data,
+    //                 num: i });
+    //     })
+    //     .catch(function (e) {
+    //         scheduleError(i, e.message);
+    //     });
+    // }
+
+    // for (var i = 0; i < calendars.length; i++) {
+    //     var calId = calendars[i];
+    //     var url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
+    //         + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime
+    //         + "&timeMax=" + endDateTime;
+
+    //     getCalendarData(url, i);
+    // }
+
+    function parseAsLocal(t) {
+        let localString = t;
+        if (t.slice(-1).toLowerCase() === "z") {
+            localString = t.slice(0, -1);
+        }
+        return moment(localString);
+    }
+    function toUTC(t) {
+        return parseAsLocal(t).utc();
+    }
+
+    function getCalendarDataFromCMS() {
+        const queryString = `eventbases (start: 0) {
+                                title
+                                start_time
+                                end_time
+                                area {
+                                    name
+                                }
+                                type
+                            }`;
+
+        fetch("https://cms.hack.gt/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": `application/json`,
+                "Accept": `application/json`
+            },
+            body: JSON.stringify({
+                query: `query {
+                    ${queryString}
+                }`
+            })
         })
-        .catch(function (e) {
-            scheduleError(i, e.message);
+        .then(r => r.json())
+        .then(json => {
+            console.log(json);
+            const items = json.data.eventbases.map(e => {
+                return {
+                    summary: e.title,
+                    location: (e.area && e.area.name) || '',
+                    start: {
+                        dateTime: toUTC(e.start_time).format()
+                    },
+                    end: {
+                        dateTime: toUTC(e.end_time).format()
+                    }
+                };
+            })
+            success({
+                apiResponse: {
+                    items,
+                },
+                num: 'cms'
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            scheduleError('cms', err.message);
         });
     }
 
-    for (var i = 0; i < calendars.length; i++) {
-        var calId = calendars[i];
-        var url = "https://www.googleapis.com/calendar/v3/calendars/" + calId
-            + "/events?key={{page.gcal.api_key}}&timeMin=" + startDateTime
-            + "&timeMax=" + endDateTime;
-
-        getCalendarData(url, i);
-    }
+    getCalendarDataFromCMS();
 })();
 </script>
