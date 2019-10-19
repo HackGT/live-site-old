@@ -82,8 +82,8 @@ nav.site-nav {
     border-radius: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.18);
 }
 
@@ -155,7 +155,6 @@ img.map {
 
 nav.site-nav {
   text-align: right;
-  min-width: 900px;
 }
 
 h1.post-title {
@@ -225,6 +224,10 @@ i.open {
 
 .svg-icon {
   fill: #f0e2d1;
+}
+
+.page-link > img {
+  display: none;
 }
 
 footer p {
