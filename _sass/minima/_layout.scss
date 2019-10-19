@@ -206,6 +206,7 @@
  */
 .page-content {
   padding: ($spacing-unit * 3) 0;
+  padding-bottom: 200px; // To prevent sticky footer from covering page-content
 }
 
 .page-heading {

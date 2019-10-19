@@ -4,6 +4,10 @@ footer.site-footer {
     padding: 0;
     padding-top: 8px;
     background-color: #595F83;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
 }
 
 .footer-col > p {
