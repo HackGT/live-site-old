@@ -1,10 +1,8 @@
 ---
-layout: one_column
-display_title: points
+layout: one_column_cms
 title: Points
 icon: nav_icons/points.svg
-blocks:
-    - mini_events.md
-    - scavenger-hunt.md
-    - photo-booth.md
+cms_blocks:
+    - points
+    - scavenger_hunt
 ---
