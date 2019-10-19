@@ -3,9 +3,8 @@ icon: nav_icons/DayLink.svg
 layout: two_column_cms
 left_cms_blocks:
     - site_links
-    - faq
 right_cms_blocks:
-    - social_media
+    - faq
 permalink: /
 priority: 3
 ---
