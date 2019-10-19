@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="column">
+      <div class="post-content">
+          {% for block in page.cms_blocks %}
+              <div class="block cms-infoblock" data-cms-slug="{{ block }}">
+                <div class="block-header">Loading</div>
+                <div class="block-body">...</div>
+              </div>
+          {% endfor %}
+      </div>
+</div>
