@@ -1,23 +1,7 @@
 {
   "short_name": "HackGT 6",
   "name": "HackGT 6",
-  "icons": [
-    {
-      "src": "/assets/pwa_icons/Icon48.svg",
-      "type": "image/svg",
-      "sizes": "48x48"
-    },
-    {
-      "src": "/assets/pwa_icons/Icon96.svg",
-      "type": "image/svg",
-      "sizes": "96x96"
-    },
-    {
-      "src": "/assets/pwa_icons/Icon192.svg",
-      "type": "image/svg",
-      "sizes": "192x192"
-    }
-  ],
+  "icons": [],
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
