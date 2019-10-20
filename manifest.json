@@ -1,6 +1,6 @@
 {
-  "short_name": "HackGT 5",
-  "name": "HackGT 5",
+  "short_name": "HackGT 6",
+  "name": "HackGT 6",
   "icons": [
     {
       "src": "/assets/pwa_icons/Icon48.svg",
@@ -21,7 +21,7 @@
   "start_url": "",
   "gcm_sender_id": "482941778795",
   "gcm_sender_id_comment": "Do not change the GCM Sender ID",
-  "background_color": "#E17E76",
-  "theme_color": "#E17E76",
+  "background_color": "#edfafb",
+  "theme_color": "#edfafb",
   "display": "fullscreen"
 }
