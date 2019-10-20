@@ -1,7 +1,7 @@
 <script>
 /**
  * CMS-backed reusable lightweight components.
- */ 
+ */
 
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
@@ -10,21 +10,8 @@
     // Populate infoblocks on CMS.
     // Event pages can use layout: one_column_cms or two_column_cms
     // to use these CMS-backed blocks.
-
-    function createInfoBlockInnerHTML (title, markdownContent) {
-        return `<div class="block-header">${title}</div><div class="block-body">${marked(markdownContent)}</div>`;
-    }
-
-    function fetchInfoBlock (blockElement) {
-        const slug = blockElement.getAttribute("data-cms-slug");
-        const queryString = `infoblocks (where: {
-                                slug: "${slug}"
-                            }) {
-                                body
-                                title
-                            }`;
-
-        fetch("https://cms.hack.gt/graphql", {
+    function fetchCMS(queryString) {
+        return fetch("https://cms.hack.gt/graphql", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
@@ -36,15 +23,74 @@
                 }`
             })
         })
-        .then(r => r.json())
-        .then(json => {
-            if (json.data.infoblocks.length == 0) {
-                console.warn('No infoblock with specified slug on CMS');
+        .then(r => {
+            if (!r.ok) {
+                console.warn("CMS is down");
                 return;
             }
-            const markdownContent = json.data.infoblocks[0].body;
-            const title = json.data.infoblocks[0].title;
-            const elementString = createInfoBlockInnerHTML(title, markdownContent);
+            return r.json();
+        })
+        .then(json => json.data)
+        .catch(err => {
+            console.err(err);
+        });
+    }
+
+    function createInfoBlockInnerHTML (title, markdownContent) {
+        return `<div class="block-header">${title}</div><div class="block-body">${marked(markdownContent)}</div>`;
+    }
+
+    function createChallengeBlockInnerHTML (title, description, prizes) {
+        const descString = "### Description\n" + description && description.length > 0 ? description : "Stay tuned for more details!";
+        const prizeString = prizes && prizes.length > 0 ? `\n\n### Prizes\n ${prizes}` : "";
+        return `<div class="block-header">${title}</div>
+        <div class="block-body">${marked(descString + prizeString)}</div>
+        `;
+    }
+
+    function fetchInfoBlock (blockElement) {
+        const slug = blockElement.getAttribute("data-cms-slug");
+        const queryString = `infoblocks (where: {
+                                slug: "${slug}"
+                            }) {
+                                body
+                                title
+                            }`;
+        fetchCMS(queryString)
+            .then(data => {
+                if (data.infoblocks.length == 0) {
+                    console.warn('No infoblock with specified slug on CMS');
+                    return;
+                }
+                const markdownContent = data.infoblocks[0].body;
+                const title = data.infoblocks[0].title;
+                const elementString = createInfoBlockInnerHTML(title, markdownContent);
+                blockElement.innerHTML = elementString;
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+
+    function fetchChallengeBlock (blockElement) {
+        const slug = blockElement.getAttribute("data-cms-slug");
+        const queryString = `challenges (where: {
+                                slug: "${slug}"
+                            }) {
+                                title
+                                prize
+                                description
+                            }`;
+        fetchCMS(queryString)
+        .then(data => {
+            if (data.challenges.length == 0) {
+                console.warn('No challenge with specified slug on CMS');
+                return;
+            }
+            const prizeMd = data.challenges[0].prize;
+            const descriptionMd = data.challenges[0].description;
+            const title = data.challenges[0].title;
+            const elementString = createChallengeBlockInnerHTML(title, descriptionMd, prizeMd);
             blockElement.innerHTML = elementString;
         })
         .catch(err => {
@@ -55,6 +101,9 @@
     document.querySelectorAll('.cms-infoblock').forEach(element => {
         fetchInfoBlock(element);
     });
-    
+
+    document.querySelectorAll('.cms-challengeblock').forEach(element => {
+        fetchChallengeBlock(element);
+    });
 })();
 </script>
