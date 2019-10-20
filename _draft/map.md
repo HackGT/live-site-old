@@ -1,8 +1,6 @@
 ---
 layout: one_column
-title: Maps
-icon: nav_icons/DayMap.svg
+title: Map
 blocks:
-    - floor1.md
-    - floor2.md
+    - map.md
 ---
