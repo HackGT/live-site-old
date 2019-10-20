@@ -3,7 +3,7 @@ title: HackGT 6
 description: >- # >- means ignore newlines until "baseurl:"
  Wonderland is a place with the most unexpected of things. Follow Beardell on a 36-hour adventure as his world gets turned upside down! As you explore Wonderland, you'll encounter wild characters, use fantastical technology, and maybe even create the impossible. What are you waiting for? Into the rabbit hole you go!
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
-url: https://live.hack.gt # Your site's domain, e.g. everything up and including to the .com
+url: https://info.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
