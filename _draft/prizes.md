@@ -21,6 +21,7 @@ cms_blocks:
     - teleportal_prize
     - bny_prize
     - cap_one_prize
+    - cardlytics_prize
     - bose_prize
     - statefarm_prize
     - att_prize
