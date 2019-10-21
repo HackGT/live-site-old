@@ -338,12 +338,13 @@ strong a {
     overflow-x: hidden;
 }
 
-@media screen and (min-width: 0px) and (max-width: 512px) {
+@media screen and (min-width: 0px) and (max-width: 1050px) {
     #mobile-block { display: block; }  /* show it on small screens */
     #regular-block { display: none; }
     #messages { display: none; }
+    #map { display: none;}
 }
 
-@media screen and (min-width: 512px) {
+@media screen and (min-width: 1050px) {
     #mobile-block { display: none; }
 }
