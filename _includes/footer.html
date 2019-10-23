@@ -45,7 +45,9 @@
 {% if page.layout == "cms_schedule" %}
     {% include schedule_cms.js %}
 {% endif %}
-{% include bundle.js %}
+{% if page.title == "Map" %}
+    {% include bundle.js %}
+{% endif %}
 {% include index.js %}
 {% if page.js %}
     {% for script in page.js %}<script src="{{ script }}"></script>

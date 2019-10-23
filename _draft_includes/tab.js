@@ -8,7 +8,7 @@
         function displayTab(e) {
             let activeSchedule = document.querySelector(".schedule-body.active");
             activeSchedule.classList.remove("active");
-            
+
             let show = document.getElementById(e.target.dataset.div);
             show.classList.add("active");
 

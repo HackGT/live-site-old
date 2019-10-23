@@ -1,0 +1,12 @@
+- name: All
+  type: all
+- name: Talks
+  type: talk
+- name: Workshops
+  type: workshop
+- name: Meals
+  type: meal
+- name: Mini-Events
+  type: minievent
+- name: Other
+  type: other
