@@ -106,6 +106,13 @@
                                 }
                                 type
                             }`;
+        const talkQuery = `talks {
+            those other fields // @Hannah
+            base {
+                id
+            }
+        }`;
+        // TODO add talkQuery, merge it in referring to appgt code
 
         fetch("https://cms.hack.gt/graphql", {
             method: "POST",
@@ -113,7 +120,7 @@
                 "Content-Type": `application/json`,
                 "Accept": `application/json`
             },
-            body: JSON.stringify({
+            body: JSON.stringify({ // TODO add the entire query
                 query: `query {
                     ${queryString}
                 }`
@@ -139,7 +146,8 @@
                     },
                     type: e.type
                 };
-            })
+            });
+            // TODO merge in talk information according to appgt code
             success({
                 apiResponse: {
                     items,
@@ -228,15 +236,32 @@
             if (event.type) {
                 trString += 'data-type=' + event.type + ' ';
             }
-            schedule.insertAdjacentHTML('beforeend',trString + 'class="schedule-day-'+ day + oldClass + '"><td></td><td></td><td></td></tr>');
+
+            const clickable = event.type === "talk" || event.type === "workshop";
+
+            let rowHTML = trString + `class="${clickable ? "schedule-interactive " : ""}schedule-day-`+ day + oldClass + '">';
+            let titleEntry = `<td>${event.summary} ${clickable ? '<i class="material-icons schedule-icon">info</i>' : ""}</td>`;
+            rowHTML += titleEntry;
+            schedule.insertAdjacentHTML('beforeend', rowHTML + '<td></td><td></td></tr>');
 
             eventValues = [
-                event.summary,
                 timeString,
                 location
             ];
-            document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td').forEach(function(item, index) {
-                item.textContent = eventValues[index];
+            document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td')
+                .forEach(function(item, index) {
+                    if (index == 0) return;
+                    else item.textContent = eventValues[index - 1];
+                });
+
+            const rowEl = document.querySelector(scheduleId + ' > table > tbody > tr:last-child');
+            rowEl.addEventListener('click', () => {
+                // information is stored in `event`
+                const presenters = event.people;
+                window.alert("More information coming soon");
+                // select the modal document.getElement
+                // edit the modal contents
+                // reveal
             });
         }
 

@@ -4,6 +4,20 @@ $table-cell-highlight-color: #ededed;
 $day-highlight-color: #e1f0f5;
 $table-header-row-background: rgb(211, 215, 241);
 
+.schedule-interactive {
+    cursor: pointer;
+    transition: transform .5s;
+    border-right: 2px solid black;
+}
+
+.schedule-interactive:hover {
+    transform: scale(1.01);
+}
+
+.schedule-icon {
+  transform: scale(.7);
+}
+
 .schedule {
     /*overflow-x: auto;*/
     table {
