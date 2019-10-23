@@ -134,7 +134,7 @@
                     },
                     end: {
                         dateTime: endTime,
-                        pretty: endTime.format('HH:mm A'),
+                        pretty: endTime.format('hh:mm A'),
                         day: endTime.day()
                     },
                     type: e.type
