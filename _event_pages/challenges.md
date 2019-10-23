@@ -25,5 +25,6 @@ cms_blocks:
     - statefarm_prize
     - att_prize
     - facebook_prize
+    - ceismc_prize
 icon: nav_icons/DayLink.svg
 ---
