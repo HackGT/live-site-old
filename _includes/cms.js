@@ -32,7 +32,7 @@
         })
         .then(json => json.data)
         .catch(err => {
-            console.err(err);
+            console.error(err);
         });
     }
 
@@ -40,11 +40,15 @@
         return `<div class="block-header">${title}</div><div class="block-body">${marked(markdownContent)}</div>`;
     }
 
-    function createChallengeBlockInnerHTML (title, description, prizes) {
-        const descString = "### Description\n" + description && description.length > 0 ? description : "Stay tuned for more details!";
-        const prizeString = prizes && prizes.length > 0 ? `\n\n### Prizes\n ${prizes}` : "";
+    function createChallengeBlockInnerHTML (title, description, prizes, partner) {
+        const descString = "#### Description\n" + description && description.length > 0 ? description : "Stay tuned for more details!";
+        const prizeString = prizes && prizes.length > 0 ? `\n\n#### Prizes\n ${prizes}` : "";
+        console.log(partner);
+        const partnerString = partner && !!partner.name && partner.name.length > 0 ? `#### *Presented by ${!!partner.website ?
+            `[${partner.name}](${partner.website})` : partner.name}*\n` : "";
+        console.log(partnerString);
         return `<div class="block-header">${title}</div>
-        <div class="block-body">${marked(descString + prizeString)}</div>
+        <div class="block-body">${marked(partnerString + descString + prizeString)}</div>
         `;
     }
 
@@ -80,6 +84,10 @@
                                 title
                                 prize
                                 description
+                                partner {
+                                    name
+                                    website
+                                }
                             }`;
         fetchCMS(queryString)
         .then(data => {
@@ -90,7 +98,8 @@
             const prizeMd = data.challenges[0].prize;
             const descriptionMd = data.challenges[0].description;
             const title = data.challenges[0].title;
-            const elementString = createChallengeBlockInnerHTML(title, descriptionMd, prizeMd);
+            const partner = data.challenges[0].partner;
+            const elementString = createChallengeBlockInnerHTML(title, descriptionMd, prizeMd, partner);
             blockElement.innerHTML = elementString;
         })
         .catch(err => {
