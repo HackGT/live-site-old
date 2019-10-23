@@ -1,7 +1,7 @@
 ---
 layout: one_column_cms_prizes
-title: Prizes
-display_title: Prizes
+title: Challenges
+display_title: Challenges
 cms_blocks:
     - hackgt_prizes
     - blackrock_prize
