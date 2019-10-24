@@ -349,15 +349,15 @@
                 modalContent.lastElementChild.insertAdjacentHTML('beforeend', surveyString);
             }
         }
-        if (prereqs) {
+        if (prereqs && prereqs.trim() !== "") {
             const prereqsString = `<p><strong>Prerequisites</strong>: ${prereqs}</p>`;
             modalContent.insertAdjacentHTML('beforeend', prereqsString);
         }
-        if (partner) {
+        if (partner && partner.trim() !== "") {
             const partnerString = `<p><strong>Partner</strong>: ${partner}</p>`;
             modalContent.insertAdjacentHTML('beforeend', partnerString);
         }
-        if (people) {
+        if (people && people.trim() !== "") {
             const presentersString= `<p><strong>Presenter${people.length > 1 ? 's': ''}</strong>: ${people.join(", ")}</p>`;
             modalContent.insertAdjacentHTML('beforeend', presentersString);
         }
