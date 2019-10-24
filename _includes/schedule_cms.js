@@ -3,6 +3,33 @@
 // of the global scope
 (function() {
 
+    const CMS_QUERY = `
+        eventbases(start: 0) {
+            id
+            title
+            description
+            start_time
+            end_time
+            area {
+                name
+            }
+            type
+        }
+        talks(start: 0) {
+            base {
+                id
+            }
+            slide_link
+            code_link
+            prereqs
+            survey_link
+            people {
+                name
+            }
+        }
+    `;
+
+
     const DAYS_OF_WEEK = [
         "Sunday",
         "Monday",
@@ -13,7 +40,6 @@
         "Saturday"
     ];
 
-    let eventData = [];
 
     function toggleDay(scheduleId, day) {
         document.querySelectorAll(scheduleId + ' .schedule-day-' + day).forEach(function (item, index) {
@@ -36,6 +62,8 @@
         return false;
     }
 
+    let eventData = [];
+
     function success(data) {
         // stuff the data into eventData
         var result = data.apiResponse;
@@ -55,7 +83,7 @@
 
 
         eventData = result.items;
-        filterEvents();
+        filterEvents(); // builds table
 
         var scheduleBlockBody = document.querySelector(scheduleId);
         document.querySelector(scheduleClass + ".schedule-loading").classList.add("hidden");
@@ -92,20 +120,12 @@
         }
         return moment(localString);
     }
+
     function toUTC(t) {
         return parseAsLocal(t).utc();
     }
 
     function getCalendarDataFromCMS() {
-        const queryString = `eventbases (start: 0) {
-                                title
-                                start_time
-                                end_time
-                                area {
-                                    name
-                                }
-                                type
-                            }`;
 
         fetch("https://cms.hack.gt/graphql", {
             method: "POST",
@@ -115,7 +135,7 @@
             },
             body: JSON.stringify({
                 query: `query {
-                    ${queryString}
+                    ${CMS_QUERY}
                 }`
             })
         })
@@ -125,6 +145,7 @@
                 const startTime = toUTC(e.start_time).local();
                 const endTime = toUTC(e.end_time).local();
                 return {
+                    id: e.id,
                     summary: e.title,
                     location: (e.area && e.area.name) || '',
                     start: {
@@ -137,8 +158,19 @@
                         pretty: endTime.format('hh:mm A'),
                         day: endTime.day()
                     },
-                    type: e.type
+                    type: e.type,
+                    description: e.description
                 };
+            });
+            json.data.talks.forEach(talk => {
+                const { base, people, ...other } = talk;
+                let presenters = [];
+                if (people) {
+                    presenters = people.map(p => p.name);
+                }
+                const eventIndex = items.findIndex(item => item.id === base.id);
+                if (eventIndex === -1) return;
+                items[eventIndex] = {...items[eventIndex], ...other, people: presenters};
             })
             success({
                 apiResponse: {
@@ -162,8 +194,6 @@
         });
     }
 
-// TODO fix days
-// TODO fix alternating
     function typeFilter(e, type="all") { // onClick
         filterEvents(type);
 
@@ -194,7 +224,7 @@
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
-        // TODO worry about ids
+
         var currentTime = moment();
 
         var eventValues;
@@ -228,21 +258,110 @@
             if (event.type) {
                 trString += 'data-type=' + event.type + ' ';
             }
-            schedule.insertAdjacentHTML('beforeend',trString + 'class="schedule-day-'+ day + oldClass + '"><td></td><td></td><td></td></tr>');
+
+            const clickable = event.type === "talk" || event.type === "workshop";
+
+            let rowHTML = trString + `class="${clickable ? "schedule-interactive " : ""}schedule-day-`+ day + oldClass + '">';
+            let titleEntry = `<td>${event.summary} ${clickable ? '<i class="material-icons schedule-icon">info</i>' : ""}</td>`;
+            rowHTML += titleEntry;
+            schedule.insertAdjacentHTML('beforeend', rowHTML + '<td></td><td></td></tr>');
 
             eventValues = [
-                event.summary,
                 timeString,
                 location
             ];
-            document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td').forEach(function(item, index) {
-                item.textContent = eventValues[index];
-            });
+            document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td')
+                .forEach(function(item, index) {
+                    if (index == 0) return;
+                    else item.textContent = eventValues[index - 1];
+                });
+
+            const rowEl = document.querySelector(scheduleId + ' > table > tbody > tr:last-child');
+            if (clickable) {
+                rowEl.addEventListener('click', () => {
+                    popInfoModal(event);
+                });
+            }
         }
 
 
     }
 
+    function popInfoModal(event) {
+        const modal = document.getElementById("schedule-modal");
+        if (!modal) window.alert("Sorry, something went wrong.");
+        modal.style.display = "block";
+        // TODO style + load event info
+        const { summary, location, start, end, slide_link, survey_link, code_link, prereqs, description, people } = event;
+        const modalContent = document.getElementById("schedule-modal-content");
+        while (modalContent.firstChild) {
+            modalContent.removeChild(modalContent.firstChild);
+        }
+        if (summary) {
+            const summaryString = `<h4>${summary}</h4>`;
+            modalContent.insertAdjacentHTML('beforeend', summaryString);
+        }
+        if (location || start) {
+            modalContent.insertAdjacentHTML('beforeend', '<div class="modal-row"></div>')
+            if (location) {
+                const locationString = `<h5 class="modal-item" >${location}</h5>`;
+                modalContent.lastElementChild.insertAdjacentHTML('beforeend', locationString);
+            }
+            if (start) {
+                let modalTime = start.pretty;
+                if (end && start.pretty !== end.pretty) {
+                    modalTime += ' - ' + event.end.pretty;
+                }
+                const timeString = `<h5>${modalTime}</h5>`;
+                modalContent.lastElementChild.insertAdjacentHTML('beforeend', timeString);
+            }
+        }
+
+        if (description) {
+            const descriptionString = `<p>${description}</p>`;
+            modalContent.insertAdjacentHTML('beforeend', descriptionString);
+        }
+        if (slide_link || code_link || survey_link) {
+            modalContent.insertAdjacentHTML('beforeend', '<h4>Resources</h4>');
+            modalContent.insertAdjacentHTML('beforeend', '<div class="modal-row"></div>')
+            if (slide_link) {
+                const slideString = `<a class="modal-item" href="${slide_link}">Slides</p>`;
+                modalContent.lastElementChild.insertAdjacentHTML('beforeend', slideString);
+            }
+            if (code_link) {
+                const codeString = `<a class="modal-item" href="${code_link}">Code</p>`;
+                modalContent.lastElementChild.insertAdjacentHTML('beforeend', codeString);
+            }
+            if (survey_link) {
+                const surveyString = `<a class="modal-item" href="${survey_link}">Survey</p>`;
+                modalContent.lastElementChild.insertAdjacentHTML('beforeend', surveyString);
+            }
+        }
+        if (prereqs) {
+            const prereqsString = `<p><strong>Prerequisites</strong>: ${prereqs}</p>`;
+            modalContent.insertAdjacentHTML('beforeend', prereqsString);
+        }
+        if (people) {
+            const presentersString= `<p><strong>Presenter${people.length > 1 ? 's': ''}</strong>: ${people.join(", ")}</p>`;
+            modalContent.insertAdjacentHTML('beforeend', presentersString);
+        }
+
+    }
+
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById("schedule-modal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    const modalX = document.getElementById("modal-close");
+    if (modalX) {
+        modalX.addEventListener('click', function() {
+            const modal = document.getElementById("schedule-modal");
+            modal.style.display = "none";
+        });
+    }
 
     getCalendarDataFromCMS();
 })();
