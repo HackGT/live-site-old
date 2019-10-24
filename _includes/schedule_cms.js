@@ -26,6 +26,9 @@
             people {
                 name
             }
+            partner {
+                name
+            }
         }
     `;
 
@@ -163,14 +166,14 @@
                 };
             });
             json.data.talks.forEach(talk => {
-                const { base, people, ...other } = talk;
+                const { base, people, partner, ...other } = talk;
                 let presenters = [];
                 if (people) {
                     presenters = people.map(p => p.name);
                 }
                 const eventIndex = items.findIndex(item => item.id === base.id);
                 if (eventIndex === -1) return;
-                items[eventIndex] = {...items[eventIndex], ...other, people: presenters};
+                items[eventIndex] = {...items[eventIndex], ...other, partner: partner ? partner.name : null, people: presenters};
             })
             success({
                 apiResponse: {
@@ -291,8 +294,7 @@
         const modal = document.getElementById("schedule-modal");
         if (!modal) window.alert("Sorry, something went wrong.");
         modal.style.display = "block";
-        // TODO style + load event info
-        const { summary, location, start, end, slide_link, survey_link, code_link, prereqs, description, people } = event;
+        const { summary, location, start, end, slide_link, survey_link, code_link, prereqs, description, people, partner } = event;
         const modalContent = document.getElementById("schedule-modal-content");
         while (modalContent.firstChild) {
             modalContent.removeChild(modalContent.firstChild);
@@ -340,6 +342,10 @@
         if (prereqs) {
             const prereqsString = `<p><strong>Prerequisites</strong>: ${prereqs}</p>`;
             modalContent.insertAdjacentHTML('beforeend', prereqsString);
+        }
+        if (partner) {
+            const partnerString = `<p><strong>Partner</strong>: ${partner}</p>`;
+            modalContent.insertAdjacentHTML('beforeend', partnerString);
         }
         if (people) {
             const presentersString= `<p><strong>Presenter${people.length > 1 ? 's': ''}</strong>: ${people.join(", ")}</p>`;
