@@ -142,3 +142,68 @@ table > tbody > tr.old > td {
 .schedule-body.active {
     display: block;
 }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 2em;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    max-height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.3s;
+}
+
+/* The Close Button */
+#modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 3em;
+    font-weight: bold;
+    position: relative;
+    top: -.6em;
+}
+
+#modal-close:hover,
+#modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.modal-item {
+    margin-right: 2em;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {transform: translateY(-300px); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
