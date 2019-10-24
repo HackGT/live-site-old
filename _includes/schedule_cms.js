@@ -48,7 +48,6 @@
         document.querySelectorAll(scheduleId + ' .schedule-day-' + day).forEach(function (item, index) {
             item.classList.toggle('hidden');
         });
-
         var caret = document.querySelector(scheduleId + ' tr#header-day-' + day + ' > td > i');
         caret.classList.toggle('closed');
         caret.classList.toggle('open');
@@ -222,13 +221,16 @@
             return; // nothing to see here - this is effectively an error
         }
 
+        var currentTime = moment();
         var prevCurrentDay = filtered[0].start.day;
         schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
-
-        var currentTime = moment();
+        let shouldToggle = false;
+        if (currentTime.isAfter(filtered[0].end.dateTime)) {
+            shouldToggle = true; // toggle when events are added
+        }
 
         var eventValues;
         var day = 0;
@@ -238,14 +240,24 @@
                 const currentDay = event.start.day;
 
                 if (currentDay !== prevCurrentDay) {
+                    if (shouldToggle) {
+                        toggleDay(scheduleId, document.querySelector('#header-day-0').dataset['day']);
+                        shouldToggle = false;
+                    }
                     day++;
+
                     schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
                         + DAYS_OF_WEEK[currentDay] + '</td></tr>');
                         document.querySelector(scheduleId + ' #header-day-' + day).addEventListener('click', function() {
                         toggleDay(scheduleId, this.attributes['data-day'].value);
                     });
+                    if (currentTime.isAfter(event.end.dateTime)) {
+                        shouldToggle = true;
+                    }
+                    console.log(event.summary);
+                    console.log(currentTime.isAfter(event.end.dateTime));
+                    prevCurrentDay = currentDay;
                 }
-                prevCurrentDay = currentDay;
             }
 
             // It looks weird if the start time and end time for an event are
@@ -286,8 +298,6 @@
                 });
             }
         }
-
-
     }
 
     function popInfoModal(event) {

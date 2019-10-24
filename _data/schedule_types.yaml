@@ -8,5 +8,5 @@
   type: meal
 - name: Mini-Events
   type: minievent
-- name: Other
+- name: General
   type: other
