@@ -12,6 +12,8 @@ cms_blocks:
     - wayfair_prize
     - disney_prize
     - accenture_prize
+    - nsa_1
+    - nsa_2
     - pdi_prize
     - anthem_prize
     - equifax_prize
