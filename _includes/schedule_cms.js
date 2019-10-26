@@ -227,6 +227,8 @@
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
+        let shouldToggle = false;
+
 
         var eventValues;
         var day = 0;
@@ -236,9 +238,9 @@
                 const currentDay = event.start.day;
 
                 if (currentDay !== prevCurrentDay) {
-                    // look at the previous day and collapse if you need
-                    if (currentTime.isAfter(filtered[i-1].end.dateTime)) {
-                        toggleDay(scheduleId, document.querySelector('#header-day-' + (day - 1)).dataset['day']);
+                    if (shouldToggle) {
+                        toggleDay(scheduleId, document.querySelector('#header-day-0').dataset['day']);
+                        shouldToggle = false;
                     }
                     day++;
 
