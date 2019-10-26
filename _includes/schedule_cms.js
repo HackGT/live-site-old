@@ -228,9 +228,7 @@
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
         let shouldToggle = false;
-        if (currentTime.isAfter(filtered[0].end.dateTime)) {
-            shouldToggle = true; // toggle when events are added
-        }
+
 
         var eventValues;
         var day = 0;
@@ -251,9 +249,7 @@
                         document.querySelector(scheduleId + ' #header-day-' + day).addEventListener('click', function() {
                         toggleDay(scheduleId, this.attributes['data-day'].value);
                     });
-                    if (currentTime.isAfter(event.end.dateTime)) {
-                        shouldToggle = true;
-                    }
+
                     console.log(event.summary);
                     console.log(currentTime.isAfter(event.end.dateTime));
                     prevCurrentDay = currentDay;
