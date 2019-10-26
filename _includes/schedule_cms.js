@@ -227,7 +227,6 @@
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
-        let shouldToggle = false;
 
 
         var eventValues;
@@ -238,11 +237,11 @@
                 const currentDay = event.start.day;
 
                 if (currentDay !== prevCurrentDay) {
-                    if (shouldToggle) {
-                        toggleDay(scheduleId, document.querySelector('#header-day-0').dataset['day']);
-                        shouldToggle = false;
-                    }
                     day++;
+                    if (currentTime.isAfter(filtered[i-1].end.dateTime)) {
+                        toggleDay(scheduleId,
+                            document.querySelector('#header-day-' + (day - 1)).dataset['day']);
+                    }
 
                     schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
                         + DAYS_OF_WEEK[currentDay] + '</td></tr>');
