@@ -3,6 +3,11 @@
 footer.site-footer {
     padding: 0;
     padding-top: 8px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #f9f7f4;
 }
 
 .footer-col > p {

@@ -30,8 +30,15 @@
 }
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  right: $spacing-unit;
+  top: 20px;
+  bottom: 20px;
+  width: 100px;
+  z-index: 1;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
+  //line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
       display: none;
@@ -133,6 +140,8 @@
  * Site footer
  */
 .site-footer {
+  position: absolute;
+  bottom: 0;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
