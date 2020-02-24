@@ -3,7 +3,9 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-
+  display: block;
+  width: 100px;
+  left: 150px;
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -15,7 +17,6 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
   &,
   &:visited {
     color: $grey-color-dark;
@@ -30,14 +31,15 @@
 }
 
 .site-nav {
-  right: $spacing-unit;
-  top: 20px;
-  bottom: 20px;
+  right: $spacing-unit*1.5;
+  top: $spacing-unit*1.5;
+  bottom: 55px + $spacing-unit*1.5;
   width: 100px;
   z-index: 1;
   position: fixed;
   overflow-x: hidden;
   padding-top: 20px;
+  box-shadow: -2px 2px 2px #e2d4bd;
   //line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
@@ -144,6 +146,7 @@
   bottom: 0;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  height: 55px;
 }
 
 .footer-heading {
