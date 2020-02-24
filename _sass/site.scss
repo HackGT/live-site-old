@@ -22,6 +22,7 @@ $navbar-text-color: #707070;
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
+    margin-right: $nav-bar-width + $spacing-unit * 1.5;
     font-family: 'Raleway', sans-serif !important;
     background: $page-background-color;
     color: $page-title-color !important;
@@ -31,6 +32,9 @@ body {
     div.block-header {
         font-family: 'ProximaNova';
     }*/
+    @include media-query($on-palm) {
+        margin-right: 0px;
+    }
 }
 
 a.site-title {

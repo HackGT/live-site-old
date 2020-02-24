@@ -6,9 +6,13 @@
   display: block;
   top: $spacing-unit * 1.5;
   width: 160px;
-  left: 150px;
+  left: 90px;
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  @include media-query($on-palm) {
+    left: $spacing-unit*.5;
+  }
 }
 
 .site-title {
@@ -35,7 +39,7 @@
   right: $spacing-unit*1.5;
   top: $spacing-unit*1.5;
   bottom: 55px + $spacing-unit*1.5;
-  width: 100px;
+  width: $nav-bar-width;
   z-index: 1;
   position: fixed;
   overflow-x: hidden;
@@ -145,6 +149,9 @@
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
   height: 55px;
+  a {
+      color: white;
+  }
 }
 
 .footer-heading {
@@ -160,7 +167,7 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: #fff;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
