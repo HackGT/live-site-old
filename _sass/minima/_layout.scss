@@ -3,7 +3,6 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-  display: block;
   top: $spacing-unit * 1.5;
   width: 160px;
   left: 90px;
@@ -12,7 +11,8 @@
 
   @include media-query($on-palm) {
     left: $spacing-unit*.5;
-    width: 100%;
+    width: 96%;
+    right: $spacing-unit*.5;
   }
 }
 
@@ -41,14 +41,12 @@
   top: $spacing-unit*1.5;
   bottom: 55px + $spacing-unit*1.5;
   width: $nav-bar-width;
-  z-index: 1;
   position: fixed;
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: -2px 2px 2px #e2d4bd;
   text-align: center;
   line-height: $base-line-height * $base-font-size * 2.25;
-  overflow-x: hidden;
 
   .nav-trigger {
       display: none;
@@ -61,21 +59,27 @@
   .page-link {
     padding: 2px 5px 2px 5px;
     color: $text-color;
+    @include media-query($on-palm) {
+        padding: 0px;
+    }
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
+    padding: 9px 0px 0px;
+    margin: 0px;
+    width: auto;
+    position: relative;
+    top: 0px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
-    z-index: 1;
+    box-shadow: none;
+    border-radius: 0px;
+    z-index: 2;
+    float: right;
+    line-height: $base-line-height;
 
     label[for="nav-trigger"] {
       display: block;
-      float: right;
+      float: right;   
       width: 36px;
       height: 36px;
       z-index: 2;
@@ -148,6 +152,9 @@
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
   height: 55px;
+  @include media-query($on-palm) {
+    height: 85px;
+  }
   a {
       color: white;
   }
