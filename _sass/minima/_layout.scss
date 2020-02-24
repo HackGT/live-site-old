@@ -12,6 +12,7 @@
 
   @include media-query($on-palm) {
     left: $spacing-unit*.5;
+    width: 100%;
   }
 }
 
@@ -71,8 +72,6 @@
     border-radius: 5px;
     text-align: right;
     z-index: 1;
-
-
 
     label[for="nav-trigger"] {
       display: block;
