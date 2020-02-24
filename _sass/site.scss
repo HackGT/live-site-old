@@ -3,21 +3,21 @@
 
 // Colors:
 // Site-Level
-$page-background-color: #d0e6ef;
+$page-background-color: #f7e8cf;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
 
 // Individual Pages
-$page-title-color: #454552;
+$page-title-color: #5c5854;
 
 // Navbar
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #454566;
+$navbar-background-color: #f9f7f4;
 $navbar-menu-icon-color: $navbar-menu-icon-light;
-$navbar-text-color: #fff0f2;
+$navbar-text-color: #707070;
 
 // Site-Level
 body {
@@ -35,7 +35,7 @@ body {
 
 a.site-title {
     text-transform: uppercase;
-    font-style: italic;
+    font-style: normal;
     font-weight: 700;
 }
 
