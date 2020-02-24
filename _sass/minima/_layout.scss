@@ -4,7 +4,8 @@
 .site-header {
   min-height: $spacing-unit * 1.865;
   display: block;
-  width: 100px;
+  top: $spacing-unit * 1.5;
+  width: 160px;
   left: 150px;
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -40,7 +41,9 @@
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: -2px 2px 2px #e2d4bd;
-  //line-height: $base-line-height * $base-font-size * 2.25;
+  text-align: center;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  overflow-x: hidden;
 
   .nav-trigger {
       display: none;
@@ -51,13 +54,8 @@
   }
 
   .page-link {
+    padding: 2px 5px 2px 5px;
     color: $text-color;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
   }
 
   @include media-query($on-palm) {

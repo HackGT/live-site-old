@@ -1,5 +1,5 @@
 # This file defines some parameters that will affect the live site as a whole.
-title: HackGT Live
+title: Horizons
 description: >- # >- means ignore newlines until "baseurl:"
   The base HackGT live site
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
