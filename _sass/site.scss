@@ -70,6 +70,11 @@ div.image-column-thin {
     margin-left: $spacing-unit;
 }
 
+div.text-column {
+    width: 100%;
+    margin-right: $spacing-unit;
+}
+
 // Individual Pages
 h1.post-title {
     font-size: 80px;

@@ -3,7 +3,7 @@ layout: one_column_image
 title: Points
 
 blocks:
-    - photobooth.md
+    - points.md
 
 imageSource: "/assets/points_horizons.png"
 imageAlt: "Points!"

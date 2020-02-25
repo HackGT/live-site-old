@@ -1,7 +1,7 @@
 ---
 layout: one_column_image
 blocks:
-    - photobooth.md
+    - home.md
 imageSource: "/assets/pug_horizons.png"
 imageAlt: "woof woof!"
 imageColumn: "image-column-wide"

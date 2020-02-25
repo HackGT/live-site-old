@@ -3,7 +3,7 @@ layout: one_column_image
 title: Prizes
 
 blocks:
-    - photobooth.md
+    - prizes.md
 
 imageSource: "/assets/podium_horizons.png"
 imageAlt: "Prizes!"
