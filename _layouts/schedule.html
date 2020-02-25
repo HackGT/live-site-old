@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
-{% for cal in page.calendars %}
+{% for i in (0..1) %}
 <div class="column">
+    {% for cal in page.calendars %}
+    {% assign mod = forloop.index0 | modulo:2 %}
+    {% if mod == i %}
     <div class="block">
         <div class="block-header">
             {{ cal.title | escape }}
@@ -50,6 +53,8 @@ layout: default
             </div>
         </div>
     </div>
+    {% endif %}
+    {% endfor %}
 </div>
 {% endfor %}
 {% for cal in page.calendars %}

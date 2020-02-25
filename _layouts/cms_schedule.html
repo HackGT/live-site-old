@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="column">
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close">&times;</span>
+            <div id="schedule-modal-content"></div>
+        </div>
+    </div>
+
+    <div id="schedule-block" class="block">
+        <div class="block-header tabs">
+            {% for event_type in site.data.schedule_types %}
+                <li class="tab{% if forloop.first %} active{% endif %}"
+                    data-type="{{ event_type.type }}"
+                >{{ event_type.name | escape }}</li>
+            {% endfor %}
+        </div>
+        <div id="schedule-body" class="block-body active">
+            <div class="schedule-loading align-middle schedule-cms">
+                <img src="/assets/TeenyBearHead.svg" draggable="false" />
+                <h4>
+                    Fetching the latest events!
+                </h4>
+            </div>
+
+            <div class="schedule-error hidden align-middle schedule-cms">
+                <img src="/assets/TeenyError.svg" draggable="false" />
+                <h4>
+
+                </h4>
+                <p class="error-text"></p>
+                <p class="error-msg"><small></small></p>
+
+            </div>
+
+            <div class="schedule hidden" id="schedule-cms">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Event
+                            </th>
+                            <th>
+                                Time
+                            </th>
+                            <!-- <th>
+                                End time
+                            </th> -->
+                            <th>
+                                Location
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
