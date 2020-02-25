@@ -5,7 +5,7 @@ title: Prizes
 blocks:
     - prizes.md
 
-imageSource: "/assets/podium_horizons.png"
+imageSource: "/assets/podium_horizons.svg"
 imageAlt: "Prizes!"
 imageColumn: "image-column-thin"
 ---
