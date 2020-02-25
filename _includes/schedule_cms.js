@@ -223,7 +223,17 @@
 
         var currentTime = moment();
         var prevCurrentDay = filtered[0].start.day;
-        schedule.insertAdjacentHTML('beforeend','<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+ DAYS_OF_WEEK[prevCurrentDay] + '</td></tr>');
+        schedule.insertAdjacentHTML(
+            'beforeend',
+            '<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+
+            DAYS_OF_WEEK[prevCurrentDay] +
+            '</td></tr>' +
+            `<tr class="schedule-interactive schedule-day-0">
+                <th>Event</th>
+                <th>Time</th>
+                <th>Location</th>
+            </tr>`
+        );
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
             toggleDay(scheduleId, this.attributes['data-day'].value);
         };
@@ -243,8 +253,16 @@
                             document.querySelector('#header-day-' + (day - 1)).dataset['day']);
                     }
 
-                    schedule.insertAdjacentHTML('beforeend','<tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
-                        + DAYS_OF_WEEK[currentDay] + '</td></tr>');
+                    schedule.insertAdjacentHTML(
+                        'beforeend',
+                        '</br><tr id="header-day-' + day + '" data-day="' + day + '"><td class="schedule-day" colspan="4"><i class="material-icons open" draggable="false">keyboard_arrow_down</i>'
+                        + DAYS_OF_WEEK[currentDay] + '</td></tr>' +
+                        `<tr class="schedule-interactive schedule-day-` + day + `">
+                            <th>Event</th>
+                            <th>Time</th>
+                            <th>Location</th>
+                        </tr>`
+                    );
                         document.querySelector(scheduleId + ' #header-day-' + day).addEventListener('click', function() {
                         toggleDay(scheduleId, this.attributes['data-day'].value);
                     });
@@ -269,7 +287,7 @@
                 trString += 'data-type=' + event.type + ' ';
             }
 
-            const clickable = event.type === "talk" || event.type === "workshop";
+            const clickable = event.description;
 
             let rowHTML = trString + `class="${clickable ? "schedule-interactive " : ""}schedule-day-`+ day + oldClass + '">';
             let titleEntry = `<td>${event.summary} ${clickable ? '<i class="material-icons schedule-icon">info</i>' : ""}</td>`;
