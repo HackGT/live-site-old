@@ -14,7 +14,6 @@ $block-body-text-color: #707070;
     h1, h2, h3, h4, h5, h6 {
         margin-top: $spacing-unit;
     }
-    box-shadow: -2px 2px 2px #e2d4bd;
 }
 
 .block-header {
@@ -24,12 +23,14 @@ $block-body-text-color: #707070;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
+    box-shadow: -2px 2px 2px #e2d4bd;
 }
 
 .block-body {
     padding: 30px;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
+    box-shadow: -2px 2px 2px #e2d4bd
 }
 
 .block-body > *:last-child {

@@ -61,9 +61,6 @@ div.image-column-wide {
     float: left;
     margin-right: $spacing-unit;
     margin-left: $spacing-unit;
-    @include media-query($on-palm) {
-        width: 90vw;
-    }
 }
 
 div.image-column-thin {
@@ -71,9 +68,6 @@ div.image-column-thin {
     float: left;
     margin-right: $spacing-unit;
     margin-left: $spacing-unit;
-    @include media-query($on-palm) {
-        //width: 100vw;
-    }
 }
 
 // Individual Pages
@@ -96,7 +90,11 @@ div.trigger > a.page-link {
 }
 
 div.trigger > a.page-link {
-    @include relative-font-size(1.125);
+    @include relative-font-size(2);
+    font-family: 'sauna-swash-new';
+    @include media-query($on-palm) {
+        @include relative-font-size(1.24);
+    }
 }
 
 div.container {
