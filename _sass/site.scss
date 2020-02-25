@@ -30,7 +30,7 @@ body {
     h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
-        font-family: 'sauna-swash-new';
+        font-family: sauna-swash-new;
     }
     @include media-query($on-palm) {
         margin-right: 0px;
@@ -96,7 +96,7 @@ div.trigger > a.page-link {
 
 div.trigger > a.page-link {
     @include relative-font-size(2);
-    font-family: 'sauna-swash-new';
+    font-family: sauna-swash-new;
     @include media-query($on-palm) {
         @include relative-font-size(1.24);
     }
