@@ -30,7 +30,7 @@ body {
     h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
-        font-family: 'Sauna Pro';
+        font-family: 'sauna-swash-new';
     }
     @include media-query($on-palm) {
         margin-right: 0px;
@@ -55,9 +55,34 @@ span.menu-icon > svg > path {
     fill: $navbar-menu-icon-color !important;
 }
 
+// columns
+div.image-column-wide {
+    width: 70vw;
+    float: left;
+    margin-right: $spacing-unit;
+    margin-left: $spacing-unit;
+    @include media-query($on-palm) {
+        width: 90vw;
+    }
+}
+
+div.image-column-thin {
+    width: 40vw;
+    float: left;
+    margin-right: $spacing-unit;
+    margin-left: $spacing-unit;
+    @include media-query($on-palm) {
+        //width: 100vw;
+    }
+}
+
 // Individual Pages
 h1.post-title {
+    font-size: 80px;
     color: $page-title-color;
+    @include media-query($on-palm) {
+        font-size: 60px;
+    }
 }
 
 // Navbar
