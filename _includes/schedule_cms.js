@@ -129,7 +129,7 @@
 
     function getCalendarDataFromCMS() {
 
-        fetch("https://cms.hack.gt/graphql", {
+        fetch("https://cms.dev.hack.gt/graphql", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
@@ -305,7 +305,7 @@
             modalContent.removeChild(modalContent.firstChild);
         }
         if (summary) {
-            const summaryString = `<h4>${summary}</h4>`;
+            const summaryString = `<h4 class="modal-header">${summary}</h4>`;
             modalContent.insertAdjacentHTML('beforeend', summaryString);
         }
         if (location || start) {
@@ -319,7 +319,7 @@
                 if (end && start.pretty !== end.pretty) {
                     modalTime += ' - ' + event.end.pretty;
                 }
-                const timeString = `<h5>${modalTime}</h5>`;
+                const timeString = `<h5 class="modal-time">${modalTime}</h5>`;
                 modalContent.lastElementChild.insertAdjacentHTML('beforeend', timeString);
             }
         }

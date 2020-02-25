@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 $table-cell-highlight-color: #ededed;
-$day-highlight-color: #e1f0f5;
-$table-header-row-background: rgb(211, 215, 241);
+$day-highlight-color: #fff;
+$table-header-row-background: #fff;
 
 .schedule-interactive {
     cursor: pointer;
@@ -198,8 +198,18 @@ table > tbody > tr.old > td {
     justify-content: flex-start;
 }
 
+.modal-header {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: bold;
+}
+
+.modal-time {
+    font-family: 'Raleway', sans-serif !important;
+}
+
 .modal-item {
     margin-right: 2em;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 /* Add Animation */

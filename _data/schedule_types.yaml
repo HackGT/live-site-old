@@ -1,8 +1,10 @@
 - name: All
   type: all
-- name: General Events
-  type: other 
 - name: Workshops
   type: workshop
 - name: Meals
   type: meal
+- name: Mini-Events
+  type: minievent
+- name: General
+  type: other
