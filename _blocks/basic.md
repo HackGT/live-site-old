@@ -2,6 +2,8 @@
 title: Welcome to Catalyst 2018!
 ---
 
+![woof woof](/assets/pug_horizons.svg)
+
 Hello! We are excited to welcome you to Catalyst 2018! Here's some important information:
 
 #### Contact Information
