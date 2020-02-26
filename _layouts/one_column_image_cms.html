@@ -1,11 +1,18 @@
 ---
 layout: default
 ---
-<div class="column">
+<div class="{{ page.imageColumn }}">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+    <img src="{{ page.imageSource }}" alt="{{ page.imageAlt }}" style="{{ page.imageStyle }}">    
+</div>
+<div class="text-column">
       <div class="post-content">
           {% for block in page.cms_blocks %}
               <div class="block cms-infoblock" data-cms-slug="{{ block }}">
                 <div class="block-header">Loading</div>
+                </br>
                 <div class="block-body">...</div>
               </div>
           {% endfor %}

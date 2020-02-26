@@ -37,7 +37,7 @@
     }
 
     function createInfoBlockInnerHTML (title, markdownContent) {
-        return `<div class="block-header">${title}</div><div class="block-body">${marked(markdownContent)}</div>`;
+        return `<div class="block-header">${title}</div></br><div class="block-body">${marked(markdownContent)}</div></br>`;
     }
 
     function createChallengeBlockInnerHTML (title, description, prizes, partner) {
