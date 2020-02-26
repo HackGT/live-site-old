@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 // Colors:
 // Site-Level
 $page-background-color: #f7e8cf;
@@ -23,7 +22,7 @@ $navbar-text-color: #707070;
 body {
     //Use the CSS property below to set the site body font
     margin-right: $nav-bar-width + $spacing-unit * 1.5;
-    font-family: Raleway, sans-serif !important;
+    font-family: Raleway, sans-serif;
     background: $page-background-color;
     color: $page-title-color !important;
     //Uncomment the block below and change the font to set the site header font
@@ -96,7 +95,6 @@ div.trigger > a.page-link {
 
 div.trigger > a.page-link {
     @include relative-font-size(2);
-    font-family: sauna-swash-new;
     @include media-query($on-palm) {
         @include relative-font-size(1.24);
     }
