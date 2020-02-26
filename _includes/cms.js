@@ -11,7 +11,7 @@
     // Event pages can use layout: one_column_cms or two_column_cms
     // to use these CMS-backed blocks.
     function fetchCMS(queryString) {
-        return fetch("https://cms.hack.gt/graphql", {
+        return fetch("https://cms.horizons.hack.gt/graphql", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
