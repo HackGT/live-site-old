@@ -1,5 +1,7 @@
 - name: Facebook
   profile_url: https://www.facebook.com/TheHackGT
+- name: Instagram
+  profile_url: https://www.instagram.com/thehackgt/
 - name: GitHub
   profile_url: https://www.github.com/HackGT
 - name: Twitter
