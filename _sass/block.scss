@@ -42,3 +42,9 @@ $block-body-text-color: #707070;
 .block.block-right > .block-header {
     background: $block-alt-accent-color;
 }
+
+.hide-mobile {
+    @include media-query($on-palm) {
+        display: none;
+    }
+}
