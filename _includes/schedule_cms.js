@@ -129,7 +129,7 @@
 
     function getCalendarDataFromCMS() {
 
-        fetch("https://cms.dev.hack.gt/graphql", {
+        fetch("https://cms.horizons.hack.gt/graphql", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
