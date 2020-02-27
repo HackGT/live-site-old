@@ -9,7 +9,7 @@ layout: default
     </br></br>
     <div class="post-content">
         {% for block in page.cms_blocks_left %}
-            <div class="block cms-infoblock hide-mobile" data-cms-slug="{{ block }}">
+        <div class="block cms-infoblock {% if page.hide_on_mobile contains block %} hide-mobile {% endif %}" data-cms-slug="{{ block }}">
                 <div class="block-header">Loading</div>
                 </br>
                 <div class="block-body">...</div>
