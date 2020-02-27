@@ -34,10 +34,17 @@ body {
     @include media-query($on-palm) {
         margin-right: 0px;
     }
+    div.wrapper {
+        text-align: center;
+    }
+}
+
+.site-bookmark {
+    text-align: center;
 }
 
 a.site-title {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-style: normal;
     font-weight: 700;
 }
@@ -48,6 +55,7 @@ a.site-title:hover {
 
 nav.site-nav {
     background: $navbar-background-color;
+    height: fit-content;
 }
 
 span.menu-icon > svg > path {
@@ -83,9 +91,18 @@ h1.post-title {
     }
 }
 
+.post-header {
+    text-align: center;
+}
+
 // Navbar
 header.site-header {
     background: $navbar-background-color;
+}
+
+div.trigger {
+    display: flex;
+    flex-direction: column;
 }
 
 div.wrapper > a.site-title,
@@ -94,9 +111,9 @@ div.trigger > a.page-link {
 }
 
 div.trigger > a.page-link {
-    @include relative-font-size(2);
+    @include relative-font-size(1);
     @include media-query($on-palm) {
-        @include relative-font-size(1.24);
+        @include relative-font-size(0.62);
     }
 }
 

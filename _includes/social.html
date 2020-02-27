@@ -14,7 +14,7 @@
             {% if svg_name == 'google+' %}
                 {% assign svg_name = "googleplus" %}
             {% endif %}
-            <a href="{{ sm.profile_url }}"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#{{ svg_name }}"></use></svg> <span class="sr-only">{{ sm.name }}</span></a>
+            <a target="_blank" href="{{ sm.profile_url }}"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#{{ svg_name }}"></use></svg> <span class="sr-only">{{ sm.name }}</span></a>
         </li>
     {% endfor %}
 </ul>

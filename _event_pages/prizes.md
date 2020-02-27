@@ -1,6 +1,6 @@
 ---
 layout: one_column_image_cms
-title: Prizes
+title: Judging 
 cms_blocks:
     - judging
     - prizes

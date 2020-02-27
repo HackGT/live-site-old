@@ -5,8 +5,8 @@ cms_blocks_right:
     - faq
 cms_blocks_left:
     - social_media
-imageSource: "/assets/pug_horizons.svg"
-imageAlt: "woof woof!"
+imageSource: "/assets/computer.svg"
+imageAlt: "super cool computer"
 imageColumn: "image-column-wide"
 permalink: /
 priority: 3

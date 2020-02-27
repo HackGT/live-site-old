@@ -1,0 +1,16 @@
+current directory: /Users/eltonpinto/Documents/Projects/hackgt/live-site/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/eltonpinto/.rbenv/versions/2.6.4/bin/ruby -I /Users/eltonpinto/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20191020-39749-1pwwhnh.rb extconf.rb
+creating Makefile
+
+current directory: /Users/eltonpinto/Documents/Projects/hackgt/live-site/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/eltonpinto/Documents/Projects/hackgt/live-site/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/eltonpinto/Documents/Projects/hackgt/live-site/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20191020-39749-1alg20t
