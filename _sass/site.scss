@@ -20,14 +20,17 @@ $navbar-text-color: #707070;
 body {
     //Use the CSS property below to set the site body font
     margin-right: $nav-bar-width + $spacing-unit * 1.5;
-    font-family: Raleway, sans-serif;
+    font-family: Raleway, sans-serif; 
+    font-style: normal;
     background: $page-background-color;
     color: $page-title-color !important;
     //Uncomment the block below and change the font to set the site header font
     h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title,
     div.block-header {
-        font-family: sauna-swash-new;
+        font-family: sauna-swash-new, sans-serif; 
+        font-style:italic;
+        font-weight:700;
     }
     @include media-query($on-palm) {
         margin-right: 0px;
@@ -43,7 +46,7 @@ body {
 
 a.site-title {
     // text-transform: uppercase;
-    font-style: normal;
+    font-style: italic;
     font-weight: 700;
 }
 
