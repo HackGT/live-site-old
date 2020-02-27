@@ -29,6 +29,7 @@
 
 @include media-query($on-palm) {
     div.row {
+        display: flex;
         flex-direction: column;
         overflow-y: auto;
     }
