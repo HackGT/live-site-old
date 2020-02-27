@@ -26,11 +26,13 @@ body {
     color: $page-title-color !important;
     //Uncomment the block below and change the font to set the site header font
     h1, h2, h3, h4, h5, h6,
-    div.wrapper > a.site-title,
-    div.block-header {
+    div.wrapper > a.site-title {
         font-family: sauna-swash-new, sans-serif; 
         font-style:italic;
         font-weight:700;
+    }
+    div.block-header {
+        font-weight:800;
     }
     @include media-query($on-palm) {
         margin-right: 0px;
