@@ -34,9 +34,9 @@ body {
     @include media-query($on-palm) {
         margin-right: 0px;
     }
-    div.wrapper {
-        text-align: center;
-    }
+    // div.wrapper {
+    //    text-align: center;
+    //}
 }
 
 .site-bookmark {
