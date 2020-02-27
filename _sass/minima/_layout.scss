@@ -63,6 +63,10 @@
     }
   }
 
+  .page-link.active {
+      font-weight: 800;
+  }
+
   @include media-query($on-palm) {
     padding: 9px 0px 0px;
     margin: 0px;
