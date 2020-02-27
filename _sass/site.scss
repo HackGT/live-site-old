@@ -68,6 +68,11 @@ div.image-column-wide {
     float: left;
     margin-right: $spacing-unit;
     margin-left: $spacing-unit;
+    @include media-query($on-palm) {
+        width: 100%;
+        float: center;
+        margin-left: 0;
+    }
 }
 
 div.image-column-thin {
@@ -75,6 +80,11 @@ div.image-column-thin {
     float: left;
     margin-right: $spacing-unit;
     margin-left: $spacing-unit;
+    @include media-query($on-palm) {
+        width: 100%;
+        float: center;
+        margin-left: 0;
+    }
 }
 
 div.text-column {
@@ -113,7 +123,7 @@ div.trigger > a.page-link {
 div.trigger > a.page-link {
     @include relative-font-size(1);
     @include media-query($on-palm) {
-        @include relative-font-size(0.62);
+        @include relative-font-size(1.24);
     }
 }
 
