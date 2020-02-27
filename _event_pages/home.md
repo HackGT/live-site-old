@@ -5,6 +5,8 @@ cms_blocks_right:
     - faq
 cms_blocks_left:
     - social_media
+hide_on_mobile:
+    - social_media
 imageSource: "/assets/computer.svg"
 imageAlt: "super cool computer"
 imageColumn: "image-column-wide"
