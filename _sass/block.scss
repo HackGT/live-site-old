@@ -1,10 +1,10 @@
 // Blocks
-$block-accent-color: #f9f7f4; //Used on the left column of two_column layout, and all schedule columns
-$block-alt-accent-color: #f9f7f4; //Used on the right column of the two_column layout
-$block-header-text-color: #707070;
-$corner-border-radius: 0px;
-$block-body-bg-color: #f9f7f4;
-$block-body-text-color: #707070;
+$block-accent-color: #E1BFF2; //Used on the left column of two_column layout, and all schedule columns
+$block-alt-accent-color: #E1BFF2; //Used on the right column of the two_column layout
+$block-header-text-color: #634CBA;
+$corner-border-radius: 15px;
+$block-body-bg-color: #F4ECF5;
+$block-body-text-color: #634CBA;
 
 // Blocks
 .block {
@@ -20,14 +20,16 @@ $block-body-text-color: #707070;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
-    box-shadow: -2px 2px 2px #e2d4bd;
+    // box-shadow: -2px 2px 2px #e2d4bd;
 }
 
 .block-body {
     padding: 10px 30px 10px;
     background-color: $block-body-bg-color;
     color: $block-body-text-color;
-    box-shadow: -2px 2px 2px #e2d4bd
+    // box-shadow: -2px 2px 2px #e2d4bd
+    border-radius: 0 0 $corner-border-radius $corner-border-radius;
+    margin-top: -24px;
 }
 
 .block-body > *:last-child {

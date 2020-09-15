@@ -3,16 +3,9 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-  top: $spacing-unit * 1.5;
-  width: 230px;
-  left: 0px;
-  box-shadow: -2px 2px 2px #e2d4bd;
+
   // Positioning context for the mobile navigation icon
   position: relative;
-
-  @include media-query($on-palm) {
-    width: 100%;
-  }
 }
 
 .site-title {
@@ -36,16 +29,8 @@
 }
 
 .site-nav {
-  right: $spacing-unit*1.5;
-  top: $spacing-unit*1.5;
-  bottom: 55px + $spacing-unit*1.5;
-  width: $nav-bar-width;
-  position: fixed;
-  overflow-x: hidden;
-  padding-top: 20px;
-  box-shadow: -2px 2px 2px #e2d4bd;
-  text-align: center;
-  line-height: $base-line-height * $base-font-size * 3.25;
+  float: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
       display: none;
@@ -56,10 +41,12 @@
   }
 
   .page-link {
-    padding: 2px 5px 2px 5px;
     color: $text-color;
-    @include media-query($on-palm) {
-        padding: 0px;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
     }
   }
 

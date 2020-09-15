@@ -1,14 +1,12 @@
 ---
 layout: two_column_image_cms
 cms_blocks_right:
-    - app_links
     - faq
 cms_blocks_left:
+    - app_links
     - social_media
 hide_on_mobile:
     - social_media
-imageSource: "/assets/computer.svg"
-imageAlt: "super cool computer"
 imageColumn: "image-column-wide"
 permalink: /
 priority: 3

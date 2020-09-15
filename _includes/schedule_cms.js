@@ -4,31 +4,15 @@
 (function() {
 
     const CMS_QUERY = `
-        eventbases(start: 0) {
+        allEvents (where: { hackathon: { name: "HackGTeeny 2020" } }) {
             id
-            title
+            name
+            startDate
+            endDate
+            location {
+                name
+            }
             description
-            start_time
-            end_time
-            area {
-                name
-            }
-            type
-        }
-        talks(start: 0) {
-            base {
-                id
-            }
-            slide_link
-            code_link
-            prereqs
-            survey_link
-            people {
-                name
-            }
-            partner {
-                name
-            }
         }
     `;
 
@@ -85,6 +69,7 @@
 
 
         eventData = result.items;
+        console.log(eventData);
         filterEvents(); // builds table
 
         var scheduleBlockBody = document.querySelector(scheduleId);
@@ -129,7 +114,7 @@
 
     function getCalendarDataFromCMS() {
 
-        fetch("https://cms.horizons.hack.gt/graphql", {
+        fetch("https://cms.hack.gt/admin/api", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
@@ -143,13 +128,13 @@
         })
         .then(r => r.json())
         .then(json => {
-            const items = json.data.eventbases.map(e => {
-                const startTime = toUTC(e.start_time).local();
-                const endTime = toUTC(e.end_time).local();
+            const items = json.data.allEvents.map(e => {
+                const startTime = toUTC(e.startDate).local();
+                const endTime = toUTC(e.endDate).local();
                 return {
                     id: e.id,
-                    summary: e.title,
-                    location: (e.area && e.area.name) || '',
+                    summary: e.name,
+                    location: (e.location[0].name) || '',
                     start: {
                         dateTime: startTime,
                         pretty: startTime.format('hh:mm A'),
@@ -164,16 +149,16 @@
                     description: e.description
                 };
             });
-            json.data.talks.forEach(talk => {
-                const { base, people, partner, ...other } = talk;
-                let presenters = [];
-                if (people) {
-                    presenters = people.map(p => p.name);
-                }
-                const eventIndex = items.findIndex(item => item.id === base.id);
-                if (eventIndex === -1) return;
-                items[eventIndex] = {...items[eventIndex], ...other, partner: partner ? partner.name : null, people: presenters};
-            })
+            // json.data.talks.forEach(talk => {
+            //     const { base, people, partner, ...other } = talk;
+            //     let presenters = [];
+            //     if (people) {
+            //         presenters = people.map(p => p.name);
+            //     }
+            //     const eventIndex = items.findIndex(item => item.id === base.id);
+            //     if (eventIndex === -1) return;
+            //     items[eventIndex] = {...items[eventIndex], ...other, partner: partner ? partner.name : null, people: presenters};
+            // })
             success({
                 apiResponse: {
                     items,

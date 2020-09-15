@@ -1,9 +1,8 @@
 ---
-layout: one_column_image_cms
-title: Judging 
+layout: tracks_cms
+title: Gaming and Graphics
 cms_blocks:
-    - judging
-    - prizes
+    - gaming-and-graphics
 imageSource: "/assets/podium_horizons.svg"
 imageAlt: "Prizes!"
 imageColumn: "image-column-thin"

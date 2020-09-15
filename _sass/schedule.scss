@@ -159,21 +159,21 @@ table > tbody > tr.old > td {
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #634CBA;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 2em;
-    border: 1px solid #888;
+    // border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 600px;
     max-height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.3s;
 }
 
 /* The Close Button */
 #modal-close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 3em;
     font-weight: bold;
@@ -194,17 +194,17 @@ table > tbody > tr.old > td {
 }
 
 .modal-header {
-    font-family: Raleway, sans-serif;
+    font-family: 'Baloo 2';
     font-weight: bold;
 }
 
 .modal-time {
-    font-family: Raleway, sans-serif;
+    font-family: 'Baloo 2';
 }
 
 .modal-item {
     margin-right: 2em;
-    font-family: Raleway, sans-serif;
+    font-family: 'Baloo 2';
 }
 
 /* Add Animation */

@@ -1,34 +1,42 @@
+@font-face {
+    font-family: "Baloo 2";
+    src: url("../assets/Baloo2-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 // Colors:
 // Site-Level
-$page-background-color: #f7e8cf;
+$page-background-color: #AB9CE5;
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
 
 // Individual Pages
-$page-title-color: #5c5854;
+$page-title-color: white;
 
 // Navbar
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #f9f7f4;
-$navbar-menu-icon-color: #707070;
-$navbar-text-color: #707070;
+$navbar-background-color: #634CBA;
+$navbar-menu-icon-color: white;
+$navbar-text-color: white;
 
 // Site-Level
 body {
     //Use the CSS property below to set the site body font
-    margin-right: $nav-bar-width + $spacing-unit * 1.5;
-    font-family: Raleway, sans-serif; 
+    // margin-right: $nav-bar-width + $spacing-unit * 1.5;
+    font-family: 'Baloo 2'; 
     font-style: normal;
     background: $page-background-color;
     color: $page-title-color !important;
     //Uncomment the block below and change the font to set the site header font
     h1, h2, h3, h4, h5, h6,
     div.wrapper > a.site-title {
-        font-family: sauna-swash-new, sans-serif; 
-        font-style:italic;
+        font-family: 'Baloo 2'; 
+        // font-style:italic;
         font-weight:700;
     }
     div.block-header {
@@ -48,7 +56,6 @@ body {
 
 a.site-title {
     // text-transform: uppercase;
-    font-style: italic;
     font-weight: 700;
 }
 
@@ -59,6 +66,7 @@ a.site-title:hover {
 nav.site-nav {
     background: $navbar-background-color;
     height: fit-content;
+    padding: 10px;
 }
 
 span.menu-icon > svg > path {
@@ -97,7 +105,7 @@ div.text-column {
 
 // Individual Pages
 h1.post-title {
-    font-size: 80px;
+    font-size: 50px;
     color: $page-title-color;
     @include media-query($on-palm) {
         font-size: 60px;
@@ -111,11 +119,22 @@ h1.post-title {
 // Navbar
 header.site-header {
     background: $navbar-background-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    .logo {
+        width: 50px;
+        height: 50px;
+        bottom: 0;
+        margin-top: 0.25em;
+        margin-right: 0.5em;
+        content: url("../assets/logo.png");
+        float: left;
+    }
 }
 
 div.trigger {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
 }
 
 div.wrapper > a.site-title,

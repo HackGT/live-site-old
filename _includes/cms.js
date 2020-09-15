@@ -11,7 +11,7 @@
     // Event pages can use layout: one_column_cms or two_column_cms
     // to use these CMS-backed blocks.
     function fetchCMS(queryString) {
-        return fetch("https://cms.horizons.hack.gt/graphql", {
+        return fetch("https://cms.hack.gt/admin/api", {
             method: "POST",
             headers: {
                 "Content-Type": `application/json`,
@@ -54,26 +54,127 @@
 
     function fetchInfoBlock (blockElement) {
         const slug = blockElement.getAttribute("data-cms-slug");
-        const queryString = `infoblocks (where: {
-                                slug: "${slug}"
-                            }) {
-                                body
-                                title
-                            }`;
+        const HACKATHON = "HackGTeeny 2020"
+        const queryString = `
+        allBlocks (where: { slug: "${slug}", hackathon: {name: "${HACKATHON}"} }) 
+                {
+                    name
+                    content
+                }
+        `;
         fetchCMS(queryString)
             .then(data => {
-                if (data.infoblocks.length == 0) {
+                if (data.allBlocks.length == 0) {
                     console.warn('No infoblock with specified slug on CMS');
                     return;
                 }
-                const markdownContent = data.infoblocks[0].body;
-                const title = data.infoblocks[0].title;
+                const markdownContent = data.allBlocks[0].content;
+                const title = data.allBlocks[0].name;
                 const elementString = createInfoBlockInnerHTML(title, markdownContent);
                 blockElement.innerHTML = elementString;
             })
             .catch(err => {
                 console.error(err);
             });
+    }
+
+    function fetchTrackBlock (blockElement) {
+        const slug = blockElement.getAttribute("data-cms-slug");
+        const slugDescription = slug + "__description";
+        const slugResources = slug + "__resources";
+        const slugSyllabus = slug + "__syllabus";
+        const slugAbout = slug + "__about";
+
+        const HACKATHON = "HackGTeeny 2020";
+
+        let queryString = `allBlocks (where: {slug: "${slugDescription}", hackathon: {name: "${HACKATHON}"}})
+        {
+            name
+            content
+        }`;
+        fetchCMS(queryString)
+            .then(data => {
+                if (data.allBlocks.length == 0) {
+                    console.warn('No infoblock with ' + slugDescription +' on CMS');
+                    return;
+                } else {
+                    console.log(data.allBlocks);
+                    let markdownContent = data.allBlocks[0].content;
+                    let title = "Description";
+                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
+                    blockElement.innerHTML = elementString;
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        
+        queryString = `allBlocks (where: {slug: "${slugResources}", hackathon: {name: "${HACKATHON}"}})
+        {
+            name
+            content
+        }`;
+        fetchCMS(queryString)
+            .then(data => {
+                if (data.allBlocks.length == 0) {
+                    console.warn('No infoblock with ' + slugResources +' on CMS');
+                    return;
+                } else {
+                    console.log(data.allBlocks);
+                    let markdownContent = data.allBlocks[0].content;
+                    let title = "Pre-installation Instructions/Resources"
+                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
+                    blockElement.innerHTML += elementString;
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
+        queryString = `allBlocks (where: {slug: "${slugSyllabus}", hackathon: {name: "${HACKATHON}"}})
+        {
+            name
+            content
+        }`;
+        fetchCMS(queryString)
+            .then(data => {
+                if (data.allBlocks.length == 0) {
+                    console.warn('No infoblock with ' + slugSyllabus +' on CMS');
+                    return;
+                } else {
+                    console.log(data.allBlocks);
+                    let markdownContent = data.allBlocks[0].content;
+                    let title = "Syllabus"
+                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
+                    blockElement.innerHTML += elementString;
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        
+        queryString = `allBlocks (where: {slug: "${slugAbout}", hackathon: {name: "${HACKATHON}"}})
+        {
+            name
+            content
+        }`;
+        fetchCMS(queryString)
+            .then(data => {
+                if (data.allBlocks.length == 0) {
+                    console.warn('No infoblock with ' + slugAbout +' on CMS');
+                    return;
+                } else {
+                    console.log(data.allBlocks);
+                    let markdownContent = data.allBlocks[0].content;
+                    let title = "About the Instructors"
+                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
+                    blockElement.innerHTML += elementString;
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        
     }
 
     function fetchChallengeBlock (blockElement) {
@@ -114,5 +215,9 @@
     document.querySelectorAll('.cms-challengeblock').forEach(element => {
         fetchChallengeBlock(element);
     });
+
+    document.querySelectorAll('.cms-trackblock').forEach(element => {
+        fetchTrackBlock(element);
+    })
 })();
 </script>
