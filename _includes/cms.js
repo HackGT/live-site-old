@@ -86,6 +86,7 @@
         const slugAbout = slug + "__about";
 
         const HACKATHON = "HackGTeeny 2020";
+        let elementString = "";
 
         let queryString = `allBlocks (where: {slug: "${slugDescription}", hackathon: {name: "${HACKATHON}"}})
         {
@@ -101,80 +102,73 @@
                     console.log(data.allBlocks);
                     let markdownContent = data.allBlocks[0].content;
                     let title = "Description";
-                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
-                    blockElement.innerHTML = elementString;
+                    elementString += createInfoBlockInnerHTML(title, markdownContent);
                 }
+                queryString = `allBlocks (where: {slug: "${slugResources}", hackathon: {name: "${HACKATHON}"}})
+                {
+                    name
+                    content
+                }`;
+                fetchCMS(queryString)
+                    .then(data => {
+                        if (data.allBlocks.length == 0) {
+                            console.warn('No infoblock with ' + slugResources +' on CMS');
+                            return;
+                        } else {
+                            console.log(data.allBlocks);
+                            let markdownContent = data.allBlocks[0].content;
+                            let title = "Pre-installation Instructions/Resources"
+                            elementString += createInfoBlockInnerHTML(title, markdownContent);
+                        }
+                        queryString = `allBlocks (where: {slug: "${slugSyllabus}", hackathon: {name: "${HACKATHON}"}})
+                        {
+                            name
+                            content
+                        }`;
+                        fetchCMS(queryString)
+                            .then(data => {
+                                if (data.allBlocks.length == 0) {
+                                    console.warn('No infoblock with ' + slugSyllabus +' on CMS');
+                                    return;
+                                } else {
+                                    console.log(data.allBlocks);
+                                    let markdownContent = data.allBlocks[0].content;
+                                    let title = "Syllabus"
+                                    elementString += createInfoBlockInnerHTML(title, markdownContent);
+                                }
+                                queryString = `allBlocks (where: {slug: "${slugAbout}", hackathon: {name: "${HACKATHON}"}})
+                                {
+                                    name
+                                    content
+                                }`;
+                                fetchCMS(queryString)
+                                    .then(data => {
+                                        if (data.allBlocks.length == 0) {
+                                            console.warn('No infoblock with ' + slugAbout +' on CMS');
+                                            return;
+                                        } else {
+                                            console.log(data.allBlocks);
+                                            let markdownContent = data.allBlocks[0].content;
+                                            let title = "About the Instructors"
+                                            elementString += createInfoBlockInnerHTML(title, markdownContent);
+                                            blockElement.innerHTML = elementString;
+                                        }
+                                    })
+                                    .catch(err => {
+                                        console.log(err);
+                                    });
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
             })
             .catch(err => {
                 console.log(err);
             });
-        
-        queryString = `allBlocks (where: {slug: "${slugResources}", hackathon: {name: "${HACKATHON}"}})
-        {
-            name
-            content
-        }`;
-        fetchCMS(queryString)
-            .then(data => {
-                if (data.allBlocks.length == 0) {
-                    console.warn('No infoblock with ' + slugResources +' on CMS');
-                    return;
-                } else {
-                    console.log(data.allBlocks);
-                    let markdownContent = data.allBlocks[0].content;
-                    let title = "Pre-installation Instructions/Resources"
-                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
-                    blockElement.innerHTML += elementString;
-                }
-            })
-            .catch(err => {
-                console.log(err);
-            });
-
-        queryString = `allBlocks (where: {slug: "${slugSyllabus}", hackathon: {name: "${HACKATHON}"}})
-        {
-            name
-            content
-        }`;
-        fetchCMS(queryString)
-            .then(data => {
-                if (data.allBlocks.length == 0) {
-                    console.warn('No infoblock with ' + slugSyllabus +' on CMS');
-                    return;
-                } else {
-                    console.log(data.allBlocks);
-                    let markdownContent = data.allBlocks[0].content;
-                    let title = "Syllabus"
-                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
-                    blockElement.innerHTML += elementString;
-                }
-            })
-            .catch(err => {
-                console.log(err);
-            });
-        
-        queryString = `allBlocks (where: {slug: "${slugAbout}", hackathon: {name: "${HACKATHON}"}})
-        {
-            name
-            content
-        }`;
-        fetchCMS(queryString)
-            .then(data => {
-                if (data.allBlocks.length == 0) {
-                    console.warn('No infoblock with ' + slugAbout +' on CMS');
-                    return;
-                } else {
-                    console.log(data.allBlocks);
-                    let markdownContent = data.allBlocks[0].content;
-                    let title = "About the Instructors"
-                    let elementString = createInfoBlockInnerHTML(title, markdownContent);
-                    blockElement.innerHTML += elementString;
-                }
-            })
-            .catch(err => {
-                console.log(err);
-            });
-        
     }
 
     function fetchChallengeBlock (blockElement) {
