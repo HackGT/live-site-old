@@ -1,9 +1,9 @@
 # This file defines some parameters that will affect the live site as a whole.
-title: HackGTeeny 2020
+title: HackGT 7
 description: >- # >- means ignore newlines until "baseurl:"
-  Everything you need to know while you're at HackGTeeny!
+  Everything you need to know while you're at HackGT!
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
-url: https://info.teeny.hack.gt # Your site's domain, e.g. everything up and including to the .com
+url: https://info.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!

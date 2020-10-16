@@ -2,9 +2,10 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
+    const HACKATHON = "HackGT 7"
 
     const CMS_QUERY = `
-        allEvents (where: { hackathon: { name: "HackGTeeny 2020" } }) {
+        allEvents (where: { hackathon: { name: "${HACKATHON}" } }) {
             id
             name
             startDate
@@ -69,7 +70,6 @@
 
 
         eventData = result.items;
-        console.log(eventData);
         filterEvents(); // builds table
 
         var scheduleBlockBody = document.querySelector(scheduleId);
@@ -134,7 +134,7 @@
                 return {
                     id: e.id,
                     summary: e.name,
-                    location: (e.location[0].name) || '',
+                    location: (e.location[0]?.name) || '',
                     start: {
                         dateTime: startTime,
                         pretty: startTime.format('hh:mm A'),
@@ -252,8 +252,6 @@
                         toggleDay(scheduleId, this.attributes['data-day'].value);
                     });
 
-                    console.log(event.summary);
-                    console.log(currentTime.isAfter(event.end.dateTime));
                     prevCurrentDay = currentDay;
                 }
             }

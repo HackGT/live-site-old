@@ -1,15 +1,7 @@
-@font-face {
-  font-family: "Baloo 2";
-  src: url("../assets/Baloo2-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 // Define defaults for each variable.
 // NOTE: Most of these variables are overridden by custom CSS (such as schedule.scss and site.scss, or the Milligram CSS framework). Change variables here will likely have no noticeable effect.
-$base-font-family: 'Baloo 2' !default;
-$base-font-size:   16px !default;
+$base-font-family: 'Quicksand' !default;
+$base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
@@ -19,7 +11,7 @@ $nav-bar-width:    180px !default;
 
 $text-color:       #5c5854 !default;
 $background-color: #f7e8cf !default;
-$brand-color:      #F6C059 !default;
+$brand-color:      #ffffff !default;
 
 $grey-color:       #5c5854 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;

@@ -6,7 +6,7 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
-
+    const HACKATHON = "HackGT 7";
     // Populate infoblocks on CMS.
     // Event pages can use layout: one_column_cms or two_column_cms
     // to use these CMS-backed blocks.
@@ -54,7 +54,6 @@
 
     function fetchInfoBlock (blockElement) {
         const slug = blockElement.getAttribute("data-cms-slug");
-        const HACKATHON = "HackGTeeny 2020"
         const queryString = `
         allBlocks (where: { slug: "${slug}", hackathon: {name: "${HACKATHON}"} }) 
                 {
@@ -85,7 +84,6 @@
         const slugSyllabus = slug + "__syllabus";
         const slugAbout = slug + "__about";
 
-        const HACKATHON = "HackGTeeny 2020";
         let elementString = "";
 
         let queryString = `allBlocks (where: {slug: "${slugDescription}", hackathon: {name: "${HACKATHON}"}})

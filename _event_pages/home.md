@@ -1,16 +1,11 @@
 ---
-layout: two_column_image_cms
+layout: two_column_image_cms 
 cms_blocks_right:
-    - about-live
-    - join-the-event
+    - slack-instructions
 cms_blocks_left:
-    - need-help
-    - sponsors
-hide_on_mobile:
-    - about-live
-    - join-the-event
-imageColumn: "image-column-wide"
+    - generic-introduction
+    - bluejeans-instructions
 permalink: /
-priority: 3
+imageColumn: "image-column-wide"
+priority: 7
 ---
-

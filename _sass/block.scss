@@ -1,15 +1,20 @@
 // Blocks
-$block-accent-color: #E1BFF2; //Used on the left column of two_column layout, and all schedule columns
+$block-accent-color: #ffffff; //Used on the left column of two_column layout, and all schedule columns
 $block-alt-accent-color: #E1BFF2; //Used on the right column of the two_column layout
-$block-header-text-color: #634CBA;
+$block-header-text-color: #658AAE;
 $corner-border-radius: 15px;
-$block-body-bg-color: #F4ECF5;
-$block-body-text-color: #634CBA;
+$block-body-bg-color: rgba(255, 255, 255, 0.2);
+$block-body-text-color: #ffffff;
 
 // Blocks
 .block {
     h1, h2, h3, h4, h5, h6 {
         margin-top: $spacing-unit;
+    }
+
+    a {
+        font-weight: bold;
+        text-decoration: underline;
     }
 }
 
@@ -20,6 +25,7 @@ $block-body-text-color: #634CBA;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
+    font-family: "Quicksand" !important;
     // box-shadow: -2px 2px 2px #e2d4bd;
 }
 

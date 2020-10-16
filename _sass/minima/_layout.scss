@@ -14,6 +14,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   margin-bottom: 0;
   float: left;
+  font-family: "Bavro-Regular" !important;
   &,
   &:visited {
     color: $grey-color-dark;
@@ -139,7 +140,7 @@
 .site-footer {
   position: absolute;
   bottom: 0;
-  border-top: 1px solid $grey-color-light;
+  /* border-top: 1px solid $grey-color-light; */
   padding: $spacing-unit 0;
   height: 55px;
   @include media-query($on-palm) {
@@ -252,7 +253,8 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  /* margin-bottom: $spacing-unit; */
+  margin-bottom: 40px;
 }
 
 .post-title {
