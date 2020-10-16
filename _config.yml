@@ -8,7 +8,7 @@ url: https://info.hack.gt # Your site's domain, e.g. everything up and including
 form_id: 1FAIpQLSdP3yiCMb4sSztn32tdwtDiZXud0vJNbUql-LD8au6noNTRqA # This is the form ID contained in the view URL of the site feedback form in the footer
 feedback: Give our site feedback!
 enableOneSignal: true
-oneSignalAppId: 03d7c736-42db-4507-b634-187b0d5069b0
+oneSignalAppId: 26b3bf1d-af1b-417a-97fe-a892b15066af
 
 
 # Hi!  There's a lot of interesting stuff under me, but if you touch it, you might break something!  Please don't edit anything below this line unless you know what you're doing!
