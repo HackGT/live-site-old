@@ -14,6 +14,7 @@
                 name
             }
             description
+            url
         }
     `;
 
@@ -146,7 +147,8 @@
                         day: endTime.day()
                     },
                     type: e.type,
-                    description: e.description
+                    description: e.description,
+                    url: e.url
                 };
             });
             // json.data.talks.forEach(talk => {
@@ -286,16 +288,19 @@
                     if (index == 0) return;
                     else {
                         if (index == 2) {
-                            const a = document.createElement("a");
-                            a.href = `https://calls.hack.gt/event/${event.id}`;
-                            a.target = "_blank";
-                            a.innerHTML = "Attend the event!";
-                            a.style.color = "black";
-                            a.onclick = (e) => {
-                                e.stopPropagation();
-                                return true;
-                            };
-                            item.appendChild(a); 
+                            console.log(event)
+                            if (event.url) {
+                                const a = document.createElement("a");
+                                a.href = `https://calls.hack.gt/event/${event.id}`;
+                                a.target = "_blank";
+                                a.innerHTML = "Attend the event!";
+                                a.style.color = "black";
+                                a.onclick = (e) => {
+                                    e.stopPropagation();
+                                    return true;
+                                };
+                                item.appendChild(a); 
+                            }
                         } else {
                             item.textContent = eventValues[index - 1];
                         }
@@ -315,7 +320,7 @@
         const modal = document.getElementById("schedule-modal");
         if (!modal) window.alert("Sorry, something went wrong.");
         modal.style.display = "block";
-        const { summary, location, start, end, slide_link, survey_link, code_link, prereqs, description, people, partner } = event;
+        const { url, summary, location, start, end, slide_link, survey_link, code_link, prereqs, description, people, partner } = event;
         const modalContent = document.getElementById("schedule-modal-content");
         while (modalContent.firstChild) {
             modalContent.removeChild(modalContent.firstChild);
@@ -325,12 +330,12 @@
             const summaryString = `<h4 class="modal-header">${summary}</h4>`;
             modalContent.insertAdjacentHTML('beforeend', summaryString);
         }
-        if (location || start) {
+        if (url || start) {
             modalContent.insertAdjacentHTML('beforeend', '<div class="modal-row"></div>')
-            // if (location) {
+            if (location) {
                 const locationString = `<h5 class="modal-item" ><a href="https://calls.hack.gt/event/${event.id}" target="_blank">Attend the call!</a></h5>`;
                 modalContent.lastElementChild.insertAdjacentHTML('beforeend', locationString);
-            // }
+            }
             if (start) {
                 let modalTime = start.pretty;
                 if (end && start.pretty !== end.pretty) {
