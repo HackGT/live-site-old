@@ -132,10 +132,16 @@
             const items = json.data.allEvents.map(e => {
                 const startTime = toUTC(e.startDate).local();
                 const endTime = toUTC(e.endDate).local();
+                let location;
+                if (e.location[0]) {
+                    location = e.location[0].name;
+                } else {
+                    location = undefined;
+                }
                 return {
                     id: e.id,
                     summary: e.name,
-                    location: (e.location[0]?.name) || '',
+                    location: location || '',
                     start: {
                         dateTime: startTime,
                         pretty: startTime.format('hh:mm A'),
@@ -288,7 +294,6 @@
                     if (index == 0) return;
                     else {
                         if (index == 2) {
-                            console.log(event)
                             if (event.url) {
                                 const a = document.createElement("a");
                                 a.href = `https://calls.hack.gt/event/${event.id}`;
