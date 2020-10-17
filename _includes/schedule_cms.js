@@ -296,9 +296,14 @@
                         if (index == 2) {
                             if (event.url) {
                                 const a = document.createElement("a");
-                                a.href = `https://calls.hack.gt/event/${event.id}`;
+                                if (event.url.includes("submit")) {
+                                    a.href = event.url;
+                                    a.innerHTML = "Submit your project";
+                                } else {
+                                    a.href = `https://calls.hack.gt/event/${event.id}`;
+                                    a.innerHTML = "Attend the event!";
+                                }
                                 a.target = "_blank";
-                                a.innerHTML = "Attend the event!";
                                 a.style.color = "black";
                                 a.onclick = (e) => {
                                     e.stopPropagation();
