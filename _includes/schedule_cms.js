@@ -284,12 +284,27 @@
             document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td')
                 .forEach(function(item, index) {
                     if (index == 0) return;
-                    else item.textContent = eventValues[index - 1];
+                    else {
+                        if (index == 2) {
+                            const a = document.createElement("a");
+                            a.href = `https://calls.hack.gt/event/${event.id}`;
+                            a.target = "_blank";
+                            a.innerHTML = "Attend the event!";
+                            a.style.color = "black";
+                            a.onclick = (e) => {
+                                e.stopPropagation();
+                                return true;
+                            };
+                            item.appendChild(a); 
+                        } else {
+                            item.textContent = eventValues[index - 1];
+                        }
+                    }
                 });
 
             const rowEl = document.querySelector(scheduleId + ' > table > tbody > tr:last-child');
             if (clickable) {
-                rowEl.addEventListener('click', () => {
+                rowEl.addEventListener('click', (e) => {
                     popInfoModal(event);
                 });
             }
@@ -305,16 +320,17 @@
         while (modalContent.firstChild) {
             modalContent.removeChild(modalContent.firstChild);
         }
+
         if (summary) {
             const summaryString = `<h4 class="modal-header">${summary}</h4>`;
             modalContent.insertAdjacentHTML('beforeend', summaryString);
         }
         if (location || start) {
             modalContent.insertAdjacentHTML('beforeend', '<div class="modal-row"></div>')
-            if (location) {
-                const locationString = `<h5 class="modal-item" >${location}</h5>`;
+            // if (location) {
+                const locationString = `<h5 class="modal-item" ><a href="https://calls.hack.gt/event/${event.id}" target="_blank">Attend the call!</a></h5>`;
                 modalContent.lastElementChild.insertAdjacentHTML('beforeend', locationString);
-            }
+            // }
             if (start) {
                 let modalTime = start.pretty;
                 if (end && start.pretty !== end.pretty) {
