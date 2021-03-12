@@ -2,7 +2,7 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
-    const HACKATHON = "HackGT 7"
+    const HACKATHON = "HealthTech 2021"
 
     const CMS_QUERY = `
         allEvents (where: { hackathon: { name: "${HACKATHON}" } }) {
@@ -267,9 +267,11 @@
             // It looks weird if the start time and end time for an event are
             // the same, so just show the start time for events that are
             // clearly meant to just mark an important time (such as a deadline)
-            let timeString = event.start.pretty;
+            
+            // TODO fix date issue
+            let timeString = event.start.dateTime.subtract(5, "hour").format("h:mm A");
             if (event.start.pretty !== event.end.pretty) {
-                timeString += ' - ' + event.end.pretty;
+              timeString += ' - ' + event.end.dateTime.subtract(5, "hour").format("h:mm A");
             }
             var location = event.location || "";
             var oldClass = (currentTime.diff(event.end.dateTime) > 0) ? ' old' : ""; //event already ended
@@ -300,8 +302,8 @@
                                     a.href = event.url;
                                     a.innerHTML = "Submit your project";
                                 } else {
-                                    a.href = `https://calls.hack.gt/event/${event.id}`;
-                                    a.innerHTML = "Attend the event!";
+                                    a.href = `https://calls.healthtech.hack.gt/${event.id}`;
+                                    a.innerHTML = "Join the call";
                                 }
                                 a.target = "_blank";
                                 a.style.color = "black";

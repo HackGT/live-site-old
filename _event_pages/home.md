@@ -1,11 +1,6 @@
 ---
-layout: two_column_image_cms 
-cms_blocks_right:
-    - slack-instructions
-cms_blocks_left:
-    - generic-introduction
-    - bluejeans-instructions
+layout: one_column_cms
 permalink: /
-imageColumn: "image-column-wide"
+cms_blocks: introduction-1
 priority: 7
 ---

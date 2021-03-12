@@ -1,20 +1,6 @@
-@font-face {
-    font-family: "Bavro-Regular";
-    src: url("../assets/fonts/Bavro-Regular.eot");
-    src: url("../assets/fonts/Bavro-Regular.eot?#iefix")
-            format("embedded-opentype"),
-        url("../assets/fonts/Bavro-Regular.svg#Bavro-Regular") format("svg"),
-        url("../assets/fonts/Bavro-Regular.ttf") format("truetype"),
-        url("../assets/fonts/Bavro-Regular.woff") format("woff"),
-        url("../assets/fonts/Bavro-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 // Colors:
 // Site-Level
-$page-background-color: linear-gradient(180deg, #658aae, #8bc2b9);
+$page-background-color: url("registration-bg.png");
 // To change the page font as a whole, add
 // font-family: fonts-here !important;
 // to the body block in this file
@@ -26,7 +12,7 @@ $page-title-color: white;
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: transparent;
+$navbar-background-color: #10112e;
 $navbar-menu-icon-color: white;
 $navbar-text-color: white;
 
@@ -34,11 +20,14 @@ $navbar-text-color: white;
 body {
     //Use the CSS property below to set the site body font
     // margin-right: $nav-bar-width + $spacing-unit * 1.5;
-    font-family: "Quicksand";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     background: $page-background-color;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover;
+    background-color: #10112e;
+    min-height: 100vh;
+    min-width: 100vw;
     color: $page-title-color !important;
     //Uncomment the block below and change the font to set the site header font
     h1,
@@ -48,9 +37,8 @@ body {
     h5,
     h6,
     div.wrapper > a.site-title {
-        font-family: "Quicksand";
         // font-style:italic;
-        font-weight: 700;
+        font-family: "Roboto", sans-serif !important;
     }
     div.block-header {
         font-weight: 800;
@@ -69,7 +57,7 @@ body {
 
 a.site-title {
     // text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 200 !important;
 }
 
 a.site-title:hover {

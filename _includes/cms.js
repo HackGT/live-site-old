@@ -6,7 +6,7 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
-    const HACKATHON = "HackGT 7";
+    const HACKATHON = "HealthTech 2021";
     // Populate infoblocks on CMS.
     // Event pages can use layout: one_column_cms or two_column_cms
     // to use these CMS-backed blocks.

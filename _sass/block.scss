@@ -3,7 +3,7 @@ $block-accent-color: #ffffff; //Used on the left column of two_column layout, an
 $block-alt-accent-color: #E1BFF2; //Used on the right column of the two_column layout
 $block-header-text-color: #658AAE;
 $corner-border-radius: 15px;
-$block-body-bg-color: rgba(255, 255, 255, 0.2);
+$block-body-bg-color: rgba(255, 255, 255, 0.4);
 $block-body-text-color: #ffffff;
 
 // Blocks
@@ -25,7 +25,6 @@ $block-body-text-color: #ffffff;
     text-align: center;
     border-radius: $corner-border-radius $corner-border-radius 0 0;
     padding: .4em 0;
-    font-family: "Quicksand" !important;
     // box-shadow: -2px 2px 2px #e2d4bd;
 }
 
@@ -36,6 +35,7 @@ $block-body-text-color: #ffffff;
     // box-shadow: -2px 2px 2px #e2d4bd
     border-radius: 0 0 $corner-border-radius $corner-border-radius;
     margin-top: -24px;
+    text-align: center;
 }
 
 .block-body > *:last-child {
