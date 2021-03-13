@@ -237,8 +237,13 @@
         for (var i = 0; i < filtered.length; i++) {
             const event = filtered[i];
             
+            console.log(event);
             // Fix date input
-            event.start.dateTime = event.start.dateTime.utc(true).local();
+            if (i == 0) {
+                event.start.dateTime = event.start.dateTime.utc().local();
+            } else {
+                event.start.dateTime.utc(true).local();
+            }
             event.end.dateTime = event.end.dateTime.utc(true).local();
             
             event.start.pretty = event.start.dateTime.format("h:mm A");
