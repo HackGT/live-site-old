@@ -1,6 +1,8 @@
 ---
 layout: one_column_cms
+cms_blocks:
+  - introduction-1
+  - important-links 
 permalink: /
-cms_blocks: introduction-1
 priority: 7
 ---
