@@ -11,11 +11,7 @@ layout: default
 
     <div id="schedule-block" class="block">
         <div class="block-header tabs">
-            {% for event_type in site.data.schedule_types %}
-                <li class="tab{% if forloop.first %} active{% endif %}"
-                    data-type="{{ event_type.type }}"
-                >{{ event_type.name | escape }}</li>
-            {% endfor %}
+          Click an event to learn more about it!
         </div>
         </br>
         <div id="schedule-body" class="block-body active">

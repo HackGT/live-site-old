@@ -184,9 +184,9 @@
 
     let tabs = document.querySelectorAll("li.tab");
     for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener("click", (e) => {
-            typeFilter(e, tabs[i].dataset.type);
-        });
+        // tabs[i].addEventListener("click", (e) => {
+        //     typeFilter(e, tabs[i].dataset.type);
+        // });
     }
 
     function typeFilter(e, type="all") { // onClick
@@ -215,7 +215,7 @@
         }
 
         var currentTime = moment();
-        var prevCurrentDay = filtered[0].start.day;
+        var prevCurrentDay = filtered[0].start.dateTime.utc(true).local().day();
         schedule.insertAdjacentHTML(
             'beforeend',
             '<tr id="header-day-0" data-day="0"><td class="schedule-day" colspan="4"><i class="material-icons open">keyboard_arrow_down</i>'+
@@ -236,6 +236,17 @@
         var day = 0;
         for (var i = 0; i < filtered.length; i++) {
             const event = filtered[i];
+            
+            // Fix date input
+            event.start.dateTime = event.start.dateTime.utc(true).local();
+            event.end.dateTime = event.end.dateTime.utc(true).local();
+            
+            event.start.pretty = event.start.dateTime.format("h:mm A");
+            event.end.pretty = event.end.dateTime.format("h:mm A");
+            event.start.day = event.start.dateTime.day();
+            event.end.day = event.end.dateTime.day();
+            
+
             if (i > 0) {
                 const currentDay = event.start.day;
 
@@ -267,11 +278,11 @@
             // It looks weird if the start time and end time for an event are
             // the same, so just show the start time for events that are
             // clearly meant to just mark an important time (such as a deadline)
-            
-            // TODO fix date issue
-            let timeString = event.start.dateTime.subtract(5, "hour").format("h:mm A");
+          
+          
+          let timeString = event.start.pretty;
             if (event.start.pretty !== event.end.pretty) {
-              timeString += ' - ' + event.end.dateTime.subtract(5, "hour").format("h:mm A");
+              timeString += ' - ' + event.end.pretty;
             }
             var location = event.location || "";
             var oldClass = (currentTime.diff(event.end.dateTime) > 0) ? ' old' : ""; //event already ended
