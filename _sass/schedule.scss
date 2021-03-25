@@ -7,19 +7,24 @@ $table-header-row-background: #fff;
 }
 
 .schedule {
-    /*overflow-x: auto;*/
     table {
+        text-align: center;
         margin-bottom: 0;
+        color: #444;
         border: 0;
     }
 
-    th {
-        background-color: $table-header-row-background;
-        font-weight: lighter;
+    tr:nth-last-child(1) td:nth-last-of-type(1) {
+        border-bottom-right-radius: 15px;
     }
-
+    tr:nth-last-child(1) td:nth-last-of-type(2) {
+        border-bottom-left-radius: 15px;
+    }
     th:first-child {
-        padding-left: 5px;
+        border-top-left-radius: 15px;
+    }
+    th:nth-child(2) {
+        border-top-right-radius: 15px;
     }
 
     table > thead > tr > th,
@@ -28,20 +33,12 @@ $table-header-row-background: #fff;
     }
 
     table > tbody > tr > td.schedule-day {
-        @include relative-font-size(1.125);
-        font-weight: bold;
-        border-top: 0;
-        border-right: 0;
-        border-left: 4px solid $block-accent-color;
-        cursor: pointer;
-        i {
-            user-select: none;
-        }
+        display: none;
     }
 
     table > thead > tr > th,
     table > tbody > tr > td {
-        padding: 3px;
+        padding: 5px;
     }
 
     table > tbody > tr:nth-child(even) > td {
@@ -61,10 +58,6 @@ $table-header-row-background: #fff;
         background: $day-highlight-color;
     }
 
-    table > tbody > tr > td.schedule-day {
-        background: $day-highlight-color;
-    }
-
     td {
         min-width: 85px;
         color: #2d2d36;
@@ -75,8 +68,6 @@ $table-header-row-background: #fff;
             min-width: 73px;
         }
     }
-
-
 
     td:last-child {
         min-width: 100px;

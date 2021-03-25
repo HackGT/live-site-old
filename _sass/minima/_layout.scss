@@ -42,17 +42,31 @@
   }
 
   .page-link {
+    font-weight: 300;
     color: $text-color;
     line-height: $base-line-height;
 
+    &:hover {
+      text-decoration: none;
+    }
+
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
 
+  .page-link.hoverText {
+    margin-top: 3px;
+    &:hover { margin-top: 0px; }
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+  }
+
   .page-link.active {
-      font-weight: 800;
+      border-bottom: 1px solid #fff;
+      font-weight: 700;
   }
 
   @include media-query($on-palm) {

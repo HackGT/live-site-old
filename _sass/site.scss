@@ -12,7 +12,7 @@ $page-title-color: white;
 $navbar-menu-icon-dark: #424242;
 $navbar-menu-icon-light: white;
 
-$navbar-background-color: #10112e;
+$navbar-background-color: rgba(0,0,0,0);
 $navbar-menu-icon-color: white;
 $navbar-text-color: white;
 
@@ -22,10 +22,9 @@ body {
     // margin-right: $nav-bar-width + $spacing-unit * 1.5;
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    background: $page-background-color;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0)), $page-background-color;
     background-size: cover;
-    background-color: #10112e;
+    background-color: rgb(46, 38, 60);
     min-height: 100vh;
     min-width: 100vw;
     color: $page-title-color !important;
@@ -41,7 +40,8 @@ body {
         font-family: "Roboto", sans-serif !important;
     }
     div.block-header {
-        font-weight: 800;
+        font-weight: 900;
+        color: rgb(42, 38, 54);
     }
     @include media-query($on-palm) {
         margin-right: 0px;
@@ -112,6 +112,8 @@ div.text-column {
 
 // Individual Pages
 h1.post-title {
+    font-weight: 900;
+    margin: 25px;
     font-size: 50px;
     color: $page-title-color;
     @include media-query($on-palm) {
@@ -128,14 +130,11 @@ header.site-header {
     background: $navbar-background-color;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 20px;
     .logo {
-        width: 50px;
-        height: 50px;
-        bottom: 0;
-        margin-top: 0.25em;
-        margin-right: 0.5em;
-        content: url("../assets/logo.png");
-        float: left;
+        width: 250px;
+        content: url("logo.png");
+        margin-top: 4px;
     }
 }
 

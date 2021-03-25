@@ -116,15 +116,13 @@
             if (endTime == startTime) {
                 endTime = "";
             }
-            var location = events[i].location || "";
             var oldClass = (currentTime - endTimeAsDate > 0) ? ' old' : ""; //event already ended
             schedule.insertAdjacentHTML('beforeend','<tr class="schedule-day-'+ day + oldClass + '"><td></td><td></td><td></td><td></td></tr>');
 
             eventValues = [
                 events[i].summary,
                 startTime,
-                endTime,
-                location
+                endTime
             ];
             document.querySelectorAll(scheduleId + ' > table > tbody > tr:last-child > td').forEach(function(item, index) {
                 item.textContent = eventValues[index];

@@ -1,5 +1,3 @@
 ---
 title: Prizes
 ---
-
-Prizes blurb

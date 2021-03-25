@@ -1,7 +1,7 @@
 # This file defines some parameters that will affect the live site as a whole.
-title: HealthTech 2021
+title: Catalyst 2021
 description: >- # >- means ignore newlines until "baseurl:"
-  Everything you need to know while you're at HealthTech!
+  Everything you need to know while attending Catalyst!
 baseurl: "" # the base subpath of this site; that is, if your pages have a constant prefix, like /live, add that here
 url: https://info.hack.gt # Your site's domain, e.g. everything up and including to the .com
 # Social media links are defined in _data/social_media.yaml

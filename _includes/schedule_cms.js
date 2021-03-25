@@ -2,7 +2,7 @@
 // This is an anonymous function to keep the functions and variables here out
 // of the global scope
 (function() {
-    const HACKATHON = "HealthTech 2021"
+    const HACKATHON = "Catalyst 2021"
 
     const CMS_QUERY = `
         allEvents (where: { hackathon: { name: "${HACKATHON}" } }) {
@@ -224,7 +224,6 @@
             `<tr class="schedule-interactive schedule-day-0">
                 <th>Event</th>
                 <th>Time</th>
-                <th>Location</th>
             </tr>`
         );
         document.querySelector(scheduleId + ' #header-day-0').onclick = function() {
@@ -268,7 +267,6 @@
                         `<tr class="schedule-interactive schedule-day-` + day + `">
                             <th>Event</th>
                             <th>Time</th>
-                            <th>Location</th>
                         </tr>`
                     );
                         document.querySelector(scheduleId + ' #header-day-' + day).addEventListener('click', function() {
@@ -300,7 +298,7 @@
             let rowHTML = trString + `class="${clickable ? "schedule-interactive " : ""}schedule-day-`+ day + oldClass + '">';
             let titleEntry = `<td>${event.summary} ${clickable ? '<i class="material-icons schedule-icon">info</i>' : ""}</td>`;
             rowHTML += titleEntry;
-            schedule.insertAdjacentHTML('beforeend', rowHTML + '<td></td><td></td></tr>');
+            schedule.insertAdjacentHTML('beforeend', rowHTML + '<td></td></tr>');
 
             eventValues = [
                 timeString,
