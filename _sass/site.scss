@@ -107,7 +107,18 @@ div.image-column-thin {
 
 div.text-column {
     width: 100%;
-    margin-right: $spacing-unit;
+    padding: $spacing-unit;
+}
+
+div.small-column {
+    width: 65%;
+    margin: 0 auto;
+}
+
+@include media-query($on-palm) {
+    div.small-column {
+        width: 100%;
+    }
 }
 
 // Individual Pages
@@ -136,6 +147,11 @@ header.site-header {
         content: url("logo.png");
         margin-top: 4px;
     }
+    @include media-query($on-palm) {
+        .logo {
+            width: 200px;
+        }
+     }
 }
 
 div.trigger {
